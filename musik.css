@@ -1,7 +1,7 @@
 /* ==========================================================================
-   1. SIDESEKTION & BAGGRUND
+   1. SIDESEKTION & BAGGRUND (Matcher class="mig" i din HTML)
    ========================================================================== */
-.info-om-mig {
+.mig {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,10 +16,10 @@
 }
 
 /* ==========================================================================
-   2. OVERSKRIFT MED GLØDENDE GRØN CYBER-STREG (NY EFFEKT)
+   2. OVERSKRIFT MED GLØDENDE GRØN CYBER-STREG (RETTET: Bindestreger fjernet)
    ========================================================================== */
-.info-om-mig h1,
-.info-om-mig h2 {
+.mig h1:not(.title),
+.mig h2:not(.title) {
     position: relative;
     font-family: "Segoe UI", sans-serif;
     font-size: 2.5rem;
@@ -33,9 +33,9 @@
     text-shadow: 0 0 10px rgba(21, 206, 44, 0.6);
 }
 
-/* Den seje, grønne neon-bundlinje der erstatter kedelig understregning */
-.info-om-mig h1::after,
-.info-om-mig h2::after {
+/* Den seje, grønne neon-bundlinje (RETTET: Ingen bokse på din neontitel) */
+.mig h1:not(.title)::after,
+.mig h2:not(.title)::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -120,6 +120,7 @@
 .info-p:hover {
     box-shadow: 0 0 35px rgb(48, 36, 219);
 }
+
 /* ==========================================================================
    ULTIMATIV BOX-KILLER (Tvinger alle skjulte pseudo-bokse væk fra titlen)
    ========================================================================== */
@@ -136,6 +137,7 @@
     opacity: 0 !important;
     visibility: hidden !important;
 }
+
 /* ==========================================================================
    5. CITATBOKS (Neon-quote)
    ========================================================================== */

@@ -1,22 +1,57 @@
 /* ==========================================================================
-   1. LAYOUT & BAGGRUND (Hovedcontainer sat direkte på main)
+   1. SIDESEKTION & BAGGRUND (Matcher class="mig" i din HTML)
    ========================================================================== */
-main {
+.mig {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     font-size: 1.2rem;
     padding: 3rem 1.5rem;
+    color: #ffffff;
     min-height: 100vh;
     background-color: #030a16;
-    /* Mørk midnatsblå baggrund på hele skærmen */
-    color: #ffffff;
+    /* Mørk midnatsblå baggrund får neonlyset til at eksplodere */
     line-height: 1.6;
 }
 
 /* ==========================================================================
-   2. NEONTITEL (Centreret overskrift - helt fri for streger)
+   2. OVERSKRIFT MED GLØDENDE GRØN CYBER-STREG (RETTET: Bindestreger fjernet)
+   ========================================================================== */
+.mig h1:not(.title),
+.mig h2:not(.title),
+.musik-side-2 {
+    position: relative;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(21, 206, 44, 0.6);
+}
+
+/* Den seje, grønne neon-bundlinje (RETTET: Ingen bokse på din neontitel) */
+.mig h1:not(.title)::after,
+.mig h2:not(.title)::after,
+.musik-side-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #15ce2c, #45cfc6, transparent);
+    box-shadow:
+        0 0 10px #15ce2c,
+        0 0 20px rgba(21, 206, 44, 0.8);
+}
+
+/* ==========================================================================
+   3. NEONTITEL (Centreret overskrift med turkis/blå glød)
    ========================================================================== */
 .title {
     margin: 20px auto 10px auto;
@@ -25,7 +60,6 @@ main {
     font-size: 50px;
     font-weight: bold;
     color: rgb(69, 207, 198);
-    /* Flot turkis farve */
     background: linear-gradient(145deg, #06142a, #081d3a);
     border: 5px solid rgb(48, 36, 219);
     border-radius: 20px;
@@ -44,43 +78,7 @@ main {
 }
 
 /* ==========================================================================
-   3. SEKTIONS-OVERSKRIFTER (RETTET: Rammer IKKE .title længere)
-   ========================================================================== */
-main h1:not(.title),
-main h2:not(.title),
-.musik-side-2 {
-    position: relative;
-    font-family: "Segoe UI", sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(21, 206, 44, 0.6);
-    /* Svag grøn neonglød */
-}
-
-/* Den grønne neon-bundlinje (RETTET: Vises kun under almindelige overskrifter) */
-main h1:not(.title)::after,
-main h2:not(.title)::after,
-.musik-side-2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-    width: 70%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #15ce2c, #45cfc6, transparent);
-    box-shadow:
-        0 0 10px #15ce2c,
-        0 0 20px rgba(21, 206, 44, 0.8);
-}
-
-/* ==========================================================================
-   4. TEKSTBOKSE & AFSNIT (Brødtekst)
+   4. TEKSTBOKSE & INFOBOKSE (Selve brødteksten med blå neonramme)
    ========================================================================== */
 .info-p {
     margin: 10px auto;
@@ -91,7 +89,6 @@ main h2:not(.title)::after,
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: #d7f7ff;
-    /* Svag lyseblå tekst */
     line-height: 1.8;
     background: linear-gradient(145deg, #06142ac5, #081d3a);
     border: 4px solid rgb(48, 36, 219);
@@ -108,7 +105,7 @@ main h2:not(.title)::after,
 }
 
 /* ==========================================================================
-   5. CITATBOKS (Neon-quote)
+   5. CITATBOKS (Neon-quote med lysende Brush Script)
    ========================================================================== */
 .neon-quote {
     margin: 20px auto;
@@ -138,7 +135,7 @@ main h2:not(.title)::after,
 }
 
 /* ==========================================================================
-   6. RESPONSIVT DESIGN (Mobiloptimering)
+   6. RESPONSIVT DESIGN (Sikrer perfekt visning på smartphones)
    ========================================================================== */
 @media (max-width: 768px) {
     .title {
@@ -146,8 +143,8 @@ main h2:not(.title)::after,
         padding: 15px;
     }
 
-    main h1:not(.title),
-    main h2:not(.title),
+    .mig h1:not(.title),
+    .mig h2:not(.title),
     .musik-side-2 {
         font-size: 2rem;
     }
