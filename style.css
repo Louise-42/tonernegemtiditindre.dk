@@ -13,13 +13,8 @@
 @import url("computerens-historie.css");
 
 /* ==========================================================================
-   RETTET: Gamle trommebilleder og tomme bokse er fjernet helt herfra
+   1. KOMPLET FIX AF HOVEDMENU (Tvinger alle 12 elementer frem live)
    ========================================================================== */
-
-/* ==========================================================================
-   KOMPLET FIX AF HOVEDMENU (Tvinger alle 12 elementer frem live)
-   ========================================================================== */
-
 header {
     display: flex !important;
     align-items: center !important;
@@ -38,7 +33,6 @@ header {
     grid-template-columns: repeat(12, 1fr) !important;
     gap: 6px !important;
     max-width: 1550px !important;
-    /* Hævet en smule ekstra for at give plads til emojier */
     width: 100% !important;
     margin: 0 auto !important;
 }
@@ -55,7 +49,6 @@ header {
     font-size: 11px !important;
     font-weight: bold !important;
     white-space: normal !important;
-    /* Tillader teksten at gå i 2 linjer, hvis skærmen snævrer ind */
     padding: 12px 4px !important;
     border-radius: 15px !important;
     text-align: center !important;
@@ -75,30 +68,10 @@ header {
 .nav-links a.active {
     color: white !important;
 }
-/* ==========================================================================
-   ULTIMATIV KODE-RETTELSE: Tvinger de tomme bokse helt væk fra skærmen
-   ========================================================================== */
-.top-hero-container,
-.title-midte,
-.min-bass-venstre,
-.min-bass-hoejre,
-.top-hero-container img {
-    display: none !important;
-    content: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
 /* ==========================================================================
-   RESPONSIVE RETTELSER TIL TABLET OG MOBIL
+   2. RESPONSIVE RETTELSER TIL TABLET OG MOBIL
    ========================================================================== */
-
 /* Tablets / Mellemstore skærme (3 knapper pr. række) */
 @media (max-width: 1200px) {
     .nav-links {
@@ -123,4 +96,24 @@ header {
         font-size: 12px !important;
         padding: 12px 8px !important;
     }
+}
+
+/* ==========================================================================
+   3. SPECIEL BILLED-SELECTOR (Tvinges i bunden for at overskrive alt korrekt)
+   ========================================================================== */
+.min-bass-venstre,
+.min-bass-hoejre {
+    width: 100% !important;
+    max-width: 160px !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.min-bass-venstre:hover,
+.min-bass-hoejre:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.6) !important;
 }
