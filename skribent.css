@@ -1,0 +1,156 @@
+/* ==========================================================================
+   1. FORFATTER SIDE (Overskriften med pulserende 360° glød)
+   ========================================================================== */
+.forfatter-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(69, 207, 198);
+    /* Flot lys turkis */
+
+    background:
+        radial-gradient(circle at top, rgba(0, 170, 255, .15), transparent 65%),
+        linear-gradient(145deg, #081d3a, #06142a);
+
+    /* DET SEJE DOBBELT-RAMME LOOK */
+    border: 4px solid #00aaff;
+    outline: 3px solid rgb(48, 36, 219);
+    outline-offset: 6px;
+    border-radius: 20px;
+    border-bottom: 5px solid rgb(69, 207, 198);
+
+    /* Tilsat den levende puls-animation */
+    animation: pulsereSkribentTitel 3s infinite alternate;
+    transition: all 0.4s ease;
+}
+
+.forfatter-side:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgb(69, 207, 198);
+}
+
+/* ==========================================================================
+   2. SKRIBENT BOKS (Den ydre ramme-kasse – Fået mere bundafstand og padding)
+   ========================================================================== */
+.skribent-boks {
+    background: linear-gradient(145deg, #06142a, #081d3a);
+    border: 4px solid #00aaff;
+    border-radius: 20px;
+    padding: 50px;
+    /* Giver den rigtige luft indvendigt i kassen */
+    max-width: 1000px;
+
+    /* AFSTAND RETTET: 40px i toppen og 50px i bunden skaber flot luft mellem bokse */
+    margin: 40px auto 50px auto;
+
+    /* Advanced 360° cyber-glød */
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 170, 255, 0.25),
+        inset 0 0 25px rgba(0, 170, 255, 0.1);
+
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Når man hovrer over boksen, eksploderer neonlyset i 360 grader */
+.skribent-boks:hover {
+    transform: translateY(-5px);
+    border-color: rgb(69, 207, 198);
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.6),
+        0 0 45px #00aaff,
+        0 0 80px rgba(0, 170, 255, 0.3),
+        inset 0 0 30px rgba(0, 170, 255, 0.2);
+}
+
+/* ==========================================================================
+   3. SKRIBENT INDHOLD (Selve tekst-området – Nu med indbyrdes afstand)
+   ========================================================================== */
+.skribent {
+    line-height: 1.9;
+    letter-spacing: 3px;
+    max-width: 100%;
+    color: #d7f7ff;
+    /* Lækker isblå tekst */
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Segoe UI', sans-serif;
+    background: transparent;
+
+    /* AFSTAND RETTET: Hvis du har flere afsnit i samme boks, får de 25px luft imellem sig */
+    padding: 15px;
+    margin: 0 auto 25px auto;
+
+    /* Neonglød direkte på selve bogstaverne */
+    text-shadow:
+        0 0 4px rgba(0, 170, 255, 0.5),
+        0 0 10px rgba(0, 170, 255, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+/* Gør at det absolut sidste tekstafsnit i en boks ikke laver tom bundluft */
+.skribent-boks .skribent:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Gør at teksten lyser en anelse kraftigere op, når man holder musen over boksen */
+.skribent-boks:hover .skribent {
+    color: #ffffff;
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 20px rgba(69, 207, 198, 0.6);
+}
+
+
+/* ==========================================================================
+   4. ANIMATIONER
+   ========================================================================== */
+@keyframes pulsereSkribentTitel {
+    0% {
+        box-shadow:
+            0 0 20px rgba(0, 170, 255, .3),
+            0 0 40px rgba(48, 36, 219, .3);
+        text-shadow: 0 0 10px #00aaff;
+    }
+
+    100% {
+        box-shadow:
+            0 0 35px rgba(0, 170, 255, .6),
+            0 0 65px rgba(48, 36, 219, .5);
+        text-shadow: 0 0 20px #00aaff, 0 0 30px rgb(69, 207, 198);
+    }
+}
+
+/* ==========================================================================
+   5. MOBILOPTIMERING (Sikrer at intet skubbes ud af skærmen på mobilen)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .forfatter-side {
+        font-size: 1.4rem;
+        padding: 15px 20px;
+        margin: 30px auto;
+        outline-offset: 4px;
+    }
+
+    .skribent-boks {
+        padding: 20px;
+        margin: 20px auto;
+        border-width: 3px;
+    }
+
+    .skribent {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+        /* Bedre læsbarhed på mindre mobilskærme */
+        margin-bottom: 15px;
+    }
+}

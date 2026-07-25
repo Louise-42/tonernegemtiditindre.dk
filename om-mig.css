@@ -1,0 +1,163 @@
+/* ==========================================================================
+   1. LAYOUT & BAGGRUND (Hovedcontainer sat direkte på main)
+   ========================================================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-size: 1.2rem;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+    background-color: #030a16;
+    /* Mørk midnatsblå baggrund på hele skærmen */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. NEONTITEL (Centreret overskrift - helt fri for streger)
+   ========================================================================== */
+.title {
+    margin: 20px auto 10px auto;
+    max-width: 600px;
+    width: 95%;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(69, 207, 198);
+    /* Flot turkis farve */
+    background: linear-gradient(145deg, #06142a, #081d3a);
+    border: 5px solid rgb(48, 36, 219);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 10px #00aaff,
+        0 0 20px rgb(48, 36, 219);
+    box-shadow: 0 0 25px rgba(48, 36, 219, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.title:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   3. SEKTIONS-OVERSKRIFTER (RETTET: Rammer IKKE .title længere)
+   ========================================================================== */
+main h1:not(.title),
+main h2:not(.title),
+.musik-side-2 {
+    position: relative;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(21, 206, 44, 0.6);
+    /* Svag grøn neonglød */
+}
+
+/* Den grønne neon-bundlinje (RETTET: Vises kun under almindelige overskrifter) */
+main h1:not(.title)::after,
+main h2:not(.title)::after,
+.musik-side-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #15ce2c, #45cfc6, transparent);
+    box-shadow:
+        0 0 10px #15ce2c,
+        0 0 20px rgba(21, 206, 44, 0.8);
+}
+
+/* ==========================================================================
+   4. TEKSTBOKSE & AFSNIT (Brødtekst)
+   ========================================================================== */
+.info-p {
+    margin: 10px auto;
+    max-width: 850px;
+    width: 90%;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #d7f7ff;
+    /* Svag lyseblå tekst */
+    line-height: 1.8;
+    background: linear-gradient(145deg, #06142ac5, #081d3a);
+    border: 4px solid rgb(48, 36, 219);
+    border-radius: 15px;
+    box-shadow:
+        0 0 10px rgb(48, 36, 219),
+        0 0 25px rgb(48, 36, 219),
+        0 0 50px rgba(48, 36, 219, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-p:hover {
+    box-shadow: 0 0 35px rgb(48, 36, 219);
+}
+
+/* ==========================================================================
+   5. CITATBOKS (Neon-quote)
+   ========================================================================== */
+.neon-quote {
+    margin: 20px auto;
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(145deg, #051937, #001026);
+    border: 4px solid #00aaff;
+    border-radius: 18px;
+    box-shadow:
+        0 0 15px #00aaff,
+        0 0 30px rgba(0, 170, 255, 0.3);
+}
+
+.neon-quote blockquote {
+    margin: 0;
+    color: #7fdfff;
+    font-size: 2.5rem;
+    font-family: "Brush Script MT", cursive;
+    line-height: 1.8;
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 10px #00aaff,
+        0 0 20px #00aaff;
+}
+
+/* ==========================================================================
+   6. RESPONSIVT DESIGN (Mobiloptimering)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    main h1:not(.title),
+    main h2:not(.title),
+    .musik-side-2 {
+        font-size: 2rem;
+    }
+
+    .info-p {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .neon-quote blockquote {
+        font-size: 1.8rem;
+    }
+}

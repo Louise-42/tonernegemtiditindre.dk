@@ -1,0 +1,321 @@
+/* ==========================================================================
+   1. KONTAKT OVERSKRIFT (Rettet til pulserende turkis neonglød)
+   ========================================================================== */
+.kontakt-mig {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(69, 207, 198);
+    /* Din flotte turkis */
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow:
+        0 0 10px #00aaff,
+        0 0 25px rgba(0, 170, 255, 0.6);
+    margin-top: 40px;
+    /* Rettet fra 350px, da den mørke baggrund styrer layoutet nu */
+}
+
+/* ==========================================================================
+   2. CV BILLEDE I MIDTEN (Opdateret med 360° blå glød)
+   ========================================================================== */
+.cv-billede {
+    width: 200px;
+    height: 175px;
+    margin: 30px auto;
+    /* Centrerer billedet automatisk uden absolute fejl */
+    overflow: hidden;
+    background: linear-gradient(145deg, #081d3a, #06142a);
+    border: 3px solid #00aaff;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+}
+
+.cv-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   3. TEKST VED SIDEN AF CV (Rettet fra hård rød til lækker neonblå)
+   ========================================================================== */
+/* ==========================================================================
+   3. TEKST VED SIDEN AF CV (Rød tekst med cool blinke-animation)
+   ========================================================================== */
+.skriv-til-mig {
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+
+    /* OPPDATERET: Farven ændret til en stærk rød */
+    color: #ff3333;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(145deg, #081d3a, #06142a);
+    border: 3px solid #00aaff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+
+    /* Tilsat en glidende neon-blinke animation der tager 2 sekunder og looper uendeligt */
+    animation: blinkeRødNeon 2s infinite;
+}
+
+/* ==========================================================================
+   NY ANIMATION (Sæt denne helt i bunden af din kontakt.css fil)
+   ========================================================================== */
+@keyframes blinkeRødNeon {
+    0% {
+        text-shadow: 0 0 4px #ff3333, 0 0 10px rgba(255, 51, 51, 0.5);
+        opacity: 1;
+        /* Helt synlig og lysende */
+    }
+
+    50% {
+        text-shadow: 0 0 2px #ff3333, 0 0 4px rgba(255, 51, 51, 0.2);
+        opacity: 0.6;
+        /* Dæmper lyset en smule, så det blinker roligt */
+    }
+
+    100% {
+        text-shadow: 0 0 4px #ff3333, 0 0 10px rgba(255, 51, 51, 0.5);
+        opacity: 1;
+        /* Går tilbage til fuld styrke */
+    }
+}
+
+/* ==========================================================================
+   4. SOCIALE MEDIER (Opdateret fra grøn til fuld 360° blå neonglød)
+   ========================================================================== */
+.social-boks {
+    max-width: 300px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #081d3a, #06142a);
+    border: 3px solid rgb(48, 36, 219);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(48, 36, 219, 0.4);
+}
+
+.social-boks h3 {
+    color: #00aaff;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00aaff;
+    font-weight: bold;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+    padding: 8px 12px;
+    text-decoration: none;
+    background: rgba(0, 170, 255, .1);
+    border-radius: 15px;
+    transition: .3s ease;
+}
+
+.social-link:hover {
+    background: rgba(0, 170, 255, .25);
+    transform: translateX(5px);
+}
+
+.social-link img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .08);
+    padding: 4px;
+    box-shadow: 0 0 8px #00aaff;
+}
+
+.social-link span {
+    color: #d7f7ff;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    /* Fjernet den grønne streg for et renere look */
+}
+
+/* ==========================================================================
+   5. KONTAKT CONTAINER & FORMULAR (FIXET AFSTAND, FELTER OG FARVER)
+   ========================================================================== */
+.kontakt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.kontakt-form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 35px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #081d3a, #06142a);
+    border: 4px solid rgb(48, 36, 219);
+    /* Rettet fra grøn til koncert-blå */
+    box-shadow: 0 0 30px rgba(48, 36, 219, 0.4);
+    transition: 0.3s ease;
+}
+
+.kontakt-form:hover {
+    transform: scale(1.01) translateY(-3px);
+    border-color: #00aaff;
+    box-shadow: 0 0 35px #00aaff;
+}
+
+/* FIX: Giver overskrift-teksterne perfekt luft og skubber dem over boksene */
+.kontakt-form label {
+    display: block;
+    color: rgb(69, 207, 198);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    /* Sikrer at teksten ikke dækkes */
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.3);
+}
+
+.kontakt-form label:first-of-type {
+    margin-top: 0;
+}
+
+/* FIX: Fjernet negativ margin-top, og ændret farve fra limegrøn til isblå */
+.kontakt-form input,
+.kontakt-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    /* Skaber luft til det næste element */
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    border: 2px solid rgb(48, 36, 219);
+    border-radius: 10px;
+    background: #030a16;
+    /* Mørk indvendig baggrund */
+    color: #d7f7ff;
+    /* Teksten du skriver er nu super nem at læse! */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Specifikt for dit textarea (Beskedboksen) */
+.kontakt-form textarea {
+    min-height: 120px;
+    height: 150px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+/* Gør boksene neonblå i 360 grader, når man trykker eller hovrer */
+.kontakt-form input:focus,
+.kontakt-form textarea:focus,
+.kontakt-form input:hover,
+.kontakt-form textarea:hover {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 15px #00aaff;
+}
+
+/* Særlige indstillinger for din motiverende tekst indeni formularen */
+.kontakt-tekst {
+    text-align: center;
+    color: #00aaff;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00aaff;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* SEND KNAP (Matcher nu dine seje grønne menuknapper perfekt) */
+.kontakt-form button {
+    padding: 14px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(145deg, #0a9d22, #066b15);
+    border: 3px solid #00aaff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+    transition: 0.3s ease;
+}
+
+.kontakt-form button:hover {
+    transform: translateY(-2px) scale(1.03);
+    border-color: #0fce2c;
+    box-shadow:
+        0 0 25px #0fce2c,
+        0 0 40px rgba(0, 170, 255, 0.5);
+}
+
+/* ==========================================================================
+   6. SOLOLEARN CERTIFIKAT (Rettet til ren mørkeblå/turkis 360° glød)
+   ========================================================================== */
+.certifikat-boks {
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #081d3a, #06142a);
+    border: 4px solid rgb(48, 36, 219);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(48, 36, 219, 0.4);
+}
+
+.certifikat-boks h2 {
+    color: #00aaff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00aaff;
+    font-weight: bold;
+}
+
+.certifikat-boks img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00aaff;
+}
+
+/* ==========================================================================
+   7. NAVIGATION KNAPPER (Bund-knapper)
+   ========================================================================== */
+.knap,
+.knap2 {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 12px 25px;
+    color: white;
+    background: #081d3a;
+    border: 3px solid #00aaff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00aaff;
+    transition: 0.3s ease;
+}
+
+.knap:hover,
+.knap2:hover {
+    background: linear-gradient(145deg, #0a9d22, #066b15);
+    border-color: #0fce2c;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #0fce2c;
+}

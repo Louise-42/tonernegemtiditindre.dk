@@ -1,0 +1,154 @@
+/* ==========================================================================
+   1. HOVEDBACKGROUND & LAYOUT (Matcher dine andre sider perfekt)
+   ========================================================================== */
+.it-side-baggrund {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+    background-color: #030a16;
+    /* Dyb midnatsblå baggrund får neonlyset til at poppe */
+    color: #ffffff;
+}
+
+.it-side {
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. IT OVERSKRIFT (Opgraderet til intens multi-neon glød)
+   ========================================================================== */
+.it-overskrift {
+    position: relative;
+    /* Gør klar til den seje bundstreg */
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 3px solid rgb(48, 36, 219);
+    /* Kraftigere blå neon-ramme */
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.2rem;
+    /* En smule større for mere autoritet */
+    letter-spacing: 2px;
+    /* Mere luft mellem bogstaverne */
+    text-transform: uppercase;
+
+    /* Dobbelt neonglød på selve teksten */
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 10px #00aaff,
+        0 0 20px rgb(48, 36, 219),
+        0 0 30px rgba(21, 206, 44, 0.8);
+    /* Fletter din grønne glød flot ind */
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, .6),
+        0 0 25px rgba(48, 36, 219, .5),
+        inset 0 0 15px rgba(0, 170, 255, 0.2);
+    /* Indvendigt lys */
+
+    transition: all .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.it-overskrift:hover {
+    transform: translateY(-3px) scale(1.03);
+    border-color: #00aaff;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .7),
+        0 0 45px rgba(0, 170, 255, .9),
+        inset 0 0 25px rgba(0, 170, 255, 0.4);
+}
+
+/* En specialdesignet cyber-bundstreg i stedet for standard "underline" */
+.it-overskrift::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #45cfc6, #15ce2c, transparent);
+    box-shadow: 0 0 8px #45cfc6;
+}
+
+/* ==========================================================================
+   3. IT TEKSTBOKSE (Med gennemsigtig holografisk 'Cyber-kort' effekt)
+   ========================================================================== */
+.it-tekst p {
+    max-width: 860px;
+    width: 95%;
+    margin: 30px auto;
+    padding: 35px;
+    color: #e2f9ff;
+    text-align: left;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    background: linear-gradient(145deg, rgba(6, 20, 42, 0.85), rgba(3, 10, 22, 0.95));
+    border: 2px solid rgba(48, 36, 219, 0.5);
+    border-radius: 16px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(48, 36, 219, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Fed hover-effekt der lyser op, når musen føres over */
+.it-tekst p:hover {
+    transform: translateY(-5px);
+    border-color: #45cfc6;
+    /* Skifter til lysende turkis ved hover */
+    background: rgba(8, 29, 58, 0.95);
+    box-shadow:
+        0 15px 40px rgba(0, 170, 255, 0.3),
+        0 0 25px rgba(69, 207, 198, 0.2);
+}
+
+/* Cool cyan-farvet "Tech-prik" der gløder foran hvert afsnit */
+.it-tekst p::before {
+    content: "▪ ";
+    color: #45cfc6;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 22px;
+    text-shadow: 0 0 8px #45cfc6;
+}
+
+/* ==========================================================================
+   4. MOBILOPTIMERING (Sikrer det står snorlige på telefoner)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .it-side {
+        padding: 5px;
+    }
+
+    .it-overskrift {
+        font-size: 1.5rem;
+        /* Lidt mindre på mobil så det ikke fylder hele skærmen */
+        padding: 18px 10px;
+        margin: 25px auto;
+        letter-spacing: 1px;
+    }
+
+    .it-overskrift::after {
+        width: 70%;
+        left: 15%;
+    }
+
+    .it-tekst p {
+        font-size: 16px;
+        padding: 22px;
+        line-height: 1.7;
+        text-align: left;
+    }
+}

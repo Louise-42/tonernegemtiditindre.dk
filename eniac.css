@@ -1,0 +1,250 @@
+/* =====================================================
+   ENIAC ARTIKEL SIDE - ULTIMATIVE CYBERPUNK LOOK (V2)
+   ===================================================== */
+
+/* Animation til de lysende neon-rør i kanterne */
+@keyframes neonGlowBorder {
+    0% {
+        border-color: #ff4141;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(255, 65, 65, 0.2), 0 0 20px rgba(255, 65, 65, 0.4);
+    }
+
+    50% {
+        border-color: #15ce2c;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(21, 206, 44, 0.2), 0 0 25px rgba(21, 206, 44, 0.5);
+    }
+
+    100% {
+        border-color: #ff4141;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(255, 65, 65, 0.2), 0 0 20px rgba(255, 65, 65, 0.4);
+    }
+}
+
+/* Langsom flydende farve-effekt til teksten i overskrifterne */
+@keyframes textGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hele artikelområdet */
+.artikel-boks {
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =====================================================
+   HOVEDOVERSKRIFT - DIN NYE BLÅ/LILLA TERMINAL STIL
+   ===================================================== */
+h1.overskrift-eniac {
+    position: relative;
+    /* Livsvigtig for at laserstregen under bunder sig hertil */
+    margin: 40px auto 45px auto;
+    max-width: 950px;
+    width: 95%;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(69, 207, 198);
+    background: linear-gradient(145deg, #06142a, #081d3a);
+    border: 5px solid rgb(48, 36, 219);
+    border-radius: 20px;
+    padding: 30px 20px 45px 20px;
+    /* Ekstra bundplads til laserstregen */
+    text-align: center;
+    text-underline-offset: 8px;
+    text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 20px rgb(48, 36, 219);
+    box-shadow: 0 0 25px rgba(48, 36, 219, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Den avancerede laserstreg lagt helt præcist ind under din nye overskrift */
+h1.overskrift-eniac::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    /* Placerer den flot i bunden af din blå boks */
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff4141, #00f0ff, #15ce2c, transparent);
+    box-shadow: 0 0 20px #ff4141, 0 0 40px #00f0ff;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   MELLEMRUBRIKKER (H2) - SPREDENDE NEON-LYS
+   ===================================================== */
+.artikel-boks h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 90px;
+    margin-bottom: 35px;
+    background: linear-gradient(90deg, #00f0ff, #15ce2c, #ff4141);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientMove 4s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.6));
+}
+
+/* =====================================================
+   ALLE TEKSTAFSNIT - LYSENDE NEON-RØRS KANTER (BORDERBOX)
+   ===================================================== */
+.artikel-boks p {
+    box-sizing: border-box;
+    /* Sikrer at padding og ramme holdes indvendigt */
+    border: 3px solid #ff4141;
+    /* Det lysende neon-rør */
+    background: #02060f;
+    /* Mørk, dyb cyber-baggrund */
+    color: #e2f5ff;
+    /* Lys cyan terminal-tekst */
+    padding: 35px;
+    margin: 0 auto 40px auto;
+    max-width: 850px;
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    animation: neonGlowBorder 6s infinite ease-in-out;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Når musen føres over en tekstboks */
+.artikel-boks p:hover {
+    transform: scale(1.01) translateY(-4px);
+    color: #ffffff;
+    border-color: #00f0ff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(0, 240, 255, 0.3), 0 0 35px rgba(0, 240, 255, 0.6);
+    animation: none;
+}
+
+/* Første ord/bogstav fremhævning i teksten */
+.artikel-boks p::first-letter {
+    color: #00f0ff;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+/* =====================================================
+   OVERSKRIFT - KVINDERNE BAG ENIAC (H3)
+   ===================================================== */
+.artikel-boks h3.kvinderne {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ffd27f;
+
+    background-color: #040c1f;
+    border: 3px solid #ffd27f;
+    border-radius: 4px;
+    padding: 30px;
+    max-width: 850px;
+    width: 90%;
+    margin: 90px auto 45px auto;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    text-shadow: 0 0 12px rgba(255, 210, 127, 0.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(255, 210, 127, 0.1), 0 0 30px rgba(255, 210, 127, 0.4);
+}
+
+/* =====================================================
+   ENIAC LISTE - TECH STATION LOOK
+   ===================================================== */
+.eniac-liste {
+    max-width: 700px;
+    width: 90%;
+    margin: 50px auto 65px auto;
+    background: #02060f;
+    border: 3px solid #15ce2c;
+    border-radius: 4px;
+    color: #e2f5ff;
+    padding: 35px 40px 35px 50px;
+    list-style-position: inside;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(21, 206, 44, 0.1), 0 0 30px rgba(21, 206, 44, 0.4);
+}
+
+.eniac-liste li::marker {
+    content: "⚡ ";
+    font-size: 1.2rem;
+}
+
+.eniac-liste li {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 15px;
+    color: #e2f5ff;
+    text-align: left;
+    border-bottom: 1px dashed rgba(21, 206, 44, 0.2);
+    padding-bottom: 12px;
+}
+
+/* Historisk billede indramning */
+.eniac-billede {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto;
+    border-radius: 4px;
+    height: auto;
+    border: 3px solid #00f0ff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 240, 255, 0.4);
+}
+
+/* =====================================================
+   RESPONSIVT DESIGN (MOBILOPTIMERING)
+   ===================================================== */
+@media(max-width:768px) {
+    .artikel-boks {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .artikel-boks p {
+        font-size: 1.05rem;
+        padding: 25px;
+        line-height: 1.8;
+        border-width: 2px;
+    }
+
+    h1.overskrift-eniac {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        padding: 15px 10px 35px 10px;
+    }
+
+    .artikel-boks h2 {
+        font-size: 1.9rem;
+    }
+
+    .artikel-boks h3.kvinderne {
+        font-size: 1.5rem;
+        padding: 20px;
+        border-width: 2px;
+    }
+
+    .eniac-liste {
+        padding: 25px;
+        width: 100%;
+        border-width: 2px;
+    }
+}

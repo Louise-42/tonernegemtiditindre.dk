@@ -1,0 +1,97 @@
+/* ==========================================================================
+   1. HEADER CONTAINERS
+   ========================================================================== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    background-color: #030a16;
+    border-bottom: 2px solid rgb(207, 69, 69);
+    box-shadow: 0 4px 20px rgba(207, 69, 69, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hovedmenuens grid-struktur (Opdateret til repeat(12) og max-width: 1450px) */
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* ÆNDRET FRA 11 TIL 12 */
+    gap: 6px;
+    /* Sænket en smule for at give plads i bredden */
+    max-width: 1450px;
+    /* Hævet fra 1200px så alle ikoner og tekst kan være der */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. MENUKNAPPER (LINKS)
+   ========================================================================== */
+.nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 11px;
+    /* Sænket for at sikre plads til de lange ord og emojier */
+    font-weight: bold;
+    white-space: normal;
+    /* Tillader teksten at gå i to linjer på mindre skærme i stedet for at gå i stykker */
+    padding: 12px 6px;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(180deg, #d43c3c, #a61f1f);
+    border: 1px solid #111;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+/* EFFEKTER: Når musen føres over knapperne */
+.nav-links a:hover {
+    background: linear-gradient(180deg, #a61f1f, #d43c3c);
+    box-shadow: 0 0 10px rgba(207, 69, 69, 0.5);
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+}
+
+/* STATUS: Knappen for den side, du står på lige nu */
+.nav-links a.active {
+    color: white;
+}
+
+/* ==========================================================================
+   3. RESPONSIVT DESIGN (Skærmoptimering)
+   ========================================================================== */
+
+/* Tablets / Mellemstore skærme (3 knapper pr. række) */
+@media (max-width: 1100px) {
+
+    /* Hævet for at give bedre responsivitet */
+    .nav-links {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+}
+
+/* Mobiltelefoner (2 knapper pr. række) */
+@media (max-width: 600px) {
+    .nav-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+}

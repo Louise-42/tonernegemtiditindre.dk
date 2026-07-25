@@ -1,0 +1,126 @@
+@import url("om-mig.css");
+@import url("index.css");
+@import url("fotos.css");
+@import url("it-artikel.css");
+@import url("it-kompetencer.css");
+@import url("kontakt.css");
+@import url("musik.css");
+@import url("animations.css");
+@import url("skribent.css");
+@import url("kodens-patina.css");
+@import url("eniac.css");
+@import url("skurets-mystik.css");
+@import url("computerens-historie.css");
+
+/* ==========================================================================
+   RETTET: Gamle trommebilleder og tomme bokse er fjernet helt herfra
+   ========================================================================== */
+
+/* ==========================================================================
+   KOMPLET FIX AF HOVEDMENU (Tvinger alle 12 elementer frem live)
+   ========================================================================== */
+
+header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 25px 20px !important;
+    background-color: #030a16 !important;
+    border-bottom: 2px solid rgb(207, 69, 69) !important;
+    box-shadow: 0 4px 20px rgba(207, 69, 69, 0.3) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Tvinger layoutet op på 12 kolonner og udvider max-bredden, så der er plads */
+.nav-links {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 6px !important;
+    max-width: 1550px !important;
+    /* Hævet en smule ekstra for at give plads til emojier */
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Sørger for, at de 12 links ikke presses ud af skærmen */
+.nav-links a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    white-space: normal !important;
+    /* Tillader teksten at gå i 2 linjer, hvis skærmen snævrer ind */
+    padding: 12px 4px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    background: linear-gradient(180deg, #d43c3c, #a61f1f) !important;
+    border: 1px solid #111 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(180deg, #a61f1f, #d43c3c) !important;
+    box-shadow: 0 0 10px rgba(207, 69, 69, 0.5) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+.nav-links a.active {
+    color: white !important;
+}
+/* ==========================================================================
+   ULTIMATIV KODE-RETTELSE: Tvinger de tomme bokse helt væk fra skærmen
+   ========================================================================== */
+.top-hero-container,
+.title-midte,
+.min-bass-venstre,
+.min-bass-hoejre,
+.top-hero-container img {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE RETTELSER TIL TABLET OG MOBIL
+   ========================================================================== */
+
+/* Tablets / Mellemstore skærme (3 knapper pr. række) */
+@media (max-width: 1200px) {
+    .nav-links {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .nav-links a {
+        font-size: 12px !important;
+        padding: 12px 8px !important;
+    }
+}
+
+/* Mobiltelefoner (2 knapper pr. række) */
+@media (max-width: 600px) {
+    .nav-links {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .nav-links a {
+        font-size: 12px !important;
+        padding: 12px 8px !important;
+    }
+}
