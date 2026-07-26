@@ -1,212 +1,606 @@
 /* ==========================================================================
-   1. FOTO SIDESEKTION & BAGGRUND (Rettet baggrundsstørrelse)
+   FOTOS - TONER FRA HJERTET
+   CYBER NEON DESIGN
    ========================================================================== */
+
+
+/* ==========================================================================
+   1. FOTO SIDESEKTION & BAGGRUND
+   ========================================================================== */
+
 .foto-side-baggrund {
+
     min-height: 100vh;
+
     width: 100%;
+
     background-color: #030a16;
+
     color: #ffffff;
+
     position: relative;
+
     overflow-x: hidden;
 
-    /* BAGGRUNDSEFFEKT: De fine linjer og neonlyset i siderne er nu adskilt korrekt */
     background-image:
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%),
-        radial-gradient(circle at left, rgba(48, 36, 219, 0.18), transparent 40%),
-        radial-gradient(circle at right, rgba(15, 206, 44, 0.15), transparent 40%);
 
-    /* RETTELSE: Linjerne fylder 4px i højden og gentager sig, mens neonlyset fylder hele skærmen */
-    background-size: 100% 4px, 100% 100%, 100% 100%;
+        /* Fine computerskærms-linjer */
+        linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%),
+
+        /* Digitalt farveskær */
+        linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 170, 255, 0.02),
+            rgba(255, 0, 0, 0.06)),
+
+        /* Neon i venstre side */
+        radial-gradient(circle at left,
+            rgba(48, 36, 219, 0.15),
+            transparent 35%),
+
+        /* Neon i højre side */
+        radial-gradient(circle at right,
+            rgba(15, 206, 44, 0.12),
+            transparent 35%);
+
+    background-size:
+        100% 4px,
+        100% 100%,
+        100% 100%,
+        100% 100%;
+
 }
 
-/* De to laser-streger helt ude i siderne af skærmen på PC */
+
+/* ==========================================================================
+   2. LASER-STREGER I SIDEN
+   ========================================================================== */
+
 .foto-side-baggrund::before,
 .foto-side-baggrund::after {
+
     content: '';
+
     position: absolute;
+
     top: 0;
+
     width: 2px;
+
     height: 100%;
+
     opacity: 0.3;
+
     pointer-events: none;
+
 }
+
+
+/* Venstre laser */
 
 .foto-side-baggrund::before {
+
     left: 20px;
-    background: linear-gradient(to bottom, transparent, #00aaff, transparent);
-    box-shadow: 0 0 10px #00aaff;
+
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 10px #00aaff;
+
 }
+
+
+/* Højre laser */
 
 .foto-side-baggrund::after {
+
     right: 20px;
-    background: linear-gradient(to bottom, transparent, #0fce2c, transparent);
-    box-shadow: 0 0 10px #0fce2c;
+
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            #0fce2c,
+            transparent);
+
+    box-shadow:
+        0 0 10px #0fce2c;
+
 }
 
-/* --- Din overskrifts-container --- */
+
+/* ==========================================================================
+   3. OVERSKRIFT
+   ========================================================================== */
+
 .foto-overskrift-container {
+
     text-align: center;
+
     margin-top: 50px;
+
     margin-bottom: 30px;
+
     position: relative;
+
     z-index: 2;
+
 }
+
 
 .foto-h3 {
+
     display: inline-flex;
+
     justify-content: center;
+
     align-items: center;
+
     max-width: 450px;
+
     width: 90%;
+
     margin: 0 auto;
+
     padding: 20px 40px;
-    font-size: 2.0rem;
+
+    font-size: 2rem;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     color: rgb(69, 207, 198);
 
     background:
-        radial-gradient(circle at top, rgba(0, 170, 255, .15), transparent 65%),
-        linear-gradient(145deg, #081d3a, #06142a);
+        radial-gradient(circle at top,
+            rgba(0, 170, 255, 0.15),
+            transparent 65%),
+
+        linear-gradient(145deg,
+            #081d3a,
+            #06142a);
 
     border: 4px solid #00aaff;
+
     outline: 3px solid rgb(48, 36, 219);
+
     outline-offset: 6px;
+
     border-radius: 20px;
+
     border-bottom: 5px solid rgb(69, 207, 198);
 
-    animation: pulsereFotoTitel 3s infinite alternate;
-    transition: all 0.4s ease;
+    animation:
+        pulsereFotoTitel 3s infinite alternate;
+
+    transition:
+        all 0.4s ease;
+
 }
+
 
 .foto-h3:hover {
-    transform: translateY(-3px) scale(1.02);
-    border-color: rgb(69, 207, 198);
+
+    transform:
+        translateY(-3px) scale(1.02);
+
+    border-color:
+        rgb(69, 207, 198);
+
 }
 
+
 /* ==========================================================================
-   2. FOTOS CONTAINER (Tvinger 3 på en række og 3 under)
+   4. FOTO GALLERI
+   4 BILLEDER PÅ EN RÆKKE
    ========================================================================== */
+
 .fotos-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
     margin-top: 60px;
-    min-height: 100vh;
+
     width: 100%;
-    max-width: 960px;
+
+    max-width: 1120px;
+
     margin-left: auto;
+
     margin-right: auto;
-    justify-content: center;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
     position: relative;
+
     z-index: 2;
+
 }
 
+
 /* ==========================================================================
-   3. FOTO ITEM
+   5. FOTO ITEM
    ========================================================================== */
+
 .foto-item {
+
     display: flex;
+
     flex-direction: column;
-    width: 280px;
-    background: linear-gradient(145deg, #06142a, #081d3a);
+
+    width: 100%;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a);
+
     border: 6px solid #00aaff;
+
     border-radius: 20px;
+
     padding: 20px;
+
     box-sizing: border-box;
+
     overflow: hidden;
+
     box-shadow:
+
         0 0 20px rgba(15, 206, 44, 0.7),
+
         0 0 100px rgba(0, 170, 255, 0.4),
+
         inset 0 0 15px rgba(0, 170, 255, 0.15);
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    transition:
+        all 0.3s cubic-bezier(0.165,
+            0.84,
+            0.44,
+            1);
+
 }
+
 
 .foto-item:hover {
-    transform: translateY(-5px);
-    border-color: #0fce2c;
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #0fce2c;
+
     box-shadow:
+
         0 15px 35px rgba(0, 0, 0, 0.5),
+
         0 0 30px #0fce2c,
+
         0 0 50px rgba(0, 170, 255, 0.6);
+
 }
+
+
+/* ==========================================================================
+   6. BILLEDER
+   ========================================================================== */
 
 .foto-item img {
+
     width: 100%;
-    height: 380px;
+
+    height: 300px;
+
     object-fit: cover;
+
     display: block;
+
     border-radius: 12px;
+
 }
 
+
 /* ==========================================================================
-   4. TEKSTBOKS UNDER BILLEDET
+   7. TEKSTBOKS UNDER BILLEDET
    ========================================================================== */
+
 .tekst-boks-barndom {
-    margin: 15px 0 0 0;
-    background: linear-gradient(90deg, #00aaff, #0077cc);
+
+    margin:
+        15px 0 0 0;
+
+    background:
+        linear-gradient(90deg,
+            #00aaff,
+            #0077cc);
+
     color: white;
-    padding: 12px 10px;
+
+    padding:
+        12px 10px;
+
     min-height: 60px;
+
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.3);
+
     font-size: 18px;
+
     font-weight: bold;
+
     text-align: center;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+    box-sizing: border-box;
+
 }
 
+
 /* ==========================================================================
-   5. ANIMATIONER
+   8. TILBAGE / NÆSTE KNAPPER
+   HELT UD TIL HVER SIN SIDE
    ========================================================================== */
+
+.knap-container-layout {
+
+    width: 100vw;
+
+    margin-left:
+        calc(50% - 50vw);
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding:
+        40px 25px 60px;
+
+}
+
+
+/* VENSTRE KNAP */
+
+.knap-container-layout .knap {
+
+    margin: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        12px 24px;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+}
+
+
+/* HØJRE KNAP */
+
+.knap-container-layout .knap2 {
+
+    margin: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        12px 24px;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================================================
+   9. TITEL ANIMATION
+   ========================================================================== */
+
 @keyframes pulsereFotoTitel {
+
     0% {
+
         box-shadow:
-            0 0 20px rgba(0, 170, 255, .3),
-            0 0 40px rgba(48, 36, 219, .3);
-        text-shadow: 0 0 10px #00aaff;
+
+            0 0 20px rgba(0, 170, 255, 0.3),
+
+            0 0 40px rgba(48, 36, 219, 0.3);
+
+        text-shadow:
+            0 0 10px #00aaff;
+
     }
+
 
     100% {
+
         box-shadow:
-            0 0 35px rgba(0, 170, 255, .6),
-            0 0 65px rgba(48, 36, 219, .5);
-        text-shadow: 0 0 20px #00aaff, 0 0 30px rgb(69, 207, 198);
+
+            0 0 35px rgba(0, 170, 255, 0.6),
+
+            0 0 65px rgba(48, 36, 219, 0.5);
+
+        text-shadow:
+
+            0 0 20px #00aaff,
+
+            0 0 30px rgb(69, 207, 198);
+
     }
+
 }
 
+
 /* ==========================================================================
-   6. RESPONSIVT DESIGN (Mobiloptimering)
+   10. TABLET
+   2 + 2 + 2 + 2
    ========================================================================== */
+
+@media (max-width: 1100px) {
+
+    .fotos-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-width: 760px;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   11. MOBIL
+   ========================================================================== */
+
 @media (max-width: 900px) {
+
+
+    /* Fjern laserstreger */
 
     .foto-side-baggrund::before,
     .foto-side-baggrund::after {
+
         display: none;
+
     }
+
+
+    /* Overskrift */
 
     .foto-h3 {
+
         font-size: 1.4rem;
-        padding: 15px 25px;
+
+        padding:
+            15px 25px;
+
         outline-offset: 4px;
+
     }
+
+
+    /* Galleri */
 
     .fotos-container {
-        gap: 25px;
-        padding: 0 15px;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+
+        padding:
+            0 15px;
+
     }
+
+
+    /* Kort */
 
     .foto-item {
+
         width: 100%;
-        max-width: 340px;
+
         padding: 15px;
+
     }
 
+
+    /* Billeder */
+
     .foto-item img {
+
         height: 300px;
+
     }
+
+
+}
+
+
+/* ==========================================================================
+   12. LILLE MOBIL
+   1 BILLEDE PR. RÆKKE
+   ========================================================================== */
+
+@media (max-width: 600px) {
+
+    .fotos-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .foto-item img {
+
+        height: 300px;
+
+    }
+
+
+    .knap-container-layout {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+        padding-top: 30px;
+
+        padding-bottom: 50px;
+
+    }
+
+
+    .knap-container-layout .knap,
+    .knap-container-layout .knap2 {
+
+        padding:
+            10px 16px;
+
+        font-size:
+            0.95rem;
+
+    }
+
 }

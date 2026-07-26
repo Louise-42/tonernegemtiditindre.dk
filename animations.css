@@ -76,6 +76,7 @@
         margin: 15px;
     }
 }
+
 /* Målretter selve blockquote-elementet på forsiden */
 blockquote.forside-citat {
     margin: 40px auto;
@@ -102,5 +103,5 @@ blockquote.forside-citat strong {
         0 0 40px #007bff;
 
     /* Aktiverer din blinkende animation */
-    animation: neonBlink 7s infinite alternate ease-in-out;
+    animation: neonBlink 6s infinite alternate ease-in-out;
 }

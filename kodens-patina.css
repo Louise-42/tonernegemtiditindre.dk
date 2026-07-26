@@ -1,222 +1,703 @@
 /* ==========================================================================
+   KODENS REJSE - TONER FRA HJERTET
+   SAMLET CYBERPUNK / NEON CSS
+   ========================================================================== */
+
+
+/* ==========================================================================
    1. HELE KODENS SIDE & ARTIKELBOKS
    ========================================================================== */
+
 .kodens-side {
+
     max-width: 1100px;
+
     width: 90%;
+
     margin: 40px auto;
+
     padding: 10px;
+
     border: 3px solid #00aaff;
+
     box-sizing: border-box;
 }
 
+
 main.kodens-side {
+
     display: block !important;
+
     height: auto !important;
+
     overflow: visible !important;
 }
+
 
 .kodens-artikel {
-    background: rgba(6, 20, 42, 0.95);
-    /* Forbedret til din dybe signatur-blå */
+
+    background:
+        linear-gradient(145deg,
+            rgba(6, 20, 42, 0.97),
+            rgba(2, 6, 15, 0.98));
+
     padding: 40px;
+
     border-radius: 20px;
+
     border: 3px solid #00aaff;
-    box-shadow: 0 0 15px #00aaff, 0 0 30px rgba(0, 170, 255, 0.4);
-    color: white;
+
+    box-shadow:
+        0 0 15px #00aaff,
+        0 0 30px rgba(0, 170, 255, 0.4);
+
+    color: #0fce2c;
+
     line-height: 1.8;
-    transition: transform 0.4s ease;
+
+    transition:
+        transform 0.4s ease;
+
     height: auto !important;
+
     overflow: visible !important;
 }
 
+
 .kodens-artikel:hover {
+
     transform: translateY(-5px);
+
 }
 
+
 /* ==========================================================================
-   2. OVERSKRIFTER & TITLER (Opgraderet til stilren, gennemsigtig neonglød)
-   ========================================================================= */
-/* ==========================================================================
-   2. OVERSKRIFTER & TITLER (Pansret mod VS Code advarsler)
-   ========================================================================= */
+   2. OVERSKRIFTER & TITLER
+   ========================================================================== */
+
 .tid,
 .kodens-artikel h1,
 .kodens-artikel h2 {
+
     position: relative;
+
     background: transparent;
 
-    /* Gør selve teksten to-farvet */
-    background: linear-gradient(90deg, #0fce2c, #00aaff);
+    background: linear-gradient(90deg,
+            #0fce2c,
+            #00aaff);
 
-    /* Standard-egenskaberne (Fjerner den gule advarsel i nyere VS Code) */
     background-clip: text;
 
-    /* Safari og ældre Chrome-understøttelse (Beholdes for sikkerhed) */
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
 
     text-align: center;
+
     font-size: 2.2rem;
+
     font-weight: bold;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
+
     max-width: 650px;
+
     width: 95%;
+
     margin: 45px auto 25px auto;
+
     padding-bottom: 12px;
 
-    /* Intens bagvedliggende glød */
-    filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.6));
+    filter:
+        drop-shadow(0 0 8px rgba(0, 170, 255, 0.6));
 }
 
-/* Den avancerede laser-bundlinje under titlerne */
+
+/* ==========================================================================
+   NEON-LINJE UNDER OVERSKRIFTER
+   ========================================================================== */
+
 .tid::after,
 .kodens-artikel h1::after,
 .kodens-artikel h2::after {
+
     content: '';
+
     position: absolute;
+
     bottom: 0;
+
     left: 20%;
+
     width: 60%;
+
     height: 3px;
-    background: linear-gradient(90deg, transparent, #0fce2c, #00aaff, transparent);
-    box-shadow: 0 0 10px #00aaff;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #0fce2c,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 10px #00aaff;
+
     border-radius: 10px;
 }
 
-/* Underoverskrifter (H3) */
+
+/* ==========================================================================
+   UNDEROVERSKRIFTER H3
+   ========================================================================== */
+
 .kodens-artikel h3 {
+
     color: #0fce2c;
+
     text-align: center;
+
     font-size: 1.6rem;
+
     font-weight: bold;
+
     letter-spacing: 1px;
+
     max-width: 500px;
+
     width: 90%;
+
     margin: 40px auto 20px auto;
-    text-shadow: 0 0 10px rgba(15, 206, 44, 0.5);
+
+    text-shadow:
+        0 0 10px rgba(15, 206, 44, 0.5);
+
     text-transform: uppercase;
 }
 
-/* ==========================================================================
-   3. BRØDTEKST (P)
-   ========================================================================== */
-.kodens-artikel p {
-    font-size: 19px;
-    /* Forbedret til 19px for øget læsbarhed */
-    text-align: center;
-    margin: 25px 0;
-    color: #e2f9ff;
-}
 
 /* ==========================================================================
-   4. BETALINGSLISTE (Rettet layout og tvungen centrering)
+   3. BRØDTEKST
    ========================================================================== */
+
+.kodens-artikel p {
+
+    margin: 25px 0;
+
+    color: #0aed06fd;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 0 5px rgba(15, 206, 44, .5);
+}
+
+
+/* ==========================================================================
+   4. BETALINGSLISTE
+   ========================================================================== */
+
 .betaling {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     width: 100%;
 }
 
+
 .betaling ul {
+
     display: block;
+
     max-width: 380px;
+
     width: 90%;
+
     margin: 25px auto;
-    background: linear-gradient(145deg, #06142a, #081d3a);
-    /* Skiftet til ren cyber-boks i stedet for skarp grøn gradient */
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a);
+
     border: 2px solid #00aaff;
+
     color: white;
+
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
-    padding: 25px 25px 25px 55px;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, 0.3);
+
+    padding:
+        25px 25px 25px 55px;
+
     box-sizing: border-box;
 }
 
+
 .betaling li {
+
     font-size: 18px;
+
     margin: 12px 0;
+
     font-weight: bold;
+
     color: white;
-    text-shadow: 0 0 10px #00aaff;
+
+    text-shadow:
+        0 0 10px #00aaff;
+
     list-style-type: disc;
+
     list-style-position: outside;
+
     text-align: left;
 }
 
+
 /* ==========================================================================
-   5. HTML, CSS, JAVASCRIPT BOKSE & ELEMENTER
+   5. HTML / CSS / JAVASCRIPT BOKSE & ELEMENTER
    ========================================================================== */
+
 .webdesign-koder h3 {
+
     background: transparent;
-    /* Nulstillet til det nye fede transparente look */
-    border-bottom: 2px solid #0fce2c;
+
+    border-bottom:
+        2px solid #0fce2c;
+
     border-radius: 0;
+
     box-shadow: none;
+
     padding: 10px 0;
 }
 
+
 .webdesign-koder strong {
+
     color: #0fce2c;
-    text-shadow: 0 0 8px rgba(15, 206, 44, 0.5);
+
+    text-shadow:
+        0 0 8px rgba(15, 206, 44, 0.5);
 }
 
+
 /* ==========================================================================
-   6. AFSLUTNINGSBOKS (Smukt integreret)
+   6. AFSLUTNINGSBOKS
    ========================================================================== */
+
 .afslutning-kode {
+
     margin-top: 60px;
+
     padding: 35px;
+
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(0, 170, 255, 0.1), rgba(15, 206, 44, 0.1));
-    border: 2px solid #0fce2c;
-    box-shadow: inset 0 0 20px rgba(15, 206, 44, 0.1);
+
+    background:
+        linear-gradient(135deg,
+            rgba(0, 170, 255, 0.1),
+            rgba(15, 206, 44, 0.1));
+
+    border:
+        2px solid #0fce2c;
+
+    box-shadow:
+        inset 0 0 20px rgba(15, 206, 44, 0.1);
 }
 
+
 /* ==========================================================================
-   7. RESPONSIVT LAYOUT (MEDIERESOLUTIONER)
+   7. HELE SIDENS BAGGRUND
    ========================================================================== */
+
+html,
+body {
+
+    min-height: 100%;
+
+    margin: 0;
+
+    background:
+
+        radial-gradient(circle at 50% 0%,
+            rgba(0, 170, 255, .30),
+            transparent 40%),
+
+        radial-gradient(circle at 10% 70%,
+            rgba(48, 36, 219, .20),
+            transparent 35%),
+
+        linear-gradient(145deg,
+            #01040a,
+            #020814,
+            #06142a,
+            #02060f);
+
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+/* ==========================================================================
+   8. TILBAGE / NÆSTE KNAPPER
+   CYBERPUNK NEON LOOK
+   ========================================================================== */
+
+.knap-container-layout {
+
+    width: 95%;
+
+    max-width: 900px;
+
+    margin:
+        50px auto 20px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   FÆLLES KNAPDESIGN
+   ========================================================================== */
+
+.knap-container-layout .knap,
+.knap-container-layout .knap2 {
+
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 150px;
+
+    padding:
+        13px 24px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(6, 20, 42, 0.98),
+            rgba(2, 6, 15, 0.98));
+
+    border:
+        2px solid #00aaff;
+
+    border-radius: 12px;
+
+    text-shadow:
+        0 0 5px #00aaff;
+
+    box-shadow:
+
+        0 0 8px rgba(0, 170, 255, 0.65),
+
+        0 0 20px rgba(15, 206, 44, 0.25),
+
+        inset 0 0 10px rgba(0, 170, 255, 0.08);
+
+    transition:
+
+        transform 0.3s ease,
+
+        border-color 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        background 0.3s ease;
+}
+
+
+/* ==========================================================================
+   KNAP HOVER
+   ========================================================================== */
+
+.knap-container-layout .knap:hover,
+.knap-container-layout .knap2:hover {
+
+    transform:
+        translateY(-3px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color:
+        #0fce2c;
+
+    background:
+        linear-gradient(145deg,
+            rgba(6, 35, 55, 0.98),
+            rgba(5, 30, 35, 0.98));
+
+    text-shadow:
+
+        0 0 5px #ffffff,
+
+        0 0 12px #0fce2c;
+
+    box-shadow:
+
+        0 0 10px #00aaff,
+
+        0 0 25px #00aaff,
+
+        0 0 40px rgba(15, 206, 44, 0.45),
+
+        inset 0 0 15px rgba(15, 206, 44, 0.15);
+}
+
+
+/* ==========================================================================
+   KNAP KLIK
+   ========================================================================== */
+
+.knap-container-layout .knap:active,
+.knap-container-layout .knap2:active {
+
+    transform:
+        scale(0.97);
+
+    box-shadow:
+
+        0 0 8px #00aaff,
+
+        inset 0 0 15px rgba(15, 206, 44, 0.25);
+}
+
+
+/* ==========================================================================
+   NEON-LINJE UNDER KNAPPEN
+   ========================================================================== */
+
+.knap-container-layout .knap::after,
+.knap-container-layout .knap2::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 20%;
+
+    bottom: -5px;
+
+    width: 60%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #0fce2c,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00aaff;
+
+    opacity: 0.7;
+
+    transition:
+
+        width 0.3s ease,
+
+        opacity 0.3s ease;
+}
+
+
+.knap-container-layout .knap:hover::after,
+.knap-container-layout .knap2:hover::after {
+
+    width: 80%;
+
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   9. RESPONSIVT LAYOUT
+   ========================================================================== */
+
 @media (max-width: 1024px) {
+
     .kodens-artikel {
+
         padding: 30px;
     }
 
+
     .kodens-artikel p {
+
         font-size: 17px;
     }
 }
 
+
+/* ==========================================================================
+   10. TABLET / MOBIL
+   ========================================================================== */
+
 @media (max-width: 768px) {
+
     .kodens-side {
+
         width: 95%;
     }
 
+
     .kodens-artikel {
+
         padding: 20px;
     }
+
 
     .tid,
     .kodens-artikel h1,
     .kodens-artikel h2 {
+
         font-size: 1.6rem;
     }
+
 
     .tid::after,
     .kodens-artikel h1::after,
     .kodens-artikel h2::after {
+
         width: 80%;
+
         left: 10%;
     }
 
+
     .kodens-artikel h3 {
+
         font-size: 1.3rem;
     }
 
+
     .kodens-artikel p {
+
         font-size: 16px;
+
         text-align: left;
-        /* Beholder venstrestilling på mobil for læsbarhed */
+    }
+
+
+    /* ----------------------------------------------------------
+       KNAPPER PÅ MOBIL
+       ---------------------------------------------------------- */
+
+    .knap-container-layout {
+
+        width: 95%;
+
+        margin-top: 35px;
+
+        margin-bottom: 30px;
+
+        gap: 15px;
+    }
+
+
+    .knap-container-layout .knap,
+    .knap-container-layout .knap2 {
+
+        min-width: 0;
+
+        width: 48%;
+
+        padding:
+            11px 10px;
+
+        font-size: 0.92rem;
+
+        letter-spacing: 0.5px;
+    }
+}
+
+
+/* ==========================================================================
+   11. MEGET SMÅ MOBILSKÆRME
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .kodens-side {
+
+        width: 96%;
+
+        margin-top: 25px;
+    }
+
+
+    .kodens-artikel {
+
+        padding: 15px;
+    }
+
+
+    .knap-container-layout {
+
+        width: 96%;
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+
+    .knap-container-layout .knap,
+    .knap-container-layout .knap2 {
+
+        width: 50%;
+
+        padding:
+            10px 6px;
+
+        font-size: 0.82rem;
+
+        border-radius: 10px;
     }
 }

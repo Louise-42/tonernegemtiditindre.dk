@@ -1,0 +1,990 @@
+/* ==========================================================================
+   SKRIBENT SIDE - TONER FRA HJERTET
+   CYBER NEON / DIGITAL WRITER STYLE
+   PC - TABLET - MOBIL
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. HOVEDOMRÅDE
+   ========================================================================== */
+
+.skribent-side {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 40px 20px 70px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================================================
+   2. SKRIBENT-SIDENS BAGGRUND
+   ========================================================================== */
+
+body.skribent-body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+    background:
+
+        radial-gradient(circle at 10% 10%,
+            rgba(0, 170, 255, .30),
+            transparent 30%),
+
+        radial-gradient(circle at 90% 15%,
+            rgba(69, 207, 198, .22),
+            transparent 32%),
+
+        radial-gradient(circle at 50% 45%,
+            rgba(48, 36, 219, .20),
+            transparent 38%),
+
+        radial-gradient(circle at 20% 90%,
+            rgba(15, 206, 44, .12),
+            transparent 32%),
+
+        radial-gradient(circle at 90% 85%,
+            rgba(216, 16, 173, .12),
+            transparent 30%),
+
+        linear-gradient(135deg,
+            rgba(0, 170, 255, .05) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(48, 36, 219, .05) 50%,
+            rgba(48, 36, 219, .05) 75%,
+            transparent 75%),
+
+        linear-gradient(145deg,
+            #01040a,
+            #020814,
+            #061226,
+            #030711,
+            #010309);
+
+    background-size:
+        auto,
+        auto,
+        auto,
+        auto,
+        auto,
+        120px 120px,
+        auto;
+
+    background-attachment: fixed;
+
+}
+
+
+/* ==========================================================================
+   3. DIGITALT GRID OVER BAGGRUNDEN
+   ========================================================================== */
+
+body.skribent-body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background:
+
+        linear-gradient(rgba(0, 170, 255, .035) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(0, 170, 255, .035) 1px,
+            transparent 1px);
+
+    background-size: 45px 45px;
+
+}
+
+
+/* ==========================================================================
+   4. CYBER LYS I BAGGRUNDEN
+   ========================================================================== */
+
+body.skribent-body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background:
+
+        radial-gradient(ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, .45) 100%);
+
+}
+
+
+/* ==========================================================================
+   5. INDHOLD SKAL LIGGE OVENPÅ BAGGRUNDEN
+   ========================================================================== */
+
+.skribent-side {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* ==========================================================================
+   6. OVERSKRIFT
+   ========================================================================== */
+
+.skribent-overskrift {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 90%;
+
+    max-width: 700px;
+
+    min-height: 70px;
+
+    margin: 50px auto;
+
+    padding: 25px 40px;
+
+    box-sizing: border-box;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    line-height: 1.3;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    color: #45cfc6;
+
+    background:
+
+        radial-gradient(circle at top,
+            rgba(0, 240, 255, .15),
+            transparent 60%),
+
+        linear-gradient(145deg,
+            rgba(8, 29, 58, .97),
+            rgba(3, 10, 25, .98));
+
+    border: 4px solid #00aaff;
+
+    outline: 3px solid #3024db;
+
+    outline-offset: 6px;
+
+    border-radius: 20px;
+
+    border-bottom: 5px solid #45cfc6;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px rgba(0, 170, 255, .6),
+
+        0 0 30px rgba(69, 207, 198, .35);
+
+    box-shadow:
+
+        0 0 20px rgba(0, 170, 255, .3),
+
+        0 0 40px rgba(48, 36, 219, .3),
+
+        inset 0 0 20px rgba(0, 170, 255, .08);
+
+    animation:
+        pulsereSkribentTitel 3s infinite alternate;
+
+}
+
+
+/* ==========================================================================
+   7. LILLE NEON-LINJE UNDER OVERSKRIFT
+   ========================================================================== */
+
+.skribent-overskrift::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            #3024db,
+            transparent);
+
+    box-shadow:
+
+        0 0 10px #00aaff,
+
+        0 0 20px #45cfc6;
+
+}
+
+
+/* ==========================================================================
+   8. HOVER PÅ OVERSKRIFT
+   ========================================================================== */
+
+.skribent-overskrift:hover {
+
+    transform:
+        translateY(-5px) scale(1.02);
+
+    border-color: #45cfc6;
+
+    color: #ffffff;
+
+    box-shadow:
+
+        0 0 30px rgba(0, 170, 255, .6),
+
+        0 0 60px rgba(48, 36, 219, .5),
+
+        inset 0 0 25px rgba(69, 207, 198, .15);
+
+}
+
+
+/* ==========================================================================
+   9. DEN STORE TEKSTBOKS
+   ========================================================================== */
+
+.skribent-boks {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 40px auto 50px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    background:
+
+        radial-gradient(circle at top left,
+            rgba(0, 170, 255, .10),
+            transparent 35%),
+
+        radial-gradient(circle at bottom right,
+            rgba(48, 36, 219, .12),
+            transparent 40%),
+
+        linear-gradient(145deg,
+            rgba(6, 20, 42, .97),
+            rgba(8, 29, 58, .97));
+
+    border: 4px solid #00aaff;
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 10px 30px rgba(0, 0, 0, .65),
+
+        0 0 25px rgba(0, 170, 255, .25),
+
+        0 0 60px rgba(48, 36, 219, .12),
+
+        inset 0 0 25px rgba(0, 170, 255, .08);
+
+    transition:
+
+        transform .4s ease,
+
+        border-color .4s ease,
+
+        box-shadow .4s ease;
+
+}
+
+
+/* ==========================================================================
+   10. LILLE CYBER-LYS I TEKSTBOKSEN
+   ========================================================================== */
+
+.skribent-boks::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 8%;
+
+    width: 84%;
+
+    height: 2px;
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            #3024db,
+            transparent);
+
+    box-shadow:
+
+        0 0 10px #00aaff;
+
+    opacity: .8;
+
+}
+
+
+/* ==========================================================================
+   11. HOVER PÅ DEN STORE BOKS
+   ========================================================================== */
+
+.skribent-boks:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #45cfc6;
+
+    box-shadow:
+
+        0 15px 45px rgba(0, 0, 0, .7),
+
+        0 0 35px rgba(0, 170, 255, .5),
+
+        0 0 70px rgba(48, 36, 219, .25),
+
+        inset 0 0 30px rgba(0, 170, 255, .12);
+
+}
+
+
+/* ==========================================================================
+   12. SKRIBENTTEKST
+   ========================================================================== */
+
+.skribent {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto 25px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    color: #d7f7ff;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.9;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    text-shadow:
+
+        0 0 4px rgba(0, 170, 255, .5),
+
+        0 0 10px rgba(0, 170, 255, .2);
+
+    transition:
+
+        color .3s ease,
+
+        text-shadow .3s ease;
+
+}
+
+
+/* ==========================================================================
+   13. TEKSTEN LYSER VED HOVER
+   ========================================================================== */
+
+.skribent-boks:hover .skribent {
+
+    color: #ffffff;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 20px rgba(69, 207, 198, .6),
+
+        0 0 35px rgba(0, 170, 255, .25);
+
+}
+
+
+/* ==========================================================================
+   14. SIDSTE AFSNIT
+   ========================================================================== */
+
+.skribent-boks .skribent:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================================================
+   15. ANIMATION TIL OVERSKRIFT
+   ========================================================================== */
+
+@keyframes pulsereSkribentTitel {
+
+    0% {
+
+        box-shadow:
+
+            0 0 20px rgba(0, 170, 255, .25),
+
+            0 0 40px rgba(48, 36, 219, .25),
+
+            inset 0 0 15px rgba(0, 170, 255, .05);
+
+    }
+
+    50% {
+
+        box-shadow:
+
+            0 0 30px rgba(0, 170, 255, .45),
+
+            0 0 55px rgba(48, 36, 219, .35),
+
+            inset 0 0 20px rgba(0, 170, 255, .08);
+
+    }
+
+    100% {
+
+        box-shadow:
+
+            0 0 40px rgba(0, 170, 255, .65),
+
+            0 0 75px rgba(48, 36, 219, .5),
+
+            inset 0 0 25px rgba(0, 170, 255, .12);
+
+    }
+
+}
+
+
+/* ==========================================================================
+   16. NAVIGATION - TILBAGE / NÆSTE
+   ========================================================================== */
+
+.it-navigation-knapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 60px auto 20px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================================================
+   17. FÆLLES KNAP-STYLING
+   ========================================================================== */
+
+.it-navigation-knapper .knap,
+.it-navigation-knapper .knap2 {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 170px;
+
+    padding: 14px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    border: 3px solid #00aaff;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    text-shadow:
+
+        0 0 6px #00aaff,
+
+        0 0 12px rgba(0, 170, 255, .5);
+
+    box-shadow:
+
+        0 0 12px rgba(0, 170, 255, .45),
+
+        0 0 25px rgba(48, 36, 219, .25),
+
+        inset 0 0 12px rgba(0, 170, 255, .08);
+
+    transition:
+
+        transform .3s ease,
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        box-shadow .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================================
+   18. TILBAGE-KNAP
+   ========================================================================== */
+
+.it-navigation-knapper .knap {
+
+    border-color: #00aaff;
+
+}
+
+
+/* ==========================================================================
+   19. NÆSTE-KNAP
+   ========================================================================== */
+
+.it-navigation-knapper .knap2 {
+
+    border-color: #0fce2c;
+
+    text-shadow:
+
+        0 0 6px #0fce2c,
+
+        0 0 12px rgba(15, 206, 44, .5);
+
+    box-shadow:
+
+        0 0 12px rgba(15, 206, 44, .45),
+
+        0 0 25px rgba(48, 36, 219, .25),
+
+        inset 0 0 12px rgba(15, 206, 44, .08);
+
+}
+
+
+/* ==========================================================================
+   20. HOVER PÅ TILBAGE
+   ========================================================================== */
+
+.it-navigation-knapper .knap:hover {
+
+    transform: translateY(-4px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color: #45cfc6;
+
+    background:
+        linear-gradient(145deg,
+            #081d3a,
+            #0b294d);
+
+    box-shadow:
+
+        0 0 20px #00aaff,
+
+        0 0 40px rgba(0, 170, 255, .5),
+
+        inset 0 0 18px rgba(0, 170, 255, .15);
+
+}
+
+
+/* ==========================================================================
+   21. HOVER PÅ NÆSTE
+   ========================================================================== */
+
+.it-navigation-knapper .knap2:hover {
+
+    transform: translateY(-4px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color: #45cfc6;
+
+    background:
+        linear-gradient(145deg,
+            #082a20,
+            #0a3a2a);
+
+    box-shadow:
+
+        0 0 20px #0fce2c,
+
+        0 0 40px rgba(15, 206, 44, .5),
+
+        inset 0 0 18px rgba(15, 206, 44, .15);
+
+}
+
+
+/* ==========================================================================
+   22. TABLET
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .skribent-side {
+
+        padding: 35px 18px 60px;
+
+    }
+
+
+    .skribent-overskrift {
+
+        width: 90%;
+
+        font-size: 1.8rem;
+
+        padding: 25px 30px;
+
+    }
+
+
+    .skribent-boks {
+
+        width: 92%;
+
+        padding: 40px;
+
+    }
+
+
+    .skribent {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .it-navigation-knapper {
+
+        width: 92%;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   23. MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    body.skribent-body {
+
+        background-attachment: scroll;
+
+    }
+
+
+    .skribent-side {
+
+        width: 100%;
+
+        padding: 30px 12px 50px;
+
+    }
+
+
+    .skribent-overskrift {
+
+        width: 94%;
+
+        max-width: 600px;
+
+        margin: 35px auto;
+
+        padding: 22px 18px 32px;
+
+        font-size: 1.4rem;
+
+        line-height: 1.4;
+
+        letter-spacing: 1.5px;
+
+        outline-offset: 4px;
+
+    }
+
+
+    .skribent-overskrift::after {
+
+        bottom: 8px;
+
+        left: 12%;
+
+        width: 76%;
+
+    }
+
+
+    .skribent-boks {
+
+        width: 96%;
+
+        margin: 25px auto;
+
+        padding: 25px 18px;
+
+        border-width: 3px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .skribent {
+
+        width: 100%;
+
+        padding: 5px;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        line-height: 1.75;
+
+        letter-spacing: .8px;
+
+        text-align: center;
+
+    }
+
+
+    /* Knapper oven på hinanden på mobil */
+
+    .it-navigation-knapper {
+
+        width: 96%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin: 40px auto;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        min-width: 0;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   24. MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .skribent-side {
+
+        padding: 25px 8px 45px;
+
+    }
+
+
+    .skribent-overskrift {
+
+        width: 96%;
+
+        margin: 30px auto;
+
+        padding: 20px 12px 30px;
+
+        font-size: 1.2rem;
+
+        letter-spacing: 1px;
+
+        border-width: 3px;
+
+    }
+
+
+    .skribent-boks {
+
+        width: 97%;
+
+        padding: 22px 14px;
+
+        border-width: 3px;
+
+    }
+
+
+    .skribent {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        letter-spacing: .5px;
+
+        padding: 3px;
+
+    }
+
+
+    .it-navigation-knapper {
+
+        margin: 35px auto;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 100%;
+
+        max-width: 290px;
+
+        padding: 13px 18px;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   SLUT
+   ========================================================================== */

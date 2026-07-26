@@ -1,188 +1,551 @@
 /* ==========================================================================
-   1. SIDESEKTION & BAGGRUND (Matcher class="mig" i din HTML)
+   MUSIK SIDE - TONER FRA HJERTET
+   CYBER NEON / DIGITAL STYLE
+   PC - TABLET - MOBIL
    ========================================================================== */
-.mig {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    font-size: 1.2rem;
-    padding: 3rem 1.5rem;
-    color: #ffffff;
-    min-height: 100vh;
-    background-color: #030a16;
-    /* Mørk midnatsblå baggrund får neonlyset til at eksplodere */
-    line-height: 1.6;
-}
+
 
 /* ==========================================================================
-   2. OVERSKRIFT MED GLØDENDE GRØN CYBER-STREG (RETTET: Bindestreger fjernet)
+   1. HOVEDBACKGROUND & LAYOUT
    ========================================================================== */
-.mig h1:not(.title),
-.mig h2:not(.title) {
-    position: relative;
-    font-family: "Segoe UI", sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(21, 206, 44, 0.6);
+
+.musik-side-baggrund {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    gap: 35px !important;
+
+    padding: 3rem 1.5rem !important;
+
+    min-height: 100vh !important;
+
+    background-color: #030a16 !important;
+
+    color: #ffffff !important;
+
 }
 
-/* Den seje, grønne neon-bundlinje (RETTET: Ingen bokse på din neontitel) */
-.mig h1:not(.title)::after,
-.mig h2:not(.title)::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-    width: 70%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #15ce2c, #45cfc6, transparent);
-    box-shadow:
-        0 0 10px #15ce2c,
-        0 0 20px rgba(21, 206, 44, 0.8);
-}
 
 /* ==========================================================================
-   3. NEONTITEL & STUDIEBILLEDE (Centreret layout)
+   2. HERO TOP-LAYOUT
+   Trommer på hver side af overskriften
    ========================================================================== */
-.title {
-    margin: 20px auto 10px auto;
-    max-width: 600px;
-    width: 95%;
-    font-size: 50px;
-    font-weight: bold;
-    color: rgb(69, 207, 198);
-    /* Flot turkis farve */
-    background: linear-gradient(145deg, #06142a, #081d3a);
-    border: 5px solid rgb(48, 36, 219);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    text-shadow:
-        0 0 5px #00aaff,
-        0 0 10px #00aaff,
-        0 0 20px rgb(48, 36, 219);
-    box-shadow: 0 0 25px rgba(48, 36, 219, 0.5);
-    transition: transform 0.3s ease;
+
+.top-hero-container {
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 40px !important;
+
+    max-width: 1100px !important;
+
+    width: 95% !important;
+
+    margin: 20px auto 10px auto !important;
+
+    box-sizing: border-box !important;
+
 }
 
-.title:hover {
-    transform: scale(1.02);
-}
 
-/* Det nye studiebillede med matchende neon-ramme og glød */
-.studie-billede {
-    max-width: 600px;
-    width: 90%;
-    height: auto;
-    border: 4px solid rgb(48, 36, 219);
-    border-radius: 15px;
+/* BILLEDER / BAS */
+
+.min-bass-venstre,
+.min-bass-hoejre,
+.top-hero-container img {
+
+    flex-shrink: 0 !important;
+
+    width: 140px !important;
+
+    max-width: 140px !important;
+
+    height: 140px !important;
+
+    object-fit: cover !important;
+
+    border: 4px solid rgb(48, 36, 219) !important;
+
+    border-radius: 50% !important;
+
     box-shadow:
         0 0 15px rgb(48, 36, 219),
-        0 0 30px rgba(48, 36, 219, 0.4);
-    margin: 15px auto;
-    transition: transform 0.3s ease;
+        0 0 30px rgba(48, 36, 219, 0.4) !important;
+
+    transition: transform 0.3s ease !important;
+
+    display: block !important;
+
 }
 
-.studie-billede:hover {
-    transform: scale(1.02);
+
+.min-bass-venstre:hover,
+.min-bass-hoejre:hover {
+
+    transform: scale(1.08) !important;
+
 }
 
-/* ==========================================================================
-   4. INFOBOKSE (Brødtekst/Afsnit)
-   ========================================================================== */
-.info-p {
-    max-width: 850px;
-    width: 90%;
-    margin: 10px auto;
-    text-align: center;
-    color: #d7f7ff;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.8;
-    background: linear-gradient(145deg, #06142ac5, #081d3a);
-    border: 4px solid rgb(48, 36, 219);
-    border-radius: 15px;
-    box-shadow:
-        0 0 10px rgb(48, 36, 219),
-        0 0 25px rgb(48, 36, 219),
-        0 0 50px rgba(48, 36, 219, 0.4);
-    transition: 0.3s ease;
+
+/* MIDTERSTE TITEL */
+
+.title-midte {
+
+    text-align: center !important;
+
+    display: inline-block !important;
+
+    max-width: 500px !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
 }
 
-.info-p:hover {
-    box-shadow: 0 0 35px rgb(48, 36, 219);
-}
 
 /* ==========================================================================
-   ULTIMATIV BOX-KILLER (Tvinger alle skjulte pseudo-bokse væk fra titlen)
+   3. MUSIK OVERSKRIFTER
    ========================================================================== */
-.title::after,
-.title::before,
-.neon-hovedtitel::after,
-.neon-hovedtitel::before {
-    display: none !important;
-    content: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
 
-/* ==========================================================================
-   5. CITATBOKS (Neon-quote)
-   ========================================================================== */
-.neon-quote {
-    max-width: 400px;
-    width: 90%;
-    height: auto;
-    padding: 40px;
-    margin: 20px auto;
-    text-align: center;
-    background: linear-gradient(145deg, #051937, #001026);
-    border: 4px solid #00aaff;
-    border-radius: 18px;
-    box-shadow:
-        0 0 15px #00aaff,
-        0 0 30px rgba(0, 170, 255, 0.3);
-}
+.musik-side-1,
+.musik-side-2 {
 
-.neon-quote blockquote {
-    margin: 0;
-    color: #7fdfff;
-    font-size: 2.5rem;
-    font-family: "Brush Script MT", cursive;
-    line-height: 1.8;
+    position: relative !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    max-width: 700px !important;
+
+    width: 100% !important;
+
+    margin: 0 auto 20px auto !important;
+
+    font-size: 2.2rem !important;
+
+    font-weight: bold !important;
+
+    color: rgb(69, 207, 198) !important;
+
+    padding: 10px 10px 20px 10px !important;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a) !important;
+
+    border: 5px solid rgb(48, 36, 219) !important;
+
+    border-radius: 15px !important;
+
+    text-decoration: none !important;
+
     text-shadow:
         0 0 5px #00aaff,
         0 0 10px #00aaff,
-        0 0 20px #00aaff;
+        0 0 20px rgb(48, 36, 219) !important;
+
+    box-shadow:
+        0 0 25px rgba(48, 36, 219, 0.5) !important;
+
+    transition: 0.3s ease !important;
+
 }
 
+
+.musik-side-1::after,
+.musik-side-2::after {
+
+    content: '' !important;
+
+    position: absolute !important;
+
+    bottom: 5px !important;
+
+    left: 15% !important;
+
+    width: 70% !important;
+
+    height: 4px !important;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            transparent) !important;
+
+    box-shadow:
+        0 0 10px #00aaff,
+        0 0 20px rgba(0, 170, 255, 0.8) !important;
+
+}
+
+
+.musik-side-1:hover,
+.musik-side-2:hover {
+
+    transform: translateY(-5px) scale(1.02) !important;
+
+    box-shadow:
+        0 0 30px #00aaff,
+        0 0 50px rgba(0, 170, 255, 0.6) !important;
+
+}
+
+
 /* ==========================================================================
-   6. MOBILOPTIMERING
+   4. MUSIK TEKSTBOKSE
    ========================================================================== */
+
+.musik-p {
+
+    max-width: 850px !important;
+
+    width: 90% !important;
+
+    margin: 30px auto !important;
+
+    padding: 35px !important;
+
+    font-size: 20px !important;
+
+    line-height: 1.8 !important;
+
+    text-align: center !important;
+
+    color: #d7f7ff !important;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a) !important;
+
+    border: 5px solid rgb(48, 36, 219) !important;
+
+    border-radius: 23px !important;
+
+    box-shadow:
+        0 0 15px rgba(48, 36, 219, 0.4) !important;
+
+    transition: 0.3s ease !important;
+
+}
+
+
+.musik-p:hover {
+
+    transform: translateY(-5px) !important;
+
+    border: 5px solid #00aaff !important;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, .6),
+        0 0 45px rgba(0, 170, 255, .35) !important;
+
+}
+
+
+/* ==========================================================================
+   5. CITAT BOKS & TEKST
+   ========================================================================== */
+
+.hjerte-citat {
+
+    max-width: 750px !important;
+
+    width: 90% !important;
+
+    margin: 40px auto !important;
+
+    padding: 35px !important;
+
+    text-align: center !important;
+
+    background:
+        linear-gradient(145deg,
+            #051937,
+            #001026) !important;
+
+    border: 4px solid #00aaff !important;
+
+    border-radius: 25px !important;
+
+    box-shadow:
+        0 0 15px #00aaff,
+        0 0 30px rgba(0, 170, 255, 0.3) !important;
+
+    transition: 0.3s ease !important;
+
+}
+
+
+.hjerte-citat:hover {
+
+    transform: scale(1.02) !important;
+
+    box-shadow:
+        0 0 35px #00aaff !important;
+
+}
+
+
+.hjerte-citat-text {
+
+    color: #7fdfff !important;
+
+    font-size: 2.2rem !important;
+
+    font-family: "Brush Script MT", cursive !important;
+
+    line-height: 1.6 !important;
+
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 15px #00aaff !important;
+
+    margin: 0 !important;
+
+}
+
+
+/* ==========================================================================
+   6. TILBAGE / NÆSTE KNAPPER
+   ========================================================================== */
+
+.it-navigation-knapper {
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 25px !important;
+
+    flex-wrap: wrap !important;
+
+    width: 100% !important;
+
+    margin: 50px auto 25px !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* --------------------------------------------------------------------------
+   FÆLLES KNAPDESIGN
+   -------------------------------------------------------------------------- */
+
+.it-navigation-knapper .knap,
+.it-navigation-knapper .knap2 {
+
+    display: inline-flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    min-width: 180px !important;
+
+    padding: 14px 25px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 15px !important;
+
+    border: 3px solid #00aaff !important;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a) !important;
+
+    color: #ffffff !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
+
+    font-size: 1.1rem !important;
+
+    font-weight: 800 !important;
+
+    text-decoration: none !important;
+
+    text-align: center !important;
+
+    letter-spacing: 1px !important;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 12px rgba(0, 170, 255, .6) !important;
+
+    box-shadow:
+        0 0 12px rgba(0, 170, 255, .45),
+        inset 0 0 12px rgba(0, 170, 255, .08) !important;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease,
+        color .3s ease !important;
+
+}
+
+
+/* --------------------------------------------------------------------------
+   KNAPPER HOVER
+   -------------------------------------------------------------------------- */
+
+.it-navigation-knapper .knap:hover,
+.it-navigation-knapper .knap2:hover {
+
+    transform: translateY(-4px) scale(1.03) !important;
+
+    border-color: #45cfc6 !important;
+
+    color: #45cfc6 !important;
+
+    text-shadow:
+        0 0 8px #45cfc6,
+        0 0 18px rgba(69, 207, 198, .7) !important;
+
+    box-shadow:
+        0 0 20px #00aaff,
+        0 0 40px rgba(0, 170, 255, .45),
+        inset 0 0 15px rgba(69, 207, 198, .12) !important;
+
+}
+
+
+/* ==========================================================================
+   7. MOBILOPTIMERING
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .title {
-        font-size: 28px;
-        padding: 15px;
+
+    .top-hero-container {
+
+        flex-direction: column !important;
+
+        gap: 15px !important;
+
     }
 
-    .info-p {
-        padding: 20px;
-        font-size: 18px;
+
+    .title-midte {
+
+        order: -1 !important;
+
     }
 
-    .neon-quote blockquote {
-        font-size: 1.8rem;
+
+    .musik-side-1,
+    .musik-side-2 {
+
+        font-size: 1.6rem !important;
+
+        padding: 15px !important;
+
     }
+
+
+    .min-bass-venstre,
+    .min-bass-hoejre {
+
+        width: 120px !important;
+
+        height: 120px !important;
+
+    }
+
+
+    .musik-p {
+
+        padding: 20px !important;
+
+        font-size: 18px !important;
+
+    }
+
+
+    .hjerte-citat-text {
+
+        font-size: 1.6rem !important;
+
+    }
+
+
+    /* KNAPPER PÅ MOBIL */
+
+    .it-navigation-knapper {
+
+        flex-direction: column !important;
+
+        gap: 15px !important;
+
+        margin-top: 40px !important;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 90% !important;
+
+        max-width: 320px !important;
+
+        min-width: 0 !important;
+
+        font-size: 1rem !important;
+
+        padding: 13px 20px !important;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   8. MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .it-navigation-knapper {
+
+        margin-top: 30px !important;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 96% !important;
+
+        font-size: .95rem !important;
+
+        padding: 12px 15px !important;
+
+    }
+
 }

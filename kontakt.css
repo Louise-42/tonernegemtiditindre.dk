@@ -1,321 +1,853 @@
 /* ==========================================================================
-   1. KONTAKT OVERSKRIFT (Rettet til pulserende turkis neonglød)
+   KONTAKTSIDE - TONER FRA HJERTET
+   CYBER NEON / DIGITAL STYLE
+   PC - TABLET - MOBIL
    ========================================================================== */
-.kontakt-mig {
-    text-align: center;
-    font-size: 3rem;
-    color: rgb(69, 207, 198);
-    /* Din flotte turkis */
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-shadow:
-        0 0 10px #00aaff,
-        0 0 25px rgba(0, 170, 255, 0.6);
-    margin-top: 40px;
-    /* Rettet fra 350px, da den mørke baggrund styrer layoutet nu */
-}
+
 
 /* ==========================================================================
-   2. CV BILLEDE I MIDTEN (Opdateret med 360° blå glød)
+   1. HELE KONTAKTSIDEN
    ========================================================================== */
-.cv-billede {
-    width: 200px;
-    height: 175px;
-    margin: 30px auto;
-    /* Centrerer billedet automatisk uden absolute fejl */
-    overflow: hidden;
-    background: linear-gradient(145deg, #081d3a, #06142a);
-    border: 3px solid #00aaff;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+
+.kontakt-side {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 40px 20px 70px;
+
+    box-sizing: border-box;
+
+    /*
+       MØRK CYBER BAGGRUND
+       I stedet for den ensfarvede #3024db
+    */
+
+    background:
+
+        radial-gradient(circle at 10% 10%,
+            rgba(0, 170, 255, .28),
+            transparent 32%),
+
+        radial-gradient(circle at 90% 15%,
+            rgba(48, 36, 219, .30),
+            transparent 35%),
+
+        radial-gradient(circle at 15% 75%,
+            rgba(15, 206, 44, .14),
+            transparent 35%),
+
+        radial-gradient(circle at 85% 80%,
+            rgba(216, 16, 173, .16),
+            transparent 35%),
+
+        linear-gradient(145deg,
+            #01040a,
+            #030814,
+            #061226,
+            #02050d);
+
+    background-attachment: fixed;
+
+    color: white;
+
 }
+
+
+/* ==========================================================================
+   2. HOVEDOVERSKRIFT
+   ========================================================================== */
+
+.kontakt-mig {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 25px auto 40px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #45cfc6;
+
+    text-decoration: underline;
+
+    text-underline-offset: 10px;
+
+    text-shadow:
+
+        0 0 10px #00aaff,
+
+        0 0 25px rgba(0, 170, 255, .6),
+
+        0 0 40px rgba(48, 36, 219, .5);
+
+}
+
+
+/* ==========================================================================
+   3. CV BILLEDE
+   ========================================================================== */
+
+.cv-billede {
+
+    width: 220px;
+
+    height: 190px;
+
+    margin: 20px auto 30px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border: 3px solid #00aaff;
+
+    background: #02060f;
+
+    box-shadow:
+
+        0 0 20px rgba(0, 170, 255, .5),
+
+        0 0 45px rgba(48, 36, 219, .25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.cv-billede:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+
+        0 0 25px rgba(0, 170, 255, .8),
+
+        0 0 50px rgba(48, 36, 219, .5);
+
+}
+
 
 .cv-billede img {
+
+    display: block;
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
+
 }
 
-/* ==========================================================================
-   3. TEKST VED SIDEN AF CV (Rettet fra hård rød til lækker neonblå)
-   ========================================================================== */
-/* ==========================================================================
-   3. TEKST VED SIDEN AF CV (Rød tekst med cool blinke-animation)
-   ========================================================================== */
-.skriv-til-mig {
-    max-width: 400px;
-    width: 90%;
-    margin: 20px auto;
-    padding: 15px;
-    text-align: center;
-
-    /* OPPDATERET: Farven ændret til en stærk rød */
-    color: #ff3333;
-    font-size: 1.3rem;
-    font-style: italic;
-    font-weight: bold;
-    background: linear-gradient(145deg, #081d3a, #06142a);
-    border: 3px solid #00aaff;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
-
-    /* Tilsat en glidende neon-blinke animation der tager 2 sekunder og looper uendeligt */
-    animation: blinkeRødNeon 2s infinite;
-}
 
 /* ==========================================================================
-   NY ANIMATION (Sæt denne helt i bunden af din kontakt.css fil)
+   4. SOCIALE MEDIER
    ========================================================================== */
-@keyframes blinkeRødNeon {
-    0% {
-        text-shadow: 0 0 4px #ff3333, 0 0 10px rgba(255, 51, 51, 0.5);
-        opacity: 1;
-        /* Helt synlig og lysende */
-    }
 
-    50% {
-        text-shadow: 0 0 2px #ff3333, 0 0 4px rgba(255, 51, 51, 0.2);
-        opacity: 0.6;
-        /* Dæmper lyset en smule, så det blinker roligt */
-    }
-
-    100% {
-        text-shadow: 0 0 4px #ff3333, 0 0 10px rgba(255, 51, 51, 0.5);
-        opacity: 1;
-        /* Går tilbage til fuld styrke */
-    }
-}
-
-/* ==========================================================================
-   4. SOCIALE MEDIER (Opdateret fra grøn til fuld 360° blå neonglød)
-   ========================================================================== */
 .social-boks {
-    max-width: 300px;
-    width: 90%;
-    margin: 30px auto;
-    padding: 20px;
+
+    width: 320px;
+
+    max-width: 100%;
+
+    margin: 20px auto 35px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
     text-align: center;
-    background: linear-gradient(145deg, #081d3a, #06142a);
-    border: 3px solid rgb(48, 36, 219);
+
+    background:
+
+        linear-gradient(145deg,
+            rgba(8, 29, 58, .96),
+            rgba(6, 20, 42, .98));
+
+    border: 3px solid #3024db;
+
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(48, 36, 219, 0.4);
+
+    box-shadow:
+
+        0 0 20px rgba(48, 36, 219, .4),
+
+        inset 0 0 20px rgba(0, 170, 255, .06);
+
 }
+
 
 .social-boks h3 {
-    color: #00aaff;
-    font-size: 1.4rem;
+
+    margin-top: 0;
+
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #00aaff;
-    font-weight: bold;
+
+    color: #00aaff;
+
+    font-size: 1.5rem;
+
+    font-weight: 900;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px rgba(0, 170, 255, .5);
+
 }
+
+
+/* ==========================================================================
+   5. SOCIALE LINKS
+   ========================================================================== */
 
 .social-link {
+
     display: flex;
+
     align-items: center;
-    gap: 12px;
-    margin: 12px 0;
-    padding: 8px 12px;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 15px auto;
+
+    color: white;
+
     text-decoration: none;
-    background: rgba(0, 170, 255, .1);
-    border-radius: 15px;
-    transition: .3s ease;
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    transition:
+
+        color .3s ease,
+
+        transform .3s ease,
+
+        text-shadow .3s ease;
+
 }
 
-.social-link:hover {
-    background: rgba(0, 170, 255, .25);
-    transform: translateX(5px);
-}
 
 .social-link img {
+
     width: 40px;
+
     height: 40px;
+
     object-fit: contain;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, .08);
-    padding: 4px;
-    box-shadow: 0 0 8px #00aaff;
+
+    border-radius: 10px;
+
 }
 
-.social-link span {
-    color: #d7f7ff;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    /* Fjernet den grønne streg for et renere look */
+
+.social-link:hover {
+
+    color: #0fce2c;
+
+    transform: translateX(4px);
+
+    text-shadow:
+
+        0 0 10px #0fce2c,
+
+        0 0 20px rgba(15, 206, 44, .5);
+
 }
+
 
 /* ==========================================================================
-   5. KONTAKT CONTAINER & FORMULAR (FIXET AFSTAND, FELTER OG FARVER)
+   6. TEKSTEN "SKRIV TIL MIG"
    ========================================================================== */
-.kontakt-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+
+.skriv-til-mig {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 20px auto 40px;
+
+    padding: 18px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-size: 1.3rem;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    color: #ff4b4b;
+
+    background:
+
+        linear-gradient(145deg,
+            rgba(8, 29, 58, .96),
+            rgba(6, 20, 42, .98));
+
+    border: 3px solid #00aaff;
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 0 20px rgba(0, 170, 255, .35),
+
+        inset 0 0 15px rgba(0, 170, 255, .05);
+
 }
+
+
+/* ==========================================================================
+   7. FORMULAR + CERTIFIKAT
+   ========================================================================== */
+
+.kontakt-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================================================
+   8. FORMULAR
+   ========================================================================== */
 
 .kontakt-form {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
+
+    width: 450px;
+
+    max-width: 100%;
+
     padding: 35px;
+
+    box-sizing: border-box;
+
+    background:
+
+        linear-gradient(145deg,
+            rgba(8, 29, 58, .97),
+            rgba(6, 20, 42, .99));
+
+    border: 3px solid #3024db;
+
     border-radius: 25px;
-    background: linear-gradient(145deg, #081d3a, #06142a);
-    border: 4px solid rgb(48, 36, 219);
-    /* Rettet fra grøn til koncert-blå */
-    box-shadow: 0 0 30px rgba(48, 36, 219, 0.4);
-    transition: 0.3s ease;
+
+    box-shadow:
+
+        0 0 25px rgba(48, 36, 219, .5),
+
+        inset 0 0 20px rgba(0, 170, 255, .05);
+
 }
 
-.kontakt-form:hover {
-    transform: scale(1.01) translateY(-3px);
-    border-color: #00aaff;
-    box-shadow: 0 0 35px #00aaff;
-}
 
-/* FIX: Giver overskrift-teksterne perfekt luft og skubber dem over boksene */
+/* ==========================================================================
+   9. FORMULAR LABELS
+   ========================================================================== */
+
 .kontakt-form label {
+
     display: block;
-    color: rgb(69, 207, 198);
-    font-size: 1.1rem;
+
+    margin: 15px 0 8px;
+
+    color: #45cfc6;
+
     font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    /* Sikrer at teksten ikke dækkes */
-    text-shadow: 0 0 5px rgba(0, 170, 255, 0.3);
+
+    font-size: 1rem;
+
+    text-shadow:
+
+        0 0 5px rgba(69, 207, 198, .3);
+
 }
 
-.kontakt-form label:first-of-type {
-    margin-top: 0;
-}
 
-/* FIX: Fjernet negativ margin-top, og ændret farve fra limegrøn til isblå */
+/* ==========================================================================
+   10. INPUT + TEXTAREA
+   ========================================================================== */
+
 .kontakt-form input,
 .kontakt-form textarea {
+
+    display: block;
+
     width: 100%;
+
     padding: 14px;
-    margin-bottom: 15px;
-    /* Skaber luft til det næste element */
-    font-size: 16px;
-    font-family: 'Segoe UI', sans-serif;
-    border: 2px solid rgb(48, 36, 219);
-    border-radius: 10px;
-    background: #030a16;
-    /* Mørk indvendig baggrund */
-    color: #d7f7ff;
-    /* Teksten du skriver er nu super nem at læse! */
+
     box-sizing: border-box;
-    transition: all 0.3s ease;
-}
 
-/* Specifikt for dit textarea (Beskedboksen) */
-.kontakt-form textarea {
-    min-height: 120px;
-    height: 150px;
-    line-height: 1.6;
-    resize: vertical;
-}
+    background: #02060f;
 
-/* Gør boksene neonblå i 360 grader, når man trykker eller hovrer */
-.kontakt-form input:focus,
-.kontakt-form textarea:focus,
-.kontakt-form input:hover,
-.kontakt-form textarea:hover {
-    outline: none;
-    border-color: #00aaff;
-    box-shadow: 0 0 15px #00aaff;
-}
-
-/* Særlige indstillinger for din motiverende tekst indeni formularen */
-.kontakt-tekst {
-    text-align: center;
-    color: #00aaff;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00aaff;
-    margin: 15px 0;
-    line-height: 1.5;
-}
-
-/* SEND KNAP (Matcher nu dine seje grønne menuknapper perfekt) */
-.kontakt-form button {
-    padding: 14px;
-    width: 100%;
-    font-size: 22px;
-    font-weight: bold;
     color: white;
-    background: linear-gradient(145deg, #0a9d22, #066b15);
-    border: 3px solid #00aaff;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
-    transition: 0.3s ease;
+
+    border: 2px solid #3024db;
+
+    border-radius: 10px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    transition:
+
+        border-color .3s ease,
+
+        box-shadow .3s ease;
+
 }
+
+
+.kontakt-form input::placeholder,
+.kontakt-form textarea::placeholder {
+
+    color: #8fa8b8;
+
+}
+
+
+.kontakt-form textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+
+}
+
+
+/* ==========================================================================
+   11. FOKUS PÅ FELTER
+   ========================================================================== */
+
+.kontakt-form input:focus,
+.kontakt-form textarea:focus {
+
+    outline: none;
+
+    border-color: #00aaff;
+
+    box-shadow:
+
+        0 0 10px #00aaff,
+
+        0 0 20px rgba(0, 170, 255, .35);
+
+}
+
+
+/* ==========================================================================
+   12. SEND-KNAP
+   ========================================================================== */
+
+.kontakt-form button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+
+        linear-gradient(145deg,
+            #0fce2c,
+            #0a8d1f);
+
+    box-shadow:
+
+        0 0 20px rgba(15, 206, 44, .5);
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
 
 .kontakt-form button:hover {
-    transform: translateY(-2px) scale(1.03);
-    border-color: #0fce2c;
+
+    transform: scale(1.03);
+
     box-shadow:
-        0 0 25px #0fce2c,
-        0 0 40px rgba(0, 170, 255, 0.5);
+
+        0 0 20px #0fce2c,
+
+        0 0 35px rgba(15, 206, 44, .5);
+
 }
 
+
 /* ==========================================================================
-   6. SOLOLEARN CERTIFIKAT (Rettet til ren mørkeblå/turkis 360° glød)
+   13. CERTIFIKAT
    ========================================================================== */
+
 .certifikat-boks {
-    width: 280px;
-    padding: 20px;
+
+    width: 300px;
+
+    max-width: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
     text-align: center;
-    background: linear-gradient(145deg, #081d3a, #06142a);
-    border: 4px solid rgb(48, 36, 219);
+
+    background:
+
+        linear-gradient(145deg,
+            rgba(8, 29, 58, .97),
+            rgba(6, 20, 42, .99));
+
+    border: 3px solid #3024db;
+
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(48, 36, 219, 0.4);
+
+    box-shadow:
+
+        0 0 25px rgba(48, 36, 219, .4),
+
+        inset 0 0 20px rgba(0, 170, 255, .05);
+
 }
+
 
 .certifikat-boks h2 {
+
+    margin-top: 0;
+
     color: #00aaff;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px #00aaff;
-    font-weight: bold;
+
+    font-weight: 900;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px rgba(0, 170, 255, .4);
+
 }
+
 
 .certifikat-boks img {
+
+    display: block;
+
     width: 100%;
+
     height: auto;
+
     border-radius: 10px;
-    box-shadow: 0 0 15px #00aaff;
+
 }
+
 
 /* ==========================================================================
-   7. NAVIGATION KNAPPER (Bund-knapper)
+   14. NAVIGATIONSKNAPPER
    ========================================================================== */
-.knap,
-.knap2 {
-    display: inline-block;
-    margin: 20px 10px;
-    padding: 12px 25px;
-    color: white;
-    background: #081d3a;
-    border: 3px solid #00aaff;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 0 15px #00aaff;
-    transition: 0.3s ease;
+
+.it-navigation-knapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin: 50px auto 20px;
+
 }
 
-.knap:hover,
-.knap2:hover {
-    background: linear-gradient(145deg, #0a9d22, #066b15);
-    border-color: #0fce2c;
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #0fce2c;
+
+/* ==========================================================================
+   15. MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .kontakt-side {
+
+        padding:
+
+            25px 15px 50px;
+
+        background-attachment: scroll;
+
+    }
+
+
+    .kontakt-mig {
+
+        font-size: 2rem;
+
+        margin: 20px auto 30px;
+
+        padding: 10px;
+
+    }
+
+
+    .cv-billede {
+
+        width: 200px;
+
+        height: 175px;
+
+    }
+
+
+    .social-boks {
+
+        width: 90%;
+
+        max-width: 360px;
+
+    }
+
+
+    .skriv-til-mig {
+
+        width: 95%;
+
+        font-size: 1.1rem;
+
+        padding: 15px 20px;
+
+    }
+
+
+    .kontakt-container {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 30px;
+
+    }
+
+
+    .kontakt-form {
+
+        width: 95%;
+
+        max-width: 450px;
+
+        padding: 25px;
+
+    }
+
+
+    .certifikat-boks {
+
+        width: 95%;
+
+        max-width: 350px;
+
+    }
+
+
+    .it-navigation-knapper {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin-top: 40px;
+
+    }
+
 }
+
+
+/* ==========================================================================
+   16. MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .kontakt-side {
+
+        padding:
+
+            20px 10px 40px;
+
+    }
+
+
+    .kontakt-mig {
+
+        font-size: 1.7rem;
+
+        letter-spacing: 1px;
+
+        text-underline-offset: 7px;
+
+    }
+
+
+    .cv-billede {
+
+        width: 180px;
+
+        height: 155px;
+
+    }
+
+
+    .social-boks {
+
+        width: 96%;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .social-link {
+
+        font-size: 1rem;
+
+        gap: 10px;
+
+        margin: 13px auto;
+
+    }
+
+
+    .social-link img {
+
+        width: 35px;
+
+        height: 35px;
+
+    }
+
+
+    .skriv-til-mig {
+
+        width: 96%;
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+
+    }
+
+
+    .kontakt-form {
+
+        width: 96%;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .kontakt-form input,
+    .kontakt-form textarea {
+
+        font-size: 16px;
+
+    }
+
+
+    .certifikat-boks {
+
+        width: 96%;
+
+        padding: 20px 15px;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   SLUT
+   ========================================================================== */

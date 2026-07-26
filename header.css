@@ -1,97 +1,113 @@
 /* ==========================================================================
-   1. HEADER CONTAINERS
+   HEADER - GLOBAL NAVIGATION
    ========================================================================== */
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 header {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 25px 20px;
     background-color: #030a16;
     border-bottom: 2px solid rgb(207, 69, 69);
-    box-shadow: 0 4px 20px rgba(207, 69, 69, 0.3);
+    box-shadow: 0 4px 20px rgba(207, 69, 69, .3);
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Hovedmenuens grid-struktur (Opdateret til repeat(12) og max-width: 1450px) */
+/* ==========================================================================
+   NAVIGATION GRID (RETTET: Rykket en lille smule mod venstre)
+   ========================================================================== */
 .nav-links {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* ÆNDRET FRA 11 TIL 12 */
-    gap: 6px;
-    /* Sænket en smule for at give plads i bredden */
-    max-width: 1450px;
-    /* Hævet fra 1200px så alle ikoner og tekst kan være der */
+    grid-template-columns: repeat(6, 1fr);
+    /* Lav 6 præcise, lige store kolonner */
+    gap: 12px;
     width: 100%;
-    margin: 0 auto;
+    max-width: 1450px;
+
+    /* NY REGEL: Fjerner centreringen og skubber menuen en smule til venstre */
+    margin: 0 40px 0 0;
+
+    justify-content: center;
+    /* Centrerer indholdet horisontalt */
+    justify-items: stretch;
+    /* Får alle knapper til at fylde deres kolonne ud */
 }
 
 /* ==========================================================================
-   2. MENUKNAPPER (LINKS)
+   MENU KNAPPER
    ========================================================================== */
-.nav-links a {
+header .nav-links a {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 6px;
-    color: white;
+    align-items: center;
+    min-height: 45px;
+    padding: 10px 6px;
+    color: white !important;
     text-decoration: none;
     font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 11px;
-    /* Sænket for at sikre plads til de lange ord og emojier */
+    font-size: 12px;
     font-weight: bold;
-    white-space: normal;
-    /* Tillader teksten at gå i to linjer på mindre skærme i stedet for at gå i stykker */
-    padding: 12px 6px;
-    border-radius: 15px;
     text-align: center;
-    background: linear-gradient(180deg, #d43c3c, #a61f1f);
+    background: linear-gradient(180deg, #d43c3c, #a61f1f) !important;
     border: 1px solid #111;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
-}
-
-/* EFFEKTER: Når musen føres over knapperne */
-.nav-links a:hover {
-    background: linear-gradient(180deg, #a61f1f, #d43c3c);
-    box-shadow: 0 0 10px rgba(207, 69, 69, 0.5);
-    color: rgb(255, 255, 255);
-    transform: translateY(-2px);
-}
-
-/* STATUS: Knappen for den side, du står på lige nu */
-.nav-links a.active {
-    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+    transition: .3s ease;
+    box-sizing: border-box;
+    /* Sikrer at padding ikke gør knapperne skæve */
+    width: 100%;
+    /* Tvinger knapperne til at adlyde kolonnebredden */
 }
 
 /* ==========================================================================
-   3. RESPONSIVT DESIGN (Skærmoptimering)
+   HOVER
    ========================================================================== */
+header .nav-links a:hover {
+    background: linear-gradient(180deg, #ff5050, #a61f1f) !important;
+    box-shadow: 0 0 10px rgb(207, 69, 69), 0 0 25px rgba(207, 69, 69, .6);
+    transform: translateY(-3px);
+}
 
-/* Tablets / Mellemstore skærme (3 knapper pr. række) */
-@media (max-width: 1100px) {
+/* ==========================================================================
+   AKTIV SIDE
+   ========================================================================== */
+header .nav-links a.active {
+    box-shadow: 0 0 20px #ff5555, inset 0 0 10px rgba(255, 255, 255, .2);
+}
 
-    /* Hævet for at give bedre responsivitet */
+/* ==========================================================================
+   TABLET (3 knapper pr. række -> giver 4 rækker i alt)
+   ========================================================================== */
+@media(max-width:1100px) {
     .nav-links {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-        padding: 12px 8px;
+        margin: 0 auto;
+        /* Nulstiller til centreret på mindre skærme for bedre mobillook */
     }
 }
 
-/* Mobiltelefoner (2 knapper pr. række) */
-@media (max-width: 600px) {
+/* ==========================================================================
+   MOBIL (2 knapper pr. række -> giver 6 rækker i alt)
+   ========================================================================== */
+@media(max-width:600px) {
     .nav-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        margin: 0 auto;
+        /* Nulstiller til centreret på mobil */
     }
 
-    .nav-links a {
-        font-size: 12px;
-        padding: 12px 8px;
+    header .nav-links a {
+        font-size: 11px;
+        padding: 12px 4px;
     }
 }

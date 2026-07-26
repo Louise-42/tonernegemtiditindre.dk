@@ -1,207 +1,737 @@
 /* ==========================================================================
+   SKURETS MYSTIK - TONER FRA HJERTET
+   MYSTISK CYBER NEON / LILLA DIGITAL STYLE
+   PC - TABLET - MOBIL
+   ========================================================================== */
+
+
+/* ==========================================================================
    1. BAGGRUND & LAYOUT - DET MØRKE SKUR
    ========================================================================== */
+
 .skurets-mystik-side {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: 35px;
+
     padding: 3rem 1.5rem;
+
     min-height: 100vh;
-    /* En dyb, mystisk mørkelilla/sort gradient der minder om et mørkt skur om natten */
-    background: radial-gradient(circle at center, #0f021a 0%, #030107 100%);
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(circle at center,
+            #0f021a 0%,
+            #030107 100%);
+
     color: #ffffff;
+
 }
+
 
 /* ==========================================================================
    2. OVERSKRIFT MED MYSTISK GLØD & LASER-STREG
    ========================================================================== */
+
 .skurets-mystik-side h1 {
+
     position: relative;
-    font-family: "Segoe UI", sans-serif;
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
     font-size: 2.8rem;
+
     font-weight: bold;
+
     color: #ffffff;
+
     text-transform: uppercase;
+
     letter-spacing: 3px;
+
     padding-bottom: 20px;
+
     margin-bottom: 10px;
+
     text-align: center;
 
-    /* Giver overskriften en magisk hvid og lilla glød */
     text-shadow:
+
         0 0 5px #fff,
+
         0 0 15px #b026ff,
+
         0 0 30px #b026ff;
+
 }
 
-/* Den glødende laser-streg under overskriften */
-.skurets-mystik-side h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 60%;
-    height: 4px;
-    /* Går fra gennemsigtig til neonlilla og hvid */
-    background: linear-gradient(90deg, transparent, #b026ff, #ffffff, #b026ff, transparent);
-    box-shadow:
-        0 0 10px #b026ff,
-        0 0 25px rgba(176, 38, 255, 0.8);
-}
 
 /* ==========================================================================
-   3. INFOBOKSE (Brødtekst / Afsnit) - TRÆ & VÆRKTØJS-STEMNING
+   3. LASER-STREG UNDER OVERSKRIFT
    ========================================================================== */
+
+.skurets-mystik-side h1::after {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 20%;
+
+    width: 60%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #b026ff,
+            #ffffff,
+            #b026ff,
+            transparent);
+
+    box-shadow:
+
+        0 0 10px #b026ff,
+
+        0 0 25px rgba(176, 38, 255, 0.8);
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================================
+   4. INFOBOKSE - BRØDTEKST / AFSNIT
+   ========================================================================== */
+
 .skurets-mystik-side .info-p {
+
     max-width: 850px;
+
     width: 90%;
+
     margin: 15px auto;
+
     text-align: center;
+
     color: #f1e9ff;
-    /* Meget svag lilla/hvid tekst, behagelig at læse */
+
     padding: 35px;
+
     font-size: 19px;
-    font-family: 'Segoe UI', system-ui, sans-serif;
+
+    font-family:
+        'Segoe UI',
+        system-ui,
+        sans-serif;
+
     line-height: 1.9;
 
-    /* Mørk røgfarvet baggrund */
-    background: linear-gradient(145deg, rgba(15, 5, 25, 0.8), rgba(5, 2, 10, 0.95));
+    box-sizing: border-box;
 
-    /* En fin neonlilla kant i stedet for den blå */
+    background:
+        linear-gradient(145deg,
+            rgba(15, 5, 25, 0.8),
+            rgba(5, 2, 10, 0.95));
+
     border: 3px solid #b026ff;
+
     border-radius: 18px;
 
-    /* Giver en dyb, mystisk glød indad og udad */
     box-shadow:
+
         0 0 15px rgba(176, 38, 255, 0.25),
+
         inset 0 0 20px rgba(176, 38, 255, 0.15);
+
     transition: all 0.4s ease;
+
 }
 
-/* Når man holder musen over afsnittene, lyser de op i en varm, hvid glød */
-.skurets-mystik-side .info-p:hover {
-    transform: translateY(-4px);
-    border-color: #ffffff;
-    box-shadow:
-        0 0 25px rgba(255, 255, 255, 0.4),
-        0 0 50px rgba(176, 38, 255, 0.4);
-}
 
 /* ==========================================================================
-   RETNING AF TROMMEBILLEDER I TOPPEN (Rettet: Begge sider tvinges til at være ens)
+   5. HOVER PÅ INFOBOKSE
    ========================================================================== */
-.top-hero-container {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    max-width: 1000px !important;
-    margin: 40px auto !important;
-    padding: 0 20px !important;
-    box-sizing: border-box !important;
+
+.skurets-mystik-side .info-p:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #ffffff;
+
+    box-shadow:
+
+        0 0 25px rgba(255, 255, 255, 0.4),
+
+        0 0 50px rgba(176, 38, 255, 0.4);
+
 }
+
+
+/* ==========================================================================
+   6. TOP HERO - BILLEDER + OVERSKRIFT
+   ========================================================================== */
+
+.top-hero-container {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 20px !important;
+
+    max-width: 1000px !important;
+
+    width: 100%;
+
+    margin: 40px auto !important;
+
+    padding: 0 20px !important;
+
+    box-sizing: border-box !important;
+
+}
+
 
 .title-midte {
+
     text-align: center !important;
+
     flex-grow: 1 !important;
+
 }
 
-/* OVERMALER ALLE GAMLE REGLER FRA STYLE.CSS SÅ DE BLIVER ENS */
+
+/* ==========================================================================
+   7. TROMMEBILLEDER - ENS STØRRELSE
+   ========================================================================== */
+
 .min-bass-venstre,
 .min-bass-hoejre,
 .info-om-mig .min-bass-hoejre,
 .info-om-mig .min-bass-venstre,
 .top-hero-container img {
+
     width: 150px !important;
-    /* Fast bredde på begge billeder */
+
     max-width: 150px !important;
-    /* Låser bredden hårdt */
+
     height: 150px !important;
-    /* Fast højde, så de danner ens kvadrater */
+
     object-fit: cover !important;
-    /* Skærer billedet til så det ikke strækkes skævt */
+
     border-radius: 10px !important;
-    /* Pæne afrundede kanter */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.3) !important;
+
     display: block !important;
+
+    flex-shrink: 0 !important;
+
 }
 
+
 /* ==========================================================================
-   4. SKRIVEMASKINE CITATBOKS (Dialogerne mellem Farfar & Malik)
+   8. SKRIVEMASKINE-CITATBOKS
    ========================================================================== */
+
 .skurets-mystik-side .forside-citat {
+
     max-width: 750px;
+
     width: 90%;
+
     margin: 40px auto;
+
     padding: 40px;
+
+    box-sizing: border-box;
+
     text-align: center;
-    background: rgba(3, 1, 5, 0.9);
+
+    background:
+        rgba(3, 1, 5, 0.9);
+
     border: 4px solid #ffffff;
+
     border-radius: 25px;
+
     box-shadow:
+
         0 0 20px #ffffff,
+
         0 0 40px rgba(255, 255, 255, 0.3),
+
         inset 0 0 30px rgba(176, 38, 255, 0.2);
-    animation: skuretsLys 6s infinite ease-in-out;
-    transition: transform 0.3s ease;
+
+    animation:
+        skuretsLys 6s infinite ease-in-out;
+
+    transition:
+        transform 0.3s ease;
+
 }
+
+
+/* ==========================================================================
+   9. HOVER PÅ CITATBOKS
+   ========================================================================== */
 
 .skurets-mystik-side .forside-citat:hover {
+
     transform: scale(1.03);
+
 }
 
-.skurets-mystik-side .forside-citat strong {
-    color: #ffffff !important;
-    font-size: 1.3rem !important;
-    font-family: "Segoe UI", sans-serif !important;
-    line-height: 1.7;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.3),
-        0 0 20px rgba(176, 38, 255, 0.4);
-}
 
 /* ==========================================================================
-   5. DE SÆRLIGE ANIMATIONER (Det levende lys)
+   10. CITATTEKST
    ========================================================================== */
+
+.skurets-mystik-side .forside-citat strong {
+
+    color: #ffffff !important;
+
+    font-size: 1.3rem !important;
+
+    font-family:
+        "Segoe UI",
+        sans-serif !important;
+
+    line-height: 1.7;
+
+    font-weight: bold !important;
+
+    text-decoration: none !important;
+
+    text-shadow:
+
+        0 0 8px rgba(255, 255, 255, 0.3),
+
+        0 0 20px rgba(176, 38, 255, 0.4);
+
+}
+
+
+/* ==========================================================================
+   11. ANIMATION - DET LEVENDE LYS
+   ========================================================================== */
+
 @keyframes skuretsLys {
 
     0%,
     100% {
+
         box-shadow:
+
             0 0 20px #ffffff,
+
             0 0 40px rgba(255, 255, 255, 0.3);
+
         border-color: #ffffff;
+
     }
 
     50% {
+
         box-shadow:
+
             0 0 25px #b026ff,
+
             0 0 50px rgba(176, 38, 255, 0.5);
+
         border-color: #b026ff;
+
     }
+
 }
+
 
 /* ==========================================================================
-   6. MOBILOPTIMERING
+   12. NAVIGATIONSKNAPPER
    ========================================================================== */
+
+.it-navigation-knapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 60px auto 20px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==========================================================================
+   13. FÆLLES KNAP-STYLING
+   ========================================================================== */
+
+.it-navigation-knapper .knap,
+.it-navigation-knapper .knap2 {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 170px;
+
+    padding: 14px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            #10051c,
+            #210936);
+
+    border: 3px solid #b026ff;
+
+    text-shadow:
+
+        0 0 6px #b026ff,
+
+        0 0 12px rgba(176, 38, 255, .6);
+
+    box-shadow:
+
+        0 0 12px rgba(176, 38, 255, .5),
+
+        0 0 28px rgba(176, 38, 255, .25),
+
+        inset 0 0 12px rgba(176, 38, 255, .10);
+
+    transition:
+
+        transform .3s ease,
+
+        color .3s ease,
+
+        border-color .3s ease,
+
+        box-shadow .3s ease,
+
+        background .3s ease;
+
+}
+
+
+/* ==========================================================================
+   14. TILBAGE-KNAP
+   ========================================================================== */
+
+.it-navigation-knapper .knap {
+
+    border-color: #b026ff;
+
+}
+
+
+/* ==========================================================================
+   15. NÆSTE-KNAP
+   ========================================================================== */
+
+.it-navigation-knapper .knap2 {
+
+    border-color: #ffffff;
+
+    text-shadow:
+
+        0 0 6px #ffffff,
+
+        0 0 12px rgba(176, 38, 255, .7);
+
+}
+
+
+/* ==========================================================================
+   16. HOVER PÅ TILBAGE
+   ========================================================================== */
+
+.it-navigation-knapper .knap:hover {
+
+    transform:
+        translateY(-4px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color: #ffffff;
+
+    background:
+        linear-gradient(145deg,
+            #210936,
+            #351052);
+
+    box-shadow:
+
+        0 0 20px #b026ff,
+
+        0 0 40px rgba(176, 38, 255, .6),
+
+        inset 0 0 18px rgba(176, 38, 255, .2);
+
+}
+
+
+/* ==========================================================================
+   17. HOVER PÅ NÆSTE
+   ========================================================================== */
+
+.it-navigation-knapper .knap2:hover {
+
+    transform:
+        translateY(-4px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color: #b026ff;
+
+    background:
+        linear-gradient(145deg,
+            #210936,
+            #351052);
+
+    box-shadow:
+
+        0 0 20px #ffffff,
+
+        0 0 40px rgba(176, 38, 255, .6),
+
+        inset 0 0 18px rgba(176, 38, 255, .2);
+
+}
+
+
+/* ==========================================================================
+   18. MOBILOPTIMERING
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .skurets-mystik-side h1 {
-        font-size: 2rem;
+
+    .skurets-mystik-side {
+
+        padding:
+            2rem 1rem 3rem;
+
     }
+
+
+    .skurets-mystik-side h1 {
+
+        font-size: 2rem;
+
+        letter-spacing: 2px;
+
+    }
+
 
     .skurets-mystik-side .info-p {
+
+        width: 95%;
+
         padding: 22px;
+
         font-size: 17px;
+
+        line-height: 1.8;
+
     }
+
+
+    /* Billederne bliver mindre på telefon */
+
+    .top-hero-container {
+
+        flex-direction: column !important;
+
+        gap: 15px !important;
+
+        margin: 25px auto !important;
+
+    }
+
+
+    .title-midte {
+
+        order: -1;
+
+        width: 100%;
+
+    }
+
+
+    .min-bass-venstre,
+    .min-bass-hoejre,
+    .info-om-mig .min-bass-hoejre,
+    .info-om-mig .min-bass-venstre,
+    .top-hero-container img {
+
+        width: 120px !important;
+
+        max-width: 120px !important;
+
+        height: 120px !important;
+
+    }
+
 
     .skurets-mystik-side .forside-citat {
+
+        width: 95%;
+
         padding: 25px;
+
     }
 
+
     .skurets-mystik-side .forside-citat strong {
+
         font-size: 1.1rem !important;
+
     }
+
+
+    /* Navigation oven på hinanden */
+
+    .it-navigation-knapper {
+
+        width: 95%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        margin: 40px auto;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        min-width: 0;
+
+    }
+
 }
+
+
+/* ==========================================================================
+   19. MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .skurets-mystik-side {
+
+        padding:
+            1.5rem .6rem 2.5rem;
+
+    }
+
+
+    .skurets-mystik-side h1 {
+
+        font-size: 1.6rem;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .skurets-mystik-side .info-p {
+
+        width: 97%;
+
+        padding: 18px 15px;
+
+        font-size: 16px;
+
+    }
+
+
+    .skurets-mystik-side .forside-citat {
+
+        width: 97%;
+
+        padding: 20px 15px;
+
+    }
+
+
+    .it-navigation-knapper {
+
+        margin: 35px auto;
+
+    }
+
+
+    .it-navigation-knapper .knap,
+    .it-navigation-knapper .knap2 {
+
+        width: 100%;
+
+        max-width: 290px;
+
+        padding: 13px 18px;
+
+        font-size: 1rem;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   SLUT
+   ========================================================================== */
