@@ -404,8 +404,7 @@ body {
 
     min-width: 150px;
 
-    padding:
-        13px 24px;
+    padding: 13px 24px;
 
     box-sizing: border-box;
 
@@ -421,11 +420,10 @@ body {
 
     background:
         linear-gradient(145deg,
-            rgba(6, 20, 42, 0.98),
-            rgba(2, 6, 15, 0.98));
+            #040d1a,
+            #07172e);
 
-    border:
-        2px solid #00aaff;
+    border: 2px solid #00aaff;
 
     border-radius: 12px;
 
@@ -450,6 +448,7 @@ body {
 
         background 0.3s ease;
 }
+
 
 
 /* ==========================================================================

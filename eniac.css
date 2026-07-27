@@ -88,11 +88,11 @@ h1.overskrift-eniac {
     position: relative;
     display: block !important;
     margin: 60px auto 70px auto !important;
-    max-width: 950px;
+    max-width: 750px;
     width: 95%;
-
+    text-decoration: underline;
     font-size: clamp(2rem, 5vw, 3.4rem);
-    font-weight: 900;
+    font-weight: 250;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.25;
@@ -101,7 +101,7 @@ h1.overskrift-eniac {
     background: linear-gradient(145deg, #040d1a, #07172e) !important;
     border: 4px solid #3024db !important;
     border-radius: 16px;
-    padding: 35px 25px 55px 25px;
+    padding: 20px 20px 35px 20px;
     text-align: center;
 
     /* Kraftig integreret glød, der pulserer */
