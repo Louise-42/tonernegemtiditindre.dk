@@ -2,12 +2,10 @@
    GLOBAL STYLE - Fælles for hele hjemmesiden
    ========================================================================== */
 
-
 /* Grundindstillinger */
 * {
     box-sizing: border-box;
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -15,7 +13,6 @@ html {
     margin: 0;
     padding: 0;
 }
-
 
 body {
     margin: 0;
@@ -26,39 +23,35 @@ body {
     width: 100%;
 }
 
-
 /* ==========================================================================
-   FÆLLES MAIN (RETTET: Sørger for at den ikke låser artikelsiden)
+   FÆLLES MAIN (RETTET: !important fjernet så den ikke ødelægger andre sider)
    ========================================================================== */
-
 main {
     width: 100%;
     min-height: 100vh;
+    display: block;
+    /* Standard adfærd så grids indeni virker */
 }
 
-/* NY REGEL: Hvis main har klassen .it-side-baggrund, tillader vi den at centrere alt */
+/* RETTELSE: !important fjernet fra grid-egenskaberne, så reglen KUN rammer IT-siden */
 main.it-side-baggrund {
-    display: grid !important;
-    place-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
-
 
 /* ==========================================================================
    FÆLLES TEKST
    ========================================================================== */
-
 p {
     line-height: 1.6;
 }
 
-
 /* ==========================================================================
    FÆLLES KNAPPER
    ========================================================================== */
-
 .knap-container-layout {
     display: flex;
     justify-content: center;
@@ -68,81 +61,50 @@ p {
     width: 100%;
 }
 
-
 .knap,
 .knap2 {
-
     display: inline-block;
     padding: 12px 24px;
-
     font-family: "Segoe UI", sans-serif;
     font-size: 16px;
     font-weight: bold;
-
     text-decoration: none;
     color: white !important;
-
     border-radius: 12px;
-
     background: linear-gradient(180deg, #5c4ff5, #3024db);
-
     border: 2px solid #4c41e1;
-
-    box-shadow:
-        0 6px 15px rgba(76, 65, 225, 0.4);
-
+    box-shadow: 0 6px 15px rgba(76, 65, 225, 0.4);
     transition: 0.3s ease;
 }
 
-
 .knap:hover,
 .knap2:hover {
-
     transform: translateY(-3px);
-
-    box-shadow:
-        0 0 20px #3024db;
+    box-shadow: 0 0 20px #3024db;
 }
-
 
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-
 footer {
-
     text-align: center;
-
     padding: 25px;
-
     background: #030a16;
-
     color: white;
-
     width: 100%;
-
 }
-
 
 /* ==========================================================================
    RESPONSIV
    ========================================================================== */
-
 @media (max-width:768px) {
-
     .knap-container-layout {
-
         flex-direction: column;
-
     }
-
 
     .knap,
     .knap2 {
-
         width: 80%;
         text-align: center;
-
     }
-
 }

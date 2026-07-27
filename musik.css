@@ -37,15 +37,15 @@
 
 .top-hero-container {
 
-    display: flex !important;
+    display: grid !important;
 
-    flex-direction: row !important;
-
-    justify-content: center !important;
+    grid-template-columns: 140px minmax(0, 1fr) 140px !important;
 
     align-items: center !important;
 
-    gap: 40px !important;
+    justify-content: center !important;
+
+    gap: 35px !important;
 
     max-width: 1100px !important;
 
@@ -58,19 +58,23 @@
 }
 
 
-/* BILLEDER / BAS */
+/* ==========================================================================
+   BILLEDER / TROMMER
+   ========================================================================== */
 
 .min-bass-venstre,
 .min-bass-hoejre,
 .top-hero-container img {
-
-    flex-shrink: 0 !important;
 
     width: 140px !important;
 
     max-width: 140px !important;
 
     height: 140px !important;
+
+    min-width: 140px !important;
+
+    min-height: 140px !important;
 
     object-fit: cover !important;
 
@@ -82,34 +86,52 @@
         0 0 15px rgb(48, 36, 219),
         0 0 30px rgba(48, 36, 219, 0.4) !important;
 
-    transition: transform 0.3s ease !important;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
 
     display: block !important;
 
+    justify-self: center !important;
+
 }
 
+
+/* ==========================================================================
+   VENSTRE / HØJRE BILLEDE HOVER
+   ========================================================================== */
 
 .min-bass-venstre:hover,
 .min-bass-hoejre:hover {
 
     transform: scale(1.08) !important;
 
+    box-shadow:
+        0 0 20px rgb(48, 36, 219),
+        0 0 40px rgba(0, 170, 255, 0.6) !important;
+
 }
 
 
-/* MIDTERSTE TITEL */
+/* ==========================================================================
+   MIDTERSTE TITEL
+   ========================================================================== */
 
 .title-midte {
 
     text-align: center !important;
 
-    display: inline-block !important;
-
-    max-width: 500px !important;
+    display: block !important;
 
     width: 100% !important;
 
-    margin: 0 !important;
+    max-width: 500px !important;
+
+    margin: 0 auto !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
 
 }
 
@@ -162,10 +184,18 @@
     box-shadow:
         0 0 25px rgba(48, 36, 219, 0.5) !important;
 
-    transition: 0.3s ease !important;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+
+    box-sizing: border-box !important;
 
 }
 
+
+/* ==========================================================================
+   NEON LINJE UNDER OVERSKRIFT
+   ========================================================================== */
 
 .musik-side-1::after,
 .musik-side-2::after {
@@ -196,10 +226,15 @@
 }
 
 
+/* ==========================================================================
+   OVERSKRIFT HOVER
+   ========================================================================== */
+
 .musik-side-1:hover,
 .musik-side-2:hover {
 
-    transform: translateY(-5px) scale(1.02) !important;
+    transform:
+        translateY(-5px) scale(1.02) !important;
 
     box-shadow:
         0 0 30px #00aaff,
@@ -242,10 +277,19 @@
     box-shadow:
         0 0 15px rgba(48, 36, 219, 0.4) !important;
 
-    transition: 0.3s ease !important;
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease !important;
+
+    box-sizing: border-box !important;
 
 }
 
+
+/* ==========================================================================
+   TEKSTBOKS HOVER
+   ========================================================================== */
 
 .musik-p:hover {
 
@@ -289,10 +333,18 @@
         0 0 15px #00aaff,
         0 0 30px rgba(0, 170, 255, 0.3) !important;
 
-    transition: 0.3s ease !important;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+
+    box-sizing: border-box !important;
 
 }
 
+
+/* ==========================================================================
+   CITAT HOVER
+   ========================================================================== */
 
 .hjerte-citat:hover {
 
@@ -304,13 +356,19 @@
 }
 
 
+/* ==========================================================================
+   CITAT TEKST
+   ========================================================================== */
+
 .hjerte-citat-text {
 
     color: #7fdfff !important;
 
     font-size: 2.2rem !important;
 
-    font-family: "Brush Script MT", cursive !important;
+    font-family:
+        "Brush Script MT",
+        cursive !important;
 
     line-height: 1.6 !important;
 
@@ -348,9 +406,9 @@
 }
 
 
-/* --------------------------------------------------------------------------
+/* ==========================================================================
    FÆLLES KNAPDESIGN
-   -------------------------------------------------------------------------- */
+   ========================================================================== */
 
 .it-navigation-knapper .knap,
 .it-navigation-knapper .knap2 {
@@ -410,14 +468,15 @@
 }
 
 
-/* --------------------------------------------------------------------------
+/* ==========================================================================
    KNAPPER HOVER
-   -------------------------------------------------------------------------- */
+   ========================================================================== */
 
 .it-navigation-knapper .knap:hover,
 .it-navigation-knapper .knap2:hover {
 
-    transform: translateY(-4px) scale(1.03) !important;
+    transform:
+        translateY(-4px) scale(1.03) !important;
 
     border-color: #45cfc6 !important;
 
@@ -441,23 +500,106 @@
 
 @media (max-width: 768px) {
 
+    /* --------------------------------------------------------------
+       HERO PÅ MOBIL
+       Billede - titel - billede
+       -------------------------------------------------------------- */
+
     .top-hero-container {
 
-        flex-direction: column !important;
+        display: grid !important;
 
-        gap: 15px !important;
+        grid-template-columns:
+            85px minmax(0, 1fr) 85px !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        gap: 8px !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 15px auto !important;
+
+        padding: 0 4px !important;
+
+        box-sizing: border-box !important;
 
     }
 
+
+    /* --------------------------------------------------------------
+       BILLEDER PÅ MOBIL
+       -------------------------------------------------------------- */
+
+    .min-bass-venstre,
+    .min-bass-hoejre,
+    .top-hero-container img {
+
+        width: 78px !important;
+
+        min-width: 78px !important;
+
+        max-width: 78px !important;
+
+        height: 78px !important;
+
+        min-height: 78px !important;
+
+        max-height: 78px !important;
+
+        border-width: 3px !important;
+
+        justify-self: center !important;
+
+    }
+
+
+    /* --------------------------------------------------------------
+       MIDTERTITEL PÅ MOBIL
+       -------------------------------------------------------------- */
 
     .title-midte {
 
-        order: -1 !important;
+        width: 100% !important;
+
+        max-width: none !important;
+
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        text-align: center !important;
 
     }
 
 
-    .musik-side-1,
+    .musik-side-1 {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 auto 15px auto !important;
+
+        padding: 12px 6px 20px 6px !important;
+
+        font-size: 1.25rem !important;
+
+        line-height: 1.25 !important;
+
+        border-width: 3px !important;
+
+        border-radius: 12px !important;
+
+        letter-spacing: 0.5px !important;
+
+    }
+
+
     .musik-side-2 {
 
         font-size: 1.6rem !important;
@@ -467,21 +609,34 @@
     }
 
 
-    .min-bass-venstre,
-    .min-bass-hoejre {
-
-        width: 120px !important;
-
-        height: 120px !important;
-
-    }
-
+    /* --------------------------------------------------------------
+       TEKST
+       -------------------------------------------------------------- */
 
     .musik-p {
+
+        width: 94% !important;
 
         padding: 20px !important;
 
         font-size: 18px !important;
+
+        line-height: 1.7 !important;
+
+        box-sizing: border-box !important;
+
+    }
+
+
+    /* --------------------------------------------------------------
+       CITAT
+       -------------------------------------------------------------- */
+
+    .hjerte-citat {
+
+        width: 94% !important;
+
+        padding: 25px 18px !important;
 
     }
 
@@ -493,7 +648,9 @@
     }
 
 
-    /* KNAPPER PÅ MOBIL */
+    /* --------------------------------------------------------------
+       KNAPPER PÅ MOBIL
+       -------------------------------------------------------------- */
 
     .it-navigation-knapper {
 
@@ -530,6 +687,92 @@
 
 @media (max-width: 480px) {
 
+
+    .top-hero-container {
+
+        grid-template-columns:
+            65px minmax(0, 1fr) 65px !important;
+
+        gap: 5px !important;
+
+        padding: 0 2px !important;
+
+    }
+
+
+    .min-bass-venstre,
+    .min-bass-hoejre,
+    .top-hero-container img {
+
+        width: 60px !important;
+
+        min-width: 60px !important;
+
+        max-width: 60px !important;
+
+        height: 60px !important;
+
+        min-height: 60px !important;
+
+        max-height: 60px !important;
+
+        border-width: 2px !important;
+
+    }
+
+
+    .musik-side-1 {
+
+        font-size: 1rem !important;
+
+        padding:
+            10px 4px 18px 4px !important;
+
+        line-height: 1.2 !important;
+
+        border-width: 2px !important;
+
+        border-radius: 10px !important;
+
+    }
+
+
+    .musik-side-1::after {
+
+        height: 2px !important;
+
+        bottom: 5px !important;
+
+    }
+
+
+    .musik-p {
+
+        width: 96% !important;
+
+        padding: 16px !important;
+
+        font-size: 16px !important;
+
+    }
+
+
+    .hjerte-citat {
+
+        width: 96% !important;
+
+        padding: 20px 14px !important;
+
+    }
+
+
+    .hjerte-citat-text {
+
+        font-size: 1.4rem !important;
+
+    }
+
+
     .it-navigation-knapper {
 
         margin-top: 30px !important;
@@ -545,6 +788,54 @@
         font-size: .95rem !important;
 
         padding: 12px 15px !important;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   9. EKSTRA SMAL TELEFON
+   Fx iPhone SE / små Android
+   ========================================================================== */
+
+@media (max-width: 360px) {
+
+
+    .top-hero-container {
+
+        grid-template-columns:
+            55px minmax(0, 1fr) 55px !important;
+
+        gap: 4px !important;
+
+    }
+
+
+    .min-bass-venstre,
+    .min-bass-hoejre,
+    .top-hero-container img {
+
+        width: 52px !important;
+
+        min-width: 52px !important;
+
+        max-width: 52px !important;
+
+        height: 52px !important;
+
+        min-height: 52px !important;
+
+        max-height: 52px !important;
+
+    }
+
+
+    .musik-side-1 {
+
+        font-size: 0.88rem !important;
+
+        padding: 8px 2px 16px 2px !important;
 
     }
 
