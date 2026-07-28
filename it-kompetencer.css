@@ -278,21 +278,316 @@ body {
 
 /* Cyber-prik */
 
-.it-tekst p::before {
-    content: "▪ ";
+
+
+/* ==========================================================================
+   UNDERSKRIFTER TIL DE ENKELTE IT-AFSNIT
+   Matcher cyberpunk-looket på siden
+   ========================================================================== */
+
+.it-del-overskrift {
+
+    position: relative;
+
+    max-width: 820px;
+
+    width: 90%;
+
+    margin: 55px auto 30px auto;
+
+    padding: 18px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
 
     color: #45cfc6;
 
-    font-weight: bold;
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 
-    margin-right: 5px;
+    font-size: clamp(1.35rem, 3vw, 2rem);
 
-    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
 
     text-shadow:
-        0 0 8px #45cfc6;
+        0 0 6px #00aaff,
+        0 0 14px rgba(0, 170, 255, 0.55),
+        0 0 25px rgba(48, 36, 219, 0.6);
+
+    background:
+        linear-gradient(145deg,
+            rgba(4, 13, 26, 0.95),
+            rgba(7, 23, 46, 0.98));
+
+    border: 2px solid rgba(48, 36, 219, 0.85);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 15px rgba(48, 36, 219, 0.35),
+        inset 0 0 12px rgba(0, 170, 255, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+.it-tekst .it-afsnit::first-letter {
+    color: #00f0ff !important;
+
+    font-weight: 900;
+
+    font-size: 1.5rem;
+
+    text-shadow:
+        0 0 10px #00f0ff,
+        0 0 20px rgba(0, 240, 255, 0.7);
+
+    margin-right: 2px;
+}
+
+
+/* Lille cyber-laser under hver overskrift */
+
+.it-del-overskrift::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 25%;
+
+    bottom: -5px;
+
+    width: 50%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00f0ff,
+        0 0 15px rgba(255, 65, 65, 0.5);
+
+    border-radius: 10px;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+/* Hover */
+
+.it-del-overskrift:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #00aaff;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, 0.55),
+        0 0 35px rgba(48, 36, 219, 0.35),
+        inset 0 0 15px rgba(0, 170, 255, 0.12);
+}
+
+
+.it-del-overskrift:hover::after {
+
+    width: 65%;
+}
+
+
+/* ==========================================================================
+   TEKST TIL DE NYE AFSNIT
+   ========================================================================== */
+
+.it-tekst .it-afsnit {
+
+    max-width: 860px;
+
+    width: 95%;
+
+    margin:
+        0 auto 40px auto;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    color: #e2f9ff;
+
+    font-size: 1.15rem;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    line-height: 1.95;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(4, 13, 26, 0.95),
+            rgba(7, 23, 46, 0.98));
+
+    border:
+        3px solid rgba(48, 36, 219, 0.6);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        inset 0 0 15px rgba(0, 170, 255, 0.05),
+        0 0 20px rgba(48, 36, 219, 0.2);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.it-tekst .it-afsnit:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #45cfc6;
+
+    box-shadow:
+        0 20px 45px rgba(0, 170, 255, 0.3),
+        inset 0 0 20px rgba(0, 240, 255, 0.12),
+        0 0 30px rgba(69, 207, 198, 0.3);
+}
+
+
+/* ==========================================================================
+   MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .it-del-overskrift {
+
+        width: 94%;
+
+        margin:
+            40px auto 25px;
+
+        padding:
+            15px 18px;
+
+        font-size: 1.35rem;
+
+        letter-spacing: 1px;
+    }
+
+
+    .it-del-overskrift::after {
+
+        width: 55%;
+
+        bottom: -4px;
+    }
+
+    @media (max-width: 768px) {
+
+        .it-del-overskrift {
+            width: 94%;
+            margin: 40px auto 25px;
+            padding: 15px 18px;
+            font-size: 1.35rem;
+            letter-spacing: 1px;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+
+        .it-del-overskrift {
+            width: 96%;
+            margin: 35px auto 22px;
+            padding: 13px 12px;
+            font-size: 1.15rem;
+            border-radius: 12px;
+            border-width: 2px;
+        }
+
+    }
+
+    .it-tekst .it-afsnit {
+
+        width: 96%;
+
+        padding: 24px;
+
+        font-size: 1.05rem;
+
+        line-height: 1.8;
+    }
+
+}
+
+
+/* ==========================================================================
+   MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .it-del-overskrift {
+
+        width: 96%;
+
+        margin:
+            35px auto 22px;
+
+        padding:
+            13px 12px;
+
+        font-size: 1.15rem;
+
+        border-radius: 12px;
+
+        border-width: 2px;
+    }
+
+
+    .it-del-overskrift::after {
+
+        width: 60%;
+    }
+
+
+    .it-tekst .it-afsnit {
+
+        width: 97%;
+
+        padding: 20px 17px;
+
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+    }
+
+}
 
 /* ==========================================================================
    5. IT TILBAGE / NÆSTE KNAPPER
