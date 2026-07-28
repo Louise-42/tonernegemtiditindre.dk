@@ -986,3 +986,87 @@ body {
 /* =====================================================
    SLUT
    ===================================================== */
+   /* =====================================================
+   FOOTER - COMPUTERENS HISTORIE
+   ===================================================== */
+
+   .site-footer {
+       display: block !important;
+
+       width: 100% !important;
+
+       max-width: 100% !important;
+
+       height: auto !important;
+
+       min-height: 80px !important;
+
+       margin: 40px 0 0 0 !important;
+
+       padding: 25px 20px !important;
+
+       box-sizing: border-box !important;
+
+       position: relative !important;
+
+       clear: both !important;
+
+       visibility: visible !important;
+
+       opacity: 1 !important;
+
+       overflow: visible !important;
+
+       text-align: center !important;
+
+       background:
+           linear-gradient(145deg,
+               rgba(4, 13, 26, 0.98),
+               rgba(2, 8, 20, 0.98)) !important;
+
+       border-top: 3px solid #00aaff !important;
+
+       box-shadow:
+           0 -5px 20px rgba(0, 170, 255, 0.35) !important;
+
+       color: #ffffff !important;
+   }
+
+
+   .site-footer p {
+       display: block !important;
+
+       width: 100% !important;
+
+       max-width: 100% !important;
+
+       margin: 0 !important;
+
+       padding: 0 !important;
+
+       box-sizing: border-box !important;
+
+       text-align: center !important;
+
+       color: #ffffff !important;
+
+       background: transparent !important;
+
+       border: none !important;
+
+       box-shadow: none !important;
+
+       font-family: Arial, sans-serif !important;
+
+       font-size: 14px !important;
+
+       font-weight: normal !important;
+
+       line-height: 1.7 !important;
+
+       visibility: visible !important;
+
+       opacity: 1 !important;
+
+       animation: none !important;
+   }
