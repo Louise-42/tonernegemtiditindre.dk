@@ -1070,3 +1070,64 @@ body {
 
        animation: none !important;
    }
+   /* =====================================================
+   TEST FOOTER
+   ===================================================== */
+
+   body>footer.site-footer {
+
+       display: block !important;
+
+       position: relative !important;
+
+       width: 100% !important;
+
+       min-height: 100px !important;
+
+       margin: 50px 0 0 0 !important;
+
+       padding: 30px !important;
+
+       box-sizing: border-box !important;
+
+       clear: both !important;
+
+       visibility: visible !important;
+
+       opacity: 1 !important;
+
+       background: #020814 !important;
+
+       border-top: 5px solid #00aaff !important;
+
+       color: white !important;
+
+       text-align: center !important;
+
+       z-index: 9999 !important;
+   }
+
+
+   body>footer.site-footer p {
+
+       display: block !important;
+
+       width: 100% !important;
+
+       margin: 0 !important;
+
+       padding: 0 !important;
+
+       color: white !important;
+
+       background: transparent !important;
+
+       border: none !important;
+
+       box-shadow: none !important;
+
+       text-align: center !important;
+
+       font-size: 16px !important;
+
+   }
