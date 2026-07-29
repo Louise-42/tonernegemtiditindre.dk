@@ -96,25 +96,59 @@ main.it-side-baggrund {
     text-align: center !important;
 }
 
-/* HOVEDOVERSKRIFT H1 */
+/* =====================================================
+   HOVEDOVERSKRIFT H1
+   ===================================================== */
+
 .it-tekst h1.it-overskrift {
+
     position: relative;
+
     display: block !important;
-    width: min(95%, 950px) !important;
-    margin: 40px auto 55px !important;
-    padding: 30px 25px 50px !important;
+
+    /* Lidt smallere */
+    width: min(90%, 850px) !important;
+
+    /* Mindre afstand omkring boksen */
+    margin: 30px auto 45px !important;
+
+    /* Lidt mindre højde */
+    padding: 22px 20px 38px !important;
+
     box-sizing: border-box !important;
-    font-size: clamp(1.8rem, 5vw, 3.1rem) !important;
+
+    /* Lidt mindre tekst */
+    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
+
     font-weight: bold !important;
-    line-height: 1.25 !important;
+
+    line-height: 1.2 !important;
+
     text-align: center !important;
+
     color: #45cfc6 !important;
-    background: linear-gradient(145deg, #06142a, #02060f) !important;
-    border: 5px solid #3024db !important;
-    border-radius: 20px !important;
-    text-shadow: 0 0 5px #00aaff, 0 0 15px #00aaff, 0 0 25px #3024db !important;
-    box-shadow: 0 0 25px rgba(48, 36, 219, .5), inset 0 0 20px rgba(0, 170, 255, .08) !important;
-    animation: itTitlePulse 4s infinite alternate !important;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #02060f) !important;
+
+    /* Lidt tyndere kant */
+    border: 4px solid #3024db !important;
+
+    border-radius: 18px !important;
+
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 15px #00aaff,
+        0 0 25px #3024db !important;
+
+    box-shadow:
+        0 0 22px rgba(48, 36, 219, .5),
+        inset 0 0 18px rgba(0, 170, 255, .08) !important;
+
+    animation:
+        itTitlePulse 4s infinite alternate !important;
 }
 
 .it-tekst h1.it-overskrift::after {
