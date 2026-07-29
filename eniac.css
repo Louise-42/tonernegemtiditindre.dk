@@ -7,7 +7,7 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 */
 
 /* =====================================================
-   ENIAC ARTIKEL SIDE - ULTIMATIVE CYBERPUNK LOOK
+   ENIAC ARTIKEL SIDE
    TONER FRA HJERTET
    ===================================================== */
 
@@ -16,105 +16,65 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ANIMATIONER
    ===================================================== */
 
-/* Animation til de lysende neon-rør i kanterne */
-
 @keyframes neonGlowBorder {
 
     0% {
-
         border-color: #ff4141;
 
         box-shadow:
             0 15px 40px rgba(0, 0, 0, 0.8),
             inset 0 0 15px rgba(255, 65, 65, 0.2),
             0 0 20px rgba(255, 65, 65, 0.4);
-
     }
 
     50% {
-
         border-color: #15ce2c;
 
         box-shadow:
             0 15px 40px rgba(0, 0, 0, 0.8),
             inset 0 0 15px rgba(21, 206, 44, 0.2),
             0 0 25px rgba(21, 206, 44, 0.5);
-
     }
 
     100% {
-
         border-color: #ff4141;
 
         box-shadow:
             0 15px 40px rgba(0, 0, 0, 0.8),
             inset 0 0 15px rgba(255, 65, 65, 0.2),
             0 0 20px rgba(255, 65, 65, 0.4);
-
     }
-
 }
 
-
-/* Langsom flydende farve-effekt */
-
-@keyframes textGradientMove {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
-}
-
-
-/* Subtil pulsering til overskriftsboksene */
 
 @keyframes cyberBoxPulse {
 
     0% {
-
         box-shadow:
             0 0 25px rgba(48, 36, 219, 0.4),
             inset 0 0 15px rgba(0, 170, 255, 0.1);
-
     }
 
     100% {
-
         box-shadow:
             0 0 45px rgba(0, 240, 255, 0.7),
             inset 0 0 25px rgba(48, 36, 219, 0.3);
-
     }
-
 }
 
 
 /* =====================================================
-   GLOBAL BAGGRUND & NULSTILLING
+   GLOBAL BAGGRUND
    ===================================================== */
 
 html,
 body {
 
     margin: 0 !important;
-
     padding: 0 !important;
 
-    width: 100% !important;
-
-    min-height: 100% !important;
-
-    display: block !important;
-
+    width: 100%;
+    min-height: 100%;
 
     background:
 
@@ -136,44 +96,54 @@ body {
             #061226,
             #02050d) !important;
 
-
     background-attachment: fixed !important;
 
     color: #e2f5ff;
-
 }
 
-
 /* =====================================================
-   HELE ARTIKELOMRÅDET
+   HELE ARTIKELBOKSEN
    ===================================================== */
 
 .artikel-boks {
 
-    max-width: 1100px;
-
     width: 90%;
+    max-width: 1100px;
 
     margin: 40px auto;
 
     padding: 20px;
 
-    text-align: center;
-
     box-sizing: border-box;
 
+    text-align: center;
+
     font-family:
-        'Segoe UI',
+        "Segoe UI",
         Roboto,
         Helvetica,
         Arial,
         sans-serif;
-
 }
 
 
 /* =====================================================
-   ALLE H-TAGS
+   SELVE ARTIKLEN
+   ===================================================== */
+
+.artikel-boks article {
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
    H1 + H2 + H3
    SAMME DESIGN
    ===================================================== */
@@ -186,19 +156,15 @@ body {
 
     display: block;
 
-    box-sizing: border-box;
-
     width: 100%;
-
     max-width: 850px;
 
     margin-left: auto !important;
-
     margin-right: auto !important;
 
+    padding: 25px 30px 40px;
 
-    padding: 25px 30px 40px 30px;
-
+    box-sizing: border-box;
 
     text-align: center;
 
@@ -206,61 +172,39 @@ body {
 
     font-size: 2rem;
 
-
     font-weight: 800;
 
     letter-spacing: 4px;
 
     line-height: 1.25;
 
-
     color: #45cfc6 !important;
-
 
     background:
         linear-gradient(145deg,
             #040d1a,
             #07172e) !important;
 
-
     border: 4px solid #3024db !important;
 
     border-radius: 40px !important;
 
-
     text-shadow:
-
         0 0 8px #00aaff,
-
-        0 0 20px rgba(0,
-            170,
-            255,
-            0.6),
-
+        0 0 20px rgba(0, 170, 255, 0.6),
         0 0 30px #3024db;
 
-
     box-shadow:
-
-        0 0 25px rgba(48,
-            36,
-            219,
-            0.4),
-
-        inset 0 0 15px rgba(0,
-            170,
-            255,
-            0.1);
-
+        0 0 25px rgba(48, 36, 219, 0.4),
+        inset 0 0 15px rgba(0, 170, 255, 0.1);
 
     animation:
         cyberBoxPulse 4s infinite alternate ease-in-out;
-
 }
 
 
 /* =====================================================
-   AFSTAND MELLEM H1, H2 OG H3
+   AFSTAND MELLEM OVERSKRIFTER
    ===================================================== */
 
 .artikel-boks h1,
@@ -270,19 +214,18 @@ body {
     margin-top: 80px !important;
 
     margin-bottom: 45px !important;
-
 }
 
 
 /* =====================================================
-   LASERSTREG UNDER ALLE H-TAGS
+   LASERSTREG UNDER H1 + H2 + H3
    ===================================================== */
 
 .artikel-boks h1::after,
 .artikel-boks h2::after,
 .artikel-boks h3::after {
 
-    content: '';
+    content: "";
 
     position: absolute;
 
@@ -294,9 +237,7 @@ body {
 
     height: 4px;
 
-
     background:
-
         linear-gradient(90deg,
             transparent,
             #ff4141,
@@ -304,16 +245,11 @@ body {
             #15ce2c,
             transparent);
 
-
     box-shadow:
-
         0 0 15px #ff4141,
-
         0 0 30px #00f0ff;
 
-
     border-radius: 10px;
-
 }
 
 
@@ -325,28 +261,23 @@ body {
 
     display: block !important;
 
-    box-sizing: border-box;
-
     width: 100%;
-
     max-width: 850px;
 
-    margin:
-        0 auto 40px auto !important;
+    margin: 0 auto 40px auto !important;
 
     padding: 35px;
 
+    box-sizing: border-box;
 
     background:
         linear-gradient(145deg,
             #020612,
             #051024) !important;
 
-
     border: 3px solid #ff4141;
 
     border-radius: 12px;
-
 
     color: #e2f5ff !important;
 
@@ -356,17 +287,13 @@ body {
 
     text-align: center !important;
 
-
     animation:
         neonGlowBorder 7s infinite ease-in-out;
 
-
     transition:
-        all 0.3s cubic-bezier(0.25,
-            0.8,
-            0.25,
-            1);
-
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
 
 
@@ -382,29 +309,15 @@ body {
 
     border-color: #00f0ff !important;
 
-
     box-shadow:
-
-        0 20px 50px rgba(0,
-            0,
-            0,
-            0.9),
-
-        inset 0 0 20px rgba(0,
-            240,
-            255,
-            0.2),
-
-        0 0 35px rgba(0,
-            240,
-            255,
-            0.5) !important;
-
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        inset 0 0 20px rgba(0, 240, 255, 0.2),
+        0 0 35px rgba(0, 240, 255, 0.5) !important;
 }
 
 
 /* =====================================================
-   FØRSTE BOGSTAV I TEKSTEN
+   FØRSTE BOGSTAV
    ===================================================== */
 
 .artikel-boks p::first-letter {
@@ -417,34 +330,51 @@ body {
 
     text-shadow:
         0 0 8px #00f0ff;
-
 }
 
 
 /* =====================================================
-   ENIAC LISTE - TECH STATION LOOK
+   FOTO-TEKST
+   ===================================================== */
+
+.artikel-boks .foto-kilde {
+
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: -20px auto 35px auto;
+
+    color: #a9dff0;
+
+    font-size: 0.9rem;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   ENIAC LISTE
    ===================================================== */
 
 .eniac-liste {
 
+    width: 100%;
     max-width: 850px;
 
-    width: 100%;
+    margin: 50px auto 65px auto !important;
 
-    margin:
-        50px auto 65px auto !important;
-
-    padding:
-        35px 40px 35px 50px;
+    padding: 35px 40px 35px 50px;
 
     box-sizing: border-box;
-
 
     background:
         linear-gradient(145deg,
             #020612,
             #040f21) !important;
-
 
     border: 3px solid #15ce2c;
 
@@ -454,39 +384,20 @@ body {
 
     list-style-position: inside;
 
-
     box-shadow:
-
-        0 20px 50px rgba(0,
-            0,
-            0,
-            0.9),
-
-        inset 0 0 15px rgba(21,
-            206,
-            44,
-            0.1),
-
-        0 0 30px rgba(21,
-            206,
-            44,
-            0.4) !important;
-
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        inset 0 0 15px rgba(21, 206, 44, 0.1),
+        0 0 30px rgba(21, 206, 44, 0.4) !important;
 }
 
-
-/* Liste-symboler */
 
 .eniac-liste li::marker {
 
     content: "⚡ ";
 
     font-size: 1.2rem;
-
 }
 
-
-/* Listepunkter */
 
 .eniac-liste li {
 
@@ -501,13 +412,9 @@ body {
     text-align: left;
 
     border-bottom:
-        1px dashed rgba(21,
-            206,
-            44,
-            0.15);
+        1px dashed rgba(21, 206, 44, 0.15);
 
     padding-bottom: 12px;
-
 }
 
 
@@ -518,20 +425,41 @@ body {
     margin-bottom: 0;
 
     padding-bottom: 0;
-
 }
 
 
 /* =====================================================
-   KNAP-CONTAINER
+   BILLEDE
    ===================================================== */
 
-.knap-container-layout {
+.eniac-billede {
 
-    width: 100vw;
+    display: block;
 
-    margin-left:
-        calc(50% - 50vw);
+    width: 100%;
+    max-width: 850px;
+
+    height: auto;
+
+    margin: 60px auto !important;
+
+    border: 3px solid #00f0ff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(0, 240, 255, 0.4) !important;
+}
+
+
+/* =====================================================
+   KNAPPER
+   ===================================================== */
+
+.knapper {
+
+    width: 100%;
 
     display: flex;
 
@@ -541,16 +469,12 @@ body {
 
     box-sizing: border-box;
 
-    padding:
-        40px 25px 60px;
-
+    padding: 40px 25px 60px;
 }
 
 
-.knap-container-layout .knap,
-.knap-container-layout .knap2 {
-
-    margin: 0;
+.knapper .knap,
+.knapper .knap2 {
 
     display: inline-flex;
 
@@ -558,70 +482,29 @@ body {
 
     justify-content: center;
 
-    padding:
-        12px 24px;
+    padding: 12px 24px;
 
-    text-decoration: none;
+    margin: 0;
 
     box-sizing: border-box;
 
+    text-decoration: none;
 }
 
 
 /* =====================================================
-   BILLEDE-INDRAMNING
-   ===================================================== */
-
-.eniac-billede {
-
-    display: block;
-
-    width: 100%;
-
-    max-width: 850px;
-
-    margin:
-        60px auto !important;
-
-    height: auto;
-
-    border-radius: 12px;
-
-    border: 3px solid #00f0ff;
-
-
-    box-shadow:
-
-        0 20px 50px rgba(0,
-            0,
-            0,
-            0.9),
-
-        0 0 30px rgba(0,
-            240,
-            255,
-            0.4) !important;
-
-}
-
-
-/* =====================================================
-   RESPONSIVT DESIGN - MOBIL
+   MOBIL
    ===================================================== */
 
 @media (max-width: 768px) {
-
 
     .artikel-boks {
 
         width: 100%;
 
         padding: 10px;
-
     }
 
-
-    /* Alle H-tags på mobil */
 
     .artikel-boks h1,
     .artikel-boks h2,
@@ -629,8 +512,7 @@ body {
 
         width: 100%;
 
-        padding:
-            20px 15px 35px;
+        padding: 20px 15px 35px;
 
         font-size: 1.5rem;
 
@@ -639,11 +521,8 @@ body {
         margin-top: 60px !important;
 
         margin-bottom: 35px !important;
-
     }
 
-
-    /* Laserlinjen på mobil */
 
     .artikel-boks h1::after,
     .artikel-boks h2::after,
@@ -656,11 +535,8 @@ body {
         width: 80%;
 
         height: 3px;
-
     }
 
-
-    /* Tekst */
 
     .artikel-boks p {
 
@@ -669,50 +545,40 @@ body {
         padding: 25px;
 
         line-height: 1.8;
-
     }
 
 
-    /* Liste */
+    .artikel-boks .foto-kilde {
+
+        font-size: 0.8rem;
+
+        margin-bottom: 25px;
+    }
+
 
     .eniac-liste {
 
-        padding:
-            25px 20px;
-
+        padding: 25px 20px;
     }
 
 
     .eniac-liste li {
 
         font-size: 1.05rem;
-
     }
 
 
-    /* Knapper */
+    .knapper {
 
-    .knap-container-layout {
-
-        padding-left: 12px;
-
-        padding-right: 12px;
-
-        padding-top: 30px;
-
-        padding-bottom: 50px;
-
+        padding: 30px 12px 50px;
     }
 
 
-    .knap-container-layout .knap,
-    .knap-container-layout .knap2 {
+    .knapper .knap,
+    .knapper .knap2 {
 
-        padding:
-            10px 16px;
+        padding: 10px 16px;
 
         font-size: 0.95rem;
-
     }
-
 }
