@@ -90,7 +90,7 @@ body {
 .it-overskrift {
     position: relative;
 
-    max-width: 900px;
+    max-width: 950px;
     width: 90%;
 
     margin: 40px auto 55px auto !important;
@@ -209,7 +209,7 @@ body {
         Verdana,
         sans-serif;
 
-    line-height: 1.95;
+    line-height: 2;
 
     background:
         linear-gradient(145deg,

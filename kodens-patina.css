@@ -155,10 +155,9 @@ main.kodens-side {
             #00aaff,
             transparent);
 
-    box-shadow:
-        0 0 10px #00aaff;
+    box-shadow: 0 0 10px #00aaff;
 
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 
@@ -235,11 +234,9 @@ main.kodens-side {
 
     border-radius: 15px;
 
-    box-shadow:
-        0 0 20px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
 
-    padding:
-        25px 25px 25px 55px;
+    padding: 25px 25px 25px 55px;
 
     box-sizing: border-box;
 }
