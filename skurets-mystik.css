@@ -166,7 +166,46 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 }
 
+/* =====================================================
+   BILLEDE - SKURETS MYSTIK
+   ===================================================== */
 
+.mystik-tromme {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 520px;
+
+    height: auto;
+
+    margin: 40px auto 60px;
+
+    border: 4px solid #3024db;
+
+    border-radius: 18px;
+
+    background: #020612;
+
+    box-shadow:
+        0 0 25px rgba(48, 36, 219, .6),
+        0 0 45px rgba(0, 170, 255, .35),
+        inset 0 0 15px rgba(0, 170, 255, .12);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.mystik-tromme:hover {
+
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 35px rgba(0, 240, 255, .8),
+        0 0 70px rgba(48, 36, 219, .7);
+}
 /* ==========================================================================
    5. HOVER PÅ INFOBOKSE
    ========================================================================== */

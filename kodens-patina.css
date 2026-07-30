@@ -84,7 +84,9 @@ main.kodens-side {
 
 .tid,
 .kodens-artikel h1,
-.kodens-artikel h2 {
+.kodens-artikel .overskrift-patina,
+.kodens-artikel h2,
+.kodens-artikel h3 {
 
     position: relative;
 
@@ -95,6 +97,7 @@ main.kodens-side {
             #00aaff);
 
     background-clip: text;
+
 
     -webkit-background-clip: text;
 
@@ -129,7 +132,9 @@ main.kodens-side {
 
 .tid::after,
 .kodens-artikel h1::after,
-.kodens-artikel h2::after {
+.kodens-artikel .overskrift-patina::after,
+.kodens-artikel h2::after,
+.kodens-artikel h3::after {
 
     content: '';
 
@@ -153,37 +158,16 @@ main.kodens-side {
     box-shadow:
         0 0 10px #00aaff;
 
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 
-/* ==========================================================================
-   UNDEROVERSKRIFTER H3
-   ========================================================================== */
 
-.kodens-artikel h3 {
 
-    color: #0fce2c;
 
-    text-align: center;
 
-    font-size: 1.6rem;
 
-    font-weight: bold;
 
-    letter-spacing: 1px;
-
-    max-width: 500px;
-
-    width: 90%;
-
-    margin: 40px auto 20px auto;
-
-    text-shadow:
-        0 0 10px rgba(15, 206, 44, 0.5);
-
-    text-transform: uppercase;
-}
 
 
 /* ==========================================================================
@@ -624,6 +608,7 @@ body {
     text-shadow:
         0 0 5px rgba(0, 170, 255, 0.5);
 }
+
 /* ==========================================================================
    10. TABLET / MOBIL
    ========================================================================== */
@@ -644,7 +629,9 @@ body {
 
     .tid,
     .kodens-artikel h1,
-    .kodens-artikel h2 {
+    .kodens-artikel .overskrift-patina,
+    .kodens-artikel h2,
+    .kodens-artikel h3 {
 
         font-size: 1.6rem;
     }
@@ -652,7 +639,9 @@ body {
 
     .tid::after,
     .kodens-artikel h1::after,
-    .kodens-artikel h2::after {
+    .kodens-artikel .overskrift-patina::after,
+    .kodens-artikel h2::after,
+    .kodens-artikel h3::after {
 
         width: 80%;
 
@@ -660,10 +649,7 @@ body {
     }
 
 
-    .kodens-artikel h3 {
 
-        font-size: 1.3rem;
-    }
 
 
     .kodens-artikel p {
