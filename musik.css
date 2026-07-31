@@ -2,7 +2,7 @@
 ==========================================================================
 © 2026 Toner fra hjertet – Kodens rejse
 Ophavsret til egen CSS-kode, design og struktur.
-Må ikke kopieres, genbruges eller distribueres uden tilladelse.
+Må ikke kopiére, genbruges eller distribueres uden tilladelse.
 ==========================================================================
 */
 /* ==========================================================================
@@ -17,23 +17,14 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .musik-side-baggrund {
-
     display: flex !important;
-
     flex-direction: column !important;
-
     align-items: center !important;
-
     gap: 35px !important;
-
     padding: 3rem 1.5rem !important;
-
     min-height: 100vh !important;
-
     background-color: #030a16 !important;
-
     color: #ffffff !important;
-
 }
 
 
@@ -43,25 +34,15 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .top-hero-container {
-
     display: grid !important;
-
     grid-template-columns: 140px minmax(0, 1fr) 140px !important;
-
     align-items: center !important;
-
     justify-content: center !important;
-
     gap: 35px !important;
-
     max-width: 1100px !important;
-
     width: 95% !important;
-
     margin: 20px auto 10px auto !important;
-
     box-sizing: border-box !important;
-
 }
 
 
@@ -72,35 +53,22 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 .min-bass-venstre,
 .min-bass-hoejre,
 .top-hero-container img {
-
     width: 140px !important;
-
     max-width: 140px !important;
-
     height: 140px !important;
-
     min-width: 140px !important;
-
     min-height: 140px !important;
-
     object-fit: cover !important;
-
     border: 4px solid rgb(48, 36, 219) !important;
-
     border-radius: 50% !important;
-
     box-shadow:
         0 0 15px rgb(48, 36, 219),
         0 0 30px rgba(48, 36, 219, 0.4) !important;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease !important;
-
     display: block !important;
-
     justify-self: center !important;
-
 }
 
 
@@ -110,13 +78,10 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 .min-bass-venstre:hover,
 .min-bass-hoejre:hover {
-
     transform: scale(1.08) !important;
-
     box-shadow:
         0 0 20px rgb(48, 36, 219),
         0 0 40px rgba(0, 170, 255, 0.6) !important;
-
 }
 
 
@@ -125,78 +90,53 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .title-midte {
-
     text-align: center !important;
-
     display: block !important;
-
     width: 100% !important;
-
     max-width: 500px !important;
-
     margin: 0 auto !important;
-
     min-width: 0 !important;
-
     box-sizing: border-box !important;
-
 }
 
 
 /* ==========================================================================
-   3. MUSIK OVERSKRIFTER
+   3. MUSIK OVERSKRIFTER (STORE LINKS)
    ========================================================================== */
 
 .musik-side-1,
 .musik-side-2 {
-
     position: relative !important;
-
     display: flex !important;
-
     justify-content: center !important;
-
     align-items: center !important;
-
     max-width: 700px !important;
-
     width: 100% !important;
-
     margin: 0 auto 20px auto !important;
-
     font-size: 2.2rem !important;
-
+    /* Styrer tekststørrelsen */
     font-weight: bold !important;
-
     color: rgb(69, 207, 198) !important;
-
     padding: 10px 10px 20px 10px !important;
-
+    /* Giver luft indeni kassen */
     background:
         linear-gradient(145deg,
             #06142a,
             #081d3a) !important;
-
     border: 5px solid rgb(48, 36, 219) !important;
-
+    /* Styrer den tykke ramme */
     border-radius: 15px !important;
-
     text-decoration: none !important;
-
     text-shadow:
         0 0 5px #00aaff,
         0 0 10px #00aaff,
         0 0 20px rgb(48, 36, 219) !important;
-
     box-shadow:
         0 0 25px rgba(48, 36, 219, 0.5) !important;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease !important;
-
     box-sizing: border-box !important;
-
 }
 
 
@@ -206,30 +146,21 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 .musik-side-1::after,
 .musik-side-2::after {
-
     content: '' !important;
-
     position: absolute !important;
-
     bottom: 5px !important;
-
     left: 15% !important;
-
     width: 70% !important;
-
     height: 4px !important;
-
     background:
         linear-gradient(90deg,
             transparent,
             #00aaff,
             #45cfc6,
             transparent) !important;
-
     box-shadow:
         0 0 10px #00aaff,
         0 0 20px rgba(0, 170, 255, 0.8) !important;
-
 }
 
 
@@ -239,14 +170,11 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 .musik-side-1:hover,
 .musik-side-2:hover {
-
     transform:
         translateY(-5px) scale(1.02) !important;
-
     box-shadow:
         0 0 30px #00aaff,
         0 0 50px rgba(0, 170, 255, 0.6) !important;
-
 }
 
 
@@ -255,42 +183,27 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .musik-p {
-
     max-width: 850px !important;
-
     width: 90% !important;
-
     margin: 30px auto !important;
-
     padding: 35px !important;
-
     font-size: 20px !important;
-
     line-height: 1.8 !important;
-
     text-align: center !important;
-
     color: #d7f7ff !important;
-
     background:
         linear-gradient(145deg,
             #06142a,
             #081d3a) !important;
-
     border: 5px solid rgb(48, 36, 219) !important;
-
     border-radius: 23px !important;
-
     box-shadow:
         0 0 15px rgba(48, 36, 219, 0.4) !important;
-
     transition:
         transform 0.3s ease,
         border 0.3s ease,
         box-shadow 0.3s ease !important;
-
     box-sizing: border-box !important;
-
 }
 
 
@@ -299,15 +212,11 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .musik-p:hover {
-
     transform: translateY(-5px) !important;
-
     border: 5px solid #00aaff !important;
-
     box-shadow:
         0 0 20px rgba(0, 170, 255, .6),
         0 0 45px rgba(0, 170, 255, .35) !important;
-
 }
 
 
@@ -316,36 +225,24 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .hjerte-citat {
-
-    max-width: 750px !important;
-
+    max-width: 550px !important;
     width: 90% !important;
-
     margin: 40px auto !important;
-
-    padding: 35px !important;
-
+    padding: 25px !important;
     text-align: center !important;
-
     background:
         linear-gradient(145deg,
             #051937,
             #001026) !important;
-
     border: 4px solid #00aaff !important;
-
     border-radius: 25px !important;
-
     box-shadow:
         0 0 15px #00aaff,
         0 0 30px rgba(0, 170, 255, 0.3) !important;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease !important;
-
     box-sizing: border-box !important;
-
 }
 
 
@@ -354,12 +251,9 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .hjerte-citat:hover {
-
     transform: scale(1.02) !important;
-
     box-shadow:
         0 0 35px #00aaff !important;
-
 }
 
 
@@ -368,31 +262,99 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    ========================================================================== */
 
 .hjerte-citat-text {
-
     color: #7fdfff !important;
-
     font-size: 2.2rem !important;
-
-    font-family:
-        "Brush Script MT",
-        cursive !important;
-
-    line-height: 1.6 !important;
-
-    text-shadow:
-        0 0 5px #00aaff,
-        0 0 15px #00aaff !important;
-
-    margin: 0 !important;
-
+    font-family: "Brush Script MT", cursive !important;
 }
 
 
 /* ==========================================================================
-   6. TILBAGE / NÆSTE KNAPPER
+   6. KONTAKT SEKTION (CENTRERET PÅ MIDTEN)
    ========================================================================== */
 
+.kontakt-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 40px auto !important;
+    box-sizing: border-box !important;
+}
+
+.kontakt-knap {
+    display: inline-block !important;
+    text-align: center !important;
+    min-width: 250px !important;
+    max-width: 300px !important;
+    padding: 10px 20px !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #45cfc6 !important;
+    text-decoration: none !important;
+    background: linear-gradient(145deg, #06142a, #081d3a) !important;
+    border: 3px solid rgb(48, 36, 219) !important;
+    border-radius: 50px !important;
+    text-shadow: 0 0 5px #00aaff !important;
+    box-shadow: 0 0 15px rgba(48, 36, 219, 0.4) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.kontakt-knap:hover {
+    transform: scale(1.05) !important;
+    border-color: #00aaff !important;
+    box-shadow: 0 0 25px #00aaff !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   MINDRE YOUTUBE KNAPPER I BUNDEN
+   ===================================================== */
+
+.it-navigation-knapper .knap2 {
+
+    min-width: 260px !important;
+
+    max-width: 350px !important;
+
+    padding: 10px 15px !important;
+
+    font-size: 0.95rem !important;
+
+    border-radius: 12px !important;
+
+    gap: 8px !important;
+
+}
+/* =====================================================
+   ALLE 3 LINK BOKSE SAMME STØRRELSE
+   ===================================================== */
+
 .it-navigation-knapper {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 20px !important;
+
+    width: 100% !important;
+
+    margin: 40px auto !important;
+
+}
+
+
+/* Alle links */
+
+.it-navigation-knapper .knap2 {
+
+    width: 350px !important;
+
+    min-height: 80px !important;
 
     display: flex !important;
 
@@ -400,450 +362,192 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
     align-items: center !important;
 
-    gap: 25px !important;
+    text-align: center !important;
 
-    flex-wrap: wrap !important;
-
-    width: 100% !important;
-
-    margin: 50px auto 25px !important;
-
-    box-sizing: border-box !important;
-
-}
-
-
-/* ==========================================================================
-   FÆLLES KNAPDESIGN
-   ========================================================================== */
-
-.it-navigation-knapper .knap,
-.it-navigation-knapper .knap2 {
-
-    display: inline-flex !important;
-
-    justify-content: center !important;
-
-    align-items: center !important;
-
-    min-width: 180px !important;
-
-    padding: 14px 25px !important;
+    padding: 15px 20px !important;
 
     box-sizing: border-box !important;
 
     border-radius: 15px !important;
 
-    border: 3px solid #00aaff !important;
+}
 
-    background:
-        linear-gradient(145deg,
-            #06142a,
-            #081d3a) !important;
 
-    color: #ffffff !important;
+/* Impulse uden ikon */
 
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif !important;
+.it-navigation-knapper .knap2:not(:has(.knap-ikon)) {
 
     font-size: 1.1rem !important;
 
-    font-weight: 800 !important;
-
-    text-decoration: none !important;
-
-    text-align: center !important;
-
-    letter-spacing: 1px !important;
-
-    text-shadow:
-        0 0 6px #00aaff,
-        0 0 12px rgba(0, 170, 255, .6) !important;
-
-    box-shadow:
-        0 0 12px rgba(0, 170, 255, .45),
-        inset 0 0 12px rgba(0, 170, 255, .08) !important;
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease,
-        color .3s ease !important;
-
 }
 
 
-/* ==========================================================================
-   KNAPPER HOVER
-   ========================================================================== */
+/* Mobil */
 
-.it-navigation-knapper .knap:hover,
-.it-navigation-knapper .knap2:hover {
+@media(max-width:768px) {
 
-    transform:
-        translateY(-4px) scale(1.03) !important;
-
-    border-color: #45cfc6 !important;
-
-    color: #45cfc6 !important;
-
-    text-shadow:
-        0 0 8px #45cfc6,
-        0 0 18px rgba(69, 207, 198, .7) !important;
-
-    box-shadow:
-        0 0 20px #00aaff,
-        0 0 40px rgba(0, 170, 255, .45),
-        inset 0 0 15px rgba(69, 207, 198, .12) !important;
-
-}
-
-
-/* ==========================================================================
-   7. MOBILOPTIMERING
-   ========================================================================== */
-
-@media (max-width: 768px) {
-
-    /* --------------------------------------------------------------
-       HERO PÅ MOBIL
-       Billede - titel - billede
-       -------------------------------------------------------------- */
-
-    .top-hero-container {
-
-        display: grid !important;
-
-        grid-template-columns:
-            85px minmax(0, 1fr) 85px !important;
-
-        align-items: center !important;
-
-        justify-content: center !important;
-
-        gap: 8px !important;
-
-        width: 100% !important;
-
-        max-width: 100% !important;
-
-        margin: 15px auto !important;
-
-        padding: 0 4px !important;
-
-        box-sizing: border-box !important;
-
-    }
-
-
-    /* --------------------------------------------------------------
-       BILLEDER PÅ MOBIL
-       -------------------------------------------------------------- */
-
-    .min-bass-venstre,
-    .min-bass-hoejre,
-    .top-hero-container img {
-
-        width: 78px !important;
-
-        min-width: 78px !important;
-
-        max-width: 78px !important;
-
-        height: 78px !important;
-
-        min-height: 78px !important;
-
-        max-height: 78px !important;
-
-        border-width: 3px !important;
-
-        justify-self: center !important;
-
-    }
-
-
-    /* --------------------------------------------------------------
-       MIDTERTITEL PÅ MOBIL
-       -------------------------------------------------------------- */
-
-    .title-midte {
-
-        width: 100% !important;
-
-        max-width: none !important;
-
-        min-width: 0 !important;
-
-        margin: 0 !important;
-
-        text-align: center !important;
-
-    }
-
-
-    .musik-side-1 {
-
-        width: 100% !important;
-
-        max-width: 100% !important;
-
-        margin: 0 auto 15px auto !important;
-
-        padding: 12px 6px 20px 6px !important;
-
-        font-size: 1.25rem !important;
-
-        line-height: 1.25 !important;
-
-        border-width: 3px !important;
-
-        border-radius: 12px !important;
-
-        letter-spacing: 0.5px !important;
-
-    }
-
-
-    .musik-side-2 {
-
-        font-size: 1.6rem !important;
-
-        padding: 15px !important;
-
-    }
-
-
-    /* --------------------------------------------------------------
-       TEKST
-       -------------------------------------------------------------- */
-
-    .musik-p {
-
-        width: 94% !important;
-
-        padding: 20px !important;
-
-        font-size: 18px !important;
-
-        line-height: 1.7 !important;
-
-        box-sizing: border-box !important;
-
-    }
-
-
-    /* --------------------------------------------------------------
-       CITAT
-       -------------------------------------------------------------- */
-
-    .hjerte-citat {
-
-        width: 94% !important;
-
-        padding: 25px 18px !important;
-
-    }
-
-
-    .hjerte-citat-text {
-
-        font-size: 1.6rem !important;
-
-    }
-
-
-    /* --------------------------------------------------------------
-       KNAPPER PÅ MOBIL
-       -------------------------------------------------------------- */
-
-    .it-navigation-knapper {
-
-        flex-direction: column !important;
-
-        gap: 15px !important;
-
-        margin-top: 40px !important;
-
-    }
-
-
-    .it-navigation-knapper .knap,
     .it-navigation-knapper .knap2 {
 
         width: 90% !important;
 
         max-width: 320px !important;
 
-        min-width: 0 !important;
-
-        font-size: 1rem !important;
-
-        padding: 13px 20px !important;
-
     }
+
+}
+/* =====================================================
+   ANDRE LINKS OVERSKRIFT
+   ===================================================== */
+
+/* =====================================================
+   ANDRE LINKS - CENTRERET OVER YOUTUBE BOKSE
+   ===================================================== */
+
+/* =====================================================
+   ANDRE LINKS OVERSKRIFT
+   ===================================================== */
+
+.andre-links {
+
+    width: 100% !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    margin-top: 40px !important;
+
+    margin-bottom: 20px !important;
 
 }
 
 
-/* ==========================================================================
-   8. MEGET LILLE MOBIL
-   ========================================================================== */
+/* Andre links knap - placering */
+.andre-links {
 
-@media (max-width: 480px) {
+    display: flex !important;
 
+    justify-content: center !important;
 
-    .top-hero-container {
+    align-items: center !important;
 
-        grid-template-columns:
-            65px minmax(0, 1fr) 65px !important;
+    width: 100% !important;
 
-        gap: 5px !important;
+    margin: 30px auto 20px auto !important;
 
-        padding: 0 2px !important;
-
-    }
+}
 
 
-    .min-bass-venstre,
-    .min-bass-hoejre,
-    .top-hero-container img {
+/* Selve knappen */
+.andre-links .knap {
 
-        width: 60px !important;
+    min-width: 220px !important;
 
-        min-width: 60px !important;
+    padding: 12px 30px !important;
 
-        max-width: 60px !important;
+    text-align: center !important;
 
-        height: 60px !important;
+    font-size: 1.2rem !important;
 
-        min-height: 60px !important;
+    font-weight: bold !important;
 
-        max-height: 60px !important;
+    color: #45cfc6 !important;
 
-        border-width: 2px !important;
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a) !important;
 
-    }
+    border: 3px solid #00aaff !important;
 
+    border-radius: 15px !important;
 
-    .musik-side-1 {
+    text-decoration: none !important;
 
-        font-size: 1rem !important;
+    box-shadow:
+        0 0 15px rgba(0, 170, 255, .5) !important;
 
-        padding:
-            10px 4px 18px 4px !important;
+    transition: .3s ease !important;
 
-        line-height: 1.2 !important;
-
-        border-width: 2px !important;
-
-        border-radius: 10px !important;
-
-    }
+}
 
 
-    .musik-side-1::after {
+/* Hover */
+.andre-links .knap:hover {
 
-        height: 2px !important;
+    transform: translateY(-4px) scale(1.03) !important;
 
-        bottom: 5px !important;
+    border-color: #ff2d50 !important;
 
-    }
+    color: #ff2d50 !important;
 
+    box-shadow:
+        0 0 20px #ff2d50 !important;
 
-    .musik-p {
-
-        width: 96% !important;
-
-        padding: 16px !important;
-
-        font-size: 16px !important;
-
-    }
+}
 
 
-    .hjerte-citat {
 
-        width: 96% !important;
+.andre-links .knap {
 
-        padding: 20px 14px !important;
+    display: flex !important;
 
-    }
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    min-width: 220px !important;
+
+}
+/* Mindre logo i knapperne */
+
+.it-navigation-knapper .knap2 .knap-ikon {
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+    min-width: 40px !important;
+
+    border-width: 3px !important;
+
+}
 
 
-    .hjerte-citat-text {
+/* Mobil */
 
-        font-size: 1.4rem !important;
+@media (max-width: 768px) {
 
-    }
-
-
-    .it-navigation-knapper {
-
-        margin-top: 30px !important;
-
-    }
-
-
-    .it-navigation-knapper .knap,
     .it-navigation-knapper .knap2 {
 
-        width: 96% !important;
+        width: 90% !important;
 
-        font-size: .95rem !important;
+        max-width: 300px !important;
 
-        padding: 12px 15px !important;
+        font-size: 0.9rem !important;
+
+        padding: 10px !important;
 
     }
 
 }
-
-
 /* ==========================================================================
-   9. EKSTRA SMAL TELEFON
-   Fx iPhone SE / små Android
+   7. RESPONSIVITET (MOBIL & TABLET)
    ========================================================================== */
 
-@media (max-width: 360px) {
-
+@media screen and (max-width: 768px) {
 
     .top-hero-container {
-
-        grid-template-columns:
-            55px minmax(0, 1fr) 55px !important;
-
-        gap: 4px !important;
-
-    }
-
-
-    .min-bass-venstre,
-    .min-bass-hoejre,
-    .top-hero-container img {
-
-        width: 52px !important;
-
-        min-width: 52px !important;
-
-        max-width: 52px !important;
-
-        height: 52px !important;
-
-        min-height: 52px !important;
-
-        max-height: 52px !important;
-
-    }
-
-
-    .musik-side-1 {
-
-        font-size: 0.88rem !important;
-
-        padding: 8px 2px 16px 2px !important;
-
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
     }
 
 }
+
+    .musik-side-1,
+    .musik-side-2 {
+        font-size: 1.6rem !important;
+    }
