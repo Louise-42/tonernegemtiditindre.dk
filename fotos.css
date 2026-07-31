@@ -102,7 +102,114 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 }
 
+/* ==========================================================
+   TILBAGE / NÆSTE KNAPPER
+   ========================================================== */
 
+.knap-container-layout {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 60px auto 40px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* BEGGE KNAPPER */
+
+.knap-container-layout .knap,
+.knap-container-layout .knap2 {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 220px;
+
+    padding: 15px 35px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    color: #45cfc6;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #081d3a);
+
+    border: 3px solid #00aaff;
+
+    text-shadow:
+        0 0 8px #00aaff;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, .5);
+
+    transition: .35s ease;
+
+}
+
+
+/* HOVER */
+
+.knap-container-layout .knap:hover,
+.knap-container-layout .knap2:hover {
+
+    transform:
+        translateY(-5px) scale(1.05);
+
+    color: white;
+
+    border-color: #ff2d50;
+
+    box-shadow:
+        0 0 30px #ff2d50;
+
+}
+
+
+
+/* MOBIL */
+
+@media(max-width:600px) {
+
+    .knap-container-layout {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    .knap-container-layout .knap,
+    .knap-container-layout .knap2 {
+
+        width: 90%;
+
+        max-width: 300px;
+
+    }
+
+}
 /* Højre laser */
 
 .foto-side-baggrund::after {
@@ -192,6 +299,14 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
         all 0.4s ease;
 
 }
+/* ==========================================================================
+   TILBAGE / NÆSTE KNAPPER
+   HELT UD TIL HVER SIN SIDE
+   ========================================================================== */
+
+
+
+
 
 
 .foto-h3:hover {
@@ -392,26 +507,9 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 }
 
 
-/* VENSTRE KNAP */
 
-.knap-container-layout .knap {
 
-    margin: 0;
 
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding:
-        12px 24px;
-
-    text-decoration: none;
-
-    box-sizing: border-box;
-
-}
 
 
 /* HØJRE KNAP */
