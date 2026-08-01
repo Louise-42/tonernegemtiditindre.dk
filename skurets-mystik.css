@@ -240,27 +240,20 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
    6. TOP HERO - BILLEDER + OVERSKRIFT
    ========================================================================== */
 
-.top-hero-container {
+.top-hero-container img {
 
-    display: flex !important;
+    width: 180px !important;
 
-    align-items: center !important;
+    max-width: 180px !important;
 
-    justify-content: center !important;
+    height: 180px !important;
 
-    gap: 2px !important;
+    object-fit: cover !important;
 
-    max-width: 1000px !important;
-
-    width: 100%;
-
-    margin: 40px auto !important;
-
-    padding: 0 20px !important;
-
-    box-sizing: border-box !important;
+    border-radius: 15px !important;
 
 }
+
 
 
 .title-midte {
@@ -301,7 +294,7 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 }
 
-  }
+  
 
   .it-navigation-knapper {
       flex-direction: column;
