@@ -204,6 +204,162 @@ body {
 
 }
 
+/* =====================================================
+   OM MIG - TOP TITEL MED BILLEDER
+   ===================================================== */
+
+
+.top-hero-container {
+
+    width: 100%;
+
+    padding: 40px 20px 30px;
+
+    box-sizing: border-box;
+
+}
+
+
+.title-midte {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+}
+
+
+/* Billeder ved siden af overskrift */
+
+.title-midte img {
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #00aaff;
+
+    box-shadow:
+        0 0 10px #00aaff,
+        0 0 20px #0fce2c;
+
+}
+
+
+/* Hovedoverskrift */
+
+.title-midte .title {
+
+    margin: 0;
+
+    padding: 20px 30px;
+
+    font-size: 40px;
+
+    text-align: center;
+    gap: 20px;
+    color: white;
+
+    background: linear-gradient(90deg,
+            #0fce2c,
+            #00aaff);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+/* =====================================================
+   TEKST SEKTION
+   ===================================================== */
+
+
+.tekst-sektion-layout {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+}
+
+
+.info-p {
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #00aaff;
+
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+
+}
+
+
+/* =====================================================
+   MOBIL
+   ===================================================== */
+
+
+@media (max-width: 700px) {
+
+
+    .title-midte {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .title-midte img {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+    .title-midte .title {
+
+        font-size: 32px;
+
+    }
+
+
+    .info-p {
+
+        font-size: 16px;
+
+        padding: 18px;
+
+    }
+
+}
 
 /* =====================================================
    7. LASERSTREG UNDER TITEL
