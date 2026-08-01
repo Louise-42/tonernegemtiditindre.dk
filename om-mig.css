@@ -155,36 +155,53 @@ body {
 
     margin: 0;
 
-    padding: 30px 25px 50px;
+    padding: 25px 20px 40px;
 
     text-align: center;
 
-    font-size: 40px;
+    font-size: 42px;
 
     font-weight: 900;
 
     text-transform: uppercase;
 
-    letter-spacing: 1px;
+    letter-spacing: 4px;
 
-    color: #45cfc6 !important;
+    color: limegreen;
 
     background:
         linear-gradient(145deg,
-            #040d1a,
-            #07172e) !important;
+            rgba(4, 13, 26, 0.95),
+            rgba(20, 5, 45, 0.95)) !important;
 
-    border: 4px solid #3024db;
+    border: 4px solid #b026ff;
 
     border-radius: 20px;
 
     text-shadow:
-        0 0 8px #00aaff,
-        0 0 18px rgba(0, 170, 255, 0.5),
-        0 0 25px #3024db;
+
+        0 0 5px #ffffff,
+
+        0 0 15px #00aaff,
+
+        0 0 30px #b026ff,
+
+        0 0 45px #b026ff;
+
+
+    box-shadow:
+
+        0 0 15px rgba(176, 38, 255, 0.8),
+
+        0 0 35px rgba(0, 170, 255, 0.5),
+
+        inset 0 0 25px rgba(176, 38, 255, 0.25);
+
 
     animation:
+
         cyberTitlePulse 4s infinite alternate ease-in-out;
+
 }
 
 
