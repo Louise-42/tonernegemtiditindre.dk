@@ -100,60 +100,11 @@ main.it-side-baggrund {
    HOVEDOVERSKRIFT H1
    ===================================================== */
 
-.it-tekst h1.it-overskrift {
 
-    position: relative;
-
-    display: block !important;
-
-    /* Lidt smallere */
-    width: min(90%, 850px) !important;
-
-    /* Mindre afstand omkring boksen */
-    margin: 30px auto 45px !important;
-
-    /* Lidt mindre højde */
-    padding: 22px 20px 38px !important;
-
-    box-sizing: border-box !important;
-
-    /* Lidt mindre tekst */
-    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
-
-    font-weight: bold !important;
-
-    line-height: 1.6 !important;
-
-    text-align: center !important;
-
-    color: #45cfc6 !important;
-
-    background:
-        linear-gradient(145deg,
-            #06142a,
-            #02060f) !important;
-
-    /* Lidt tyndere kant */
-    border: 4px solid #3024db !important;
-
-    border-radius: 18px !important;
-
-    text-shadow:
-        0 0 5px #00aaff,
-        0 0 15px #00aaff,
-        0 0 25px #3024db !important;
-
-    box-shadow:
-        0 0 22px rgba(48, 36, 219, .5),
-        inset 0 0 18px rgba(0, 170, 255, .08) !important;
-
-    animation:
-        itTitlePulse 4s infinite alternate !important;
-}
 
 .it-tekst h1.it-overskrift::after {
     content: '';
-    position: absolute;
+    position: relative;
     bottom: 15px;
     left: 15%;
     width: 70%;
@@ -161,41 +112,172 @@ main.it-side-baggrund {
     background: linear-gradient(90deg, transparent, #ff4141, #00f0ff, #15ce2c, transparent) !important;
     box-shadow: 0 0 15px #ff4141, 0 0 30px #00f0ff !important;
     border-radius: 10px !important;
+    content: '';
+
 }
 
-/* SEKTIONSOVERSKRIFTER H2 */
+/* =====================================================
+   FÆLLES CYBER LOOK TIL ALLE OVERSKRIFTER
+   ===================================================== */
+
+.it-tekst h1.it-overskrift,
+.it-tekst h2.it-overskrift,
+.it-tekst h3.it-overskrift,
+.it-tekst h4.it-overskrift,
+.it-tekst h5.it-overskrift,
+.it-tekst h6.it-overskrift {
+
+    padding: 15px 35px !important;
+
+    width: min(95%, 850px) !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 20px !important;
+    text-decoration: underline;
+
+
+}
+
+/* =====================================================
+   MATCHENDE CYBERPUNK OVERSKRIFTER
+   TEKST + BORDER + NEON
+   ===================================================== */
+
+
+/* H1 HOVEDOVERSKRIFT */
+.it-tekst h1.it-overskrift {
+
+    border: 4px solid #00f0ff !important;
+
+    background:
+        linear-gradient(145deg,
+            #02060f,
+            #06142a,
+            #02060f) !important;
+
+    color: transparent !important;
+
+    background-image:
+        linear-gradient(90deg,
+            #00f0ff,
+            #15ce2c,
+            #ff4141,
+            #00f0ff) !important;
+
+    background-size: 300% auto !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    animation:
+        itTextGradientMove 5s infinite ease-in-out,
+        itTitlePulse 4s infinite alternate !important;
+
+
+    box-shadow:
+
+        0 0 15px #00f0ff,
+        0 0 35px rgba(0, 240, 255, .5),
+        inset 0 0 20px rgba(0, 240, 255, .15) !important;
+
+
+    text-shadow: none !important;
+
+}
+
+.it-tekst h1.it-overskrift {
+
+    position: relative;
+
+    display: block !important;
+
+    margin: 30px auto 45px !important;
+
+    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
+
+    font-weight: bold !important;
+
+    text-align: center !important;
+
+}
+
+/* H2 OVERSKRIFTER */
 .it-tekst h2.it-overskrift {
     position: relative;
-    display: block !important;
-    width: min(90%, 800px) !important;
-    margin: 85px auto 40px !important;
-    padding: 15px 20px 25px !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
-    font-size: clamp(1.4rem, 4vw, 2.5rem) !important;
-    font-weight: bold !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-    background: linear-gradient(90deg, #00f0ff, #15ce2c, #ff4141, #00f0ff) !important;
-    background-size: 300% auto !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
+    border: 4px solid #00f0ff !important;
+
+    border-radius: 15px !important;
+
+    background:
+        linear-gradient(145deg,
+            #02060f,
+            #06142a) !important;
+
+
     color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-    animation: itTextGradientMove 5s infinite ease-in-out !important;
-    filter: drop-shadow(0 0 12px rgba(0, 240, 255, .6)) !important;
+
+
+    background-image:
+        linear-gradient(90deg,
+            #15ce2c,
+            #00f0ff,
+            #ff4141,
+            #15ce2c) !important;
+
+
+    background-size: 300% auto !important;
+
+
+    -webkit-background-clip: text !important;
+
+    background-clip: text !important;
+
+
+    animation:
+        itTextGradientMove 6s infinite ease-in-out !important;
+
+
+    box-shadow:
+
+        0 0 15px rgba(21, 206, 44, .7),
+        0 0 35px rgba(0, 240, 255, .4),
+        inset 0 0 20px rgba(21, 206, 44, .15) !important;
+
+
+    text-shadow: none !important;
+
 }
 
+
+/* Lille digital linje over H2 */
+.it-tekst h2.it-overskrift::before {
+
+    color: #00f0ff !important;
+
+    text-shadow:
+        0 0 8px #00f0ff !important;
+
+}
+
+
+/* Understregning matcher H2 */
 .it-tekst h2.it-overskrift::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #00f0ff, #15ce2c, #ff4141, transparent) !important;
-    box-shadow: 0 0 12px #00f0ff, 0 0 25px rgba(21, 206, 44, .5) !important;
-    border-radius: 10px !important;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #15ce2c,
+            #00f0ff,
+            #ff4141,
+            transparent) !important;
+
+
+    box-shadow:
+
+        0 0 15px #00f0ff,
+        0 0 30px #15ce2c !important;
+
 }
 
 /* BRØDTEKST OG LISTE-BOKSE */

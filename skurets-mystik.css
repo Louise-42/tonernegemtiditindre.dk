@@ -197,7 +197,18 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
         transform .35s ease,
         box-shadow .35s ease;
 }
+.mystik-tromme {
 
+    display: block !important;
+
+    width: 300px !important;
+
+    height: auto !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
 .mystik-tromme:hover {
 
     transform: scale(1.02);
@@ -290,7 +301,64 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
 }
 
+  }
 
+  .it-navigation-knapper {
+      flex-direction: column;
+      gap: 15px;
+      margin: 40px auto;
+  }
+
+  .it-navigation-knapper .knap,
+  .it-navigation-knapper .knap2 {
+      width: 100%;
+      max-width: 320px;
+      min-width: 0;
+  }
+  }
+
+  /* ==========================================================================
+   MEGET LILLE MOBIL
+   ========================================================================== */
+
+  @media (max-width: 480px) {
+
+      .skurets-mystik-side {
+          padding: 1.5rem 0.6rem 2.5rem;
+      }
+
+      .skurets-mystik-side h1 {
+          font-size: 1.6rem;
+          letter-spacing: 1px;
+      }
+
+      .skurets-mystik-side .info-p {
+          width: 97%;
+          padding: 18px 15px;
+          font-size: 16px;
+      }
+
+      .skurets-mystik-side .forside-citat {
+          width: 97%;
+          padding: 20px 15px;
+      }
+
+      .it-navigation-knapper {
+          margin: 35px auto;
+      }
+
+      .it-navigation-knapper .knap,
+      .it-navigation-knapper .knap2 {
+          width: 100%;
+          max-width: 290px;
+          padding: 13px 18px;
+          font-size: 1rem;
+      }
+  }
+
+  /* ==========================================================================
+   SLUT
+   ========================================================================== */
 /* ==========================================================================
    8. SKRIVEMASKINE-CITATBOKS
    ========================================================================== */
