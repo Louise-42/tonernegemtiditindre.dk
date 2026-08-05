@@ -132,13 +132,13 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 
     max-width: 900px;
 
-    margin: 0 auto 35px;
+    margin: 50px auto 50px;
 
-    padding: 18px 25px;
+    padding: 25px 25px;
 
     font-size: 42px;
 
-    font-weight: 700;
+    font-weight: 7500;
 
     color: #45cfc6;
 
@@ -216,6 +216,7 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
         0 0 55px rgba(0, 170, 255, .55);
 
 }
+
 /* ==========================================================================
    4. MUSIK TEKSTBOKSE
    ========================================================================== */
@@ -802,6 +803,7 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     }
 
 }
+
 /* ==========================================================================
    8. ANIMATIONER
    ========================================================================== */
