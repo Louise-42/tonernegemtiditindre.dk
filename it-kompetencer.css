@@ -231,7 +231,203 @@ body {
         box-shadow 0.4s ease,
         background 0.4s ease;
 }
+.it-navigation-knapper,
+.knap-container-layout {
 
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 60px auto 20px;
+
+    box-sizing: border-box;
+
+}
+.it-navigation-knapper,
+.knap-container-layout {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 60px auto 20px;
+    box-sizing: border-box;
+
+}
+/* ==========================================================================
+   KNAP DESIGN - TILBAGE / NÆSTE
+   ========================================================================== */
+
+
+.knap-container-layout .knap,
+.knap-container-layout .knap2 {
+
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 170px;
+
+    padding: 14px 28px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(145deg,
+            #020814,
+            #061a38);
+
+
+    border: 3px solid #00aaff;
+
+
+    text-shadow:
+
+        0 0 6px #00aaff,
+
+        0 0 12px rgba(0, 170, 255, .8);
+
+
+    box-shadow:
+
+        0 0 15px rgba(0, 170, 255, .6),
+
+        0 0 35px rgba(48, 36, 219, .4),
+
+        inset 0 0 15px rgba(0, 240, 255, .15);
+
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease,
+
+        background .35s ease;
+
+}
+
+
+
+/* TILBAGE KNAP */
+
+.knap-container-layout .knap {
+
+    border-color: #15ce2c;
+
+    text-shadow:
+
+        0 0 8px #15ce2c;
+
+}
+
+
+/* NÆSTE KNAP */
+
+.knap-container-layout .knap2 {
+
+    border-color: #00f0ff;
+
+}
+
+
+/* HOVER */
+
+.knap-container-layout .knap:hover,
+.knap-container-layout .knap2:hover {
+
+    transform:
+        translateY(-5px) scale(1.05);
+
+
+    background:
+        linear-gradient(145deg,
+            #06264a,
+            #10104a);
+
+
+    border-color: #ffffff;
+
+
+    box-shadow:
+
+        0 0 20px #00f0ff,
+
+        0 0 45px rgba(0, 170, 255, .8),
+
+        inset 0 0 20px rgba(0, 240, 255, .25);
+
+}
+
+
+
+/* Tryk effekt */
+
+.knap-container-layout .knap:active,
+.knap-container-layout .knap2:active {
+
+    transform: scale(.96);
+
+}
+@media (max-width:768px) {
+
+    .knap-container-layout {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .knap-container-layout .knap,
+    .knap-container-layout .knap2 {
+
+        width: 100%;
+
+        max-width: 320px;
+
+    }
+
+}
 
 /* ==========================================================================
    5. HOVER PÅ TEKSTBOKSE

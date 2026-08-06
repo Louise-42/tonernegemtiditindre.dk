@@ -20,7 +20,7 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     position: relative;
 
     width: 100%;
-
+    color: blue;
     min-height: 100vh;
 
     padding: 40px 20px 70px;
@@ -28,6 +28,28 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     box-sizing: border-box;
 
     overflow: hidden;
+
+}
+
+body.skribent-body {
+
+    margin: 0;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+}
+
+html {
+
+    min-height: 100%;
 
 }
 
@@ -42,7 +64,7 @@ body.skribent-body {
 
     min-height: 100vh;
 
-    color: #ffffff;
+    color: #000;
 
     overflow-x: hidden;
 
@@ -96,6 +118,63 @@ body.skribent-body {
 
 }
 
+.skribent-boks {
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto 50px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+
+    background:
+
+        radial-gradient(circle at top left,
+            rgba(0, 170, 255, .10),
+            transparent 35%),
+
+
+        radial-gradient(circle at bottom right,
+            rgba(48, 36, 219, .12),
+            transparent 40%),
+
+
+        linear-gradient(145deg,
+            rgba(6, 20, 42, .97),
+            rgba(8, 29, 58, .97));
+
+
+    border: 4px solid #00aaff;
+
+    border-radius: 20px;
+
+
+    box-shadow:
+
+        0 10px 30px rgba(0, 0, 0, .65),
+
+        0 0 25px rgba(0, 170, 255, .25),
+
+        0 0 60px rgba(48, 36, 219, .12),
+
+        inset 0 0 25px rgba(0, 170, 255, .08);
+
+
+    transition:
+
+        transform .4s ease,
+
+        border-color .4s ease,
+
+        box-shadow .4s ease;
+
+}
 
 /* ==========================================================================
    3. DIGITALT GRID OVER BAGGRUNDEN
@@ -168,83 +247,98 @@ body.skribent-body::after {
 /* ==========================================================================
    6. OVERSKRIFT
    ========================================================================== */
-
 .skribent-overskrift {
 
     position: relative;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     width: 90%;
+    max-width: 750px;
 
-    max-width: 700px;
-
-    min-height: 70px;
+    min-height: 100px;
 
     margin: 50px auto;
 
-    padding: 25px 40px;
+    padding: 25px 35px;
 
     box-sizing: border-box;
+
 
     font-family:
         "Segoe UI",
         Arial,
         sans-serif;
 
-    font-size: 2rem;
+
+    font-size: 2.1rem;
 
     font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
-    line-height: 1.3;
+    line-height: 1.4;
 
     text-transform: uppercase;
 
     text-align: center;
 
-    color: #45cfc6;
+
+    color: #ffffff;
+
 
     background:
-
-        radial-gradient(circle at top,
-            rgba(0, 240, 255, .15),
-            transparent 60%),
-
         linear-gradient(145deg,
-            rgba(8, 29, 58, .97),
-            rgba(3, 10, 25, .98));
+            rgba(0, 170, 255, .25),
+            rgba(6, 20, 42, .95));
 
-    border: 4px solid #00aaff;
 
-    outline: 3px solid #3024db;
+    border: 3px solid #00aaff;
 
-    outline-offset: 6px;
+    border-radius: 22px;
 
-    border-radius: 20px;
 
-    border-bottom: 5px solid #45cfc6;
+    box-shadow:
+
+        0 0 15px #00aaff,
+
+        0 0 35px rgba(0, 170, 255, .5),
+
+        inset 0 0 20px rgba(0, 170, 255, .15);
+
 
     text-shadow:
 
         0 0 8px #00aaff,
 
-        0 0 18px rgba(0, 170, 255, .6),
+        0 0 20px #45cfc6;
 
-        0 0 30px rgba(69, 207, 198, .35);
 
-    box-shadow:
+    animation:
+        pulsereSkribentTitel 3s infinite alternate;
 
-        0 0 20px rgba(0, 170, 255, .3),
+}
+.skribent-undertitel {
 
-        0 0 40px rgba(48, 36, 219, .3),
+    margin: 20px auto 35px;
 
-        inset 0 0 20px rgba(0, 170, 255, .08);
+    text-align: center;
+
+    font-size: 1.5rem;
+
+    font-weight: 250;
+
+    letter-spacing: 2px;
+
+    color: #45cfc6;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px rgba(97, 69, 207, 0.6);
 
     animation:
         pulsereSkribentTitel 3s infinite alternate;
@@ -255,31 +349,33 @@ body.skribent-body::after {
 /* ==========================================================================
    7. LILLE NEON-LINJE UNDER OVERSKRIFT
    ========================================================================== */
-
 .skribent-overskrift::after {
 
     content: "";
 
     position: absolute;
 
-    bottom: 10px;
+    bottom: 14px;
 
-    left: 15%;
+    left: 50%;
 
-    width: 70%;
+    transform: translateX(-50%);
+
+    width: 60%;
 
     height: 3px;
 
-    border-radius: 10px;
+    border-radius: 20px;
+
 
     background:
-
         linear-gradient(90deg,
             transparent,
             #00aaff,
             #45cfc6,
-            #3024db,
+            #00aaff,
             transparent);
+
 
     box-shadow:
 
@@ -318,57 +414,7 @@ body.skribent-body::after {
    9. DEN STORE TEKSTBOKS
    ========================================================================== */
 
-.skribent-boks {
 
-    position: relative;
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin: 40px auto 50px;
-
-    padding: 50px;
-
-    box-sizing: border-box;
-
-    background:
-
-        radial-gradient(circle at top left,
-            rgba(0, 170, 255, .10),
-            transparent 35%),
-
-        radial-gradient(circle at bottom right,
-            rgba(48, 36, 219, .12),
-            transparent 40%),
-
-        linear-gradient(145deg,
-            rgba(6, 20, 42, .97),
-            rgba(8, 29, 58, .97));
-
-    border: 4px solid #00aaff;
-
-    border-radius: 20px;
-
-    box-shadow:
-
-        0 10px 30px rgba(0, 0, 0, .65),
-
-        0 0 25px rgba(0, 170, 255, .25),
-
-        0 0 60px rgba(48, 36, 219, .12),
-
-        inset 0 0 25px rgba(0, 170, 255, .08);
-
-    transition:
-
-        transform .4s ease,
-
-        border-color .4s ease,
-
-        box-shadow .4s ease;
-
-}
 
 
 /* ==========================================================================
@@ -434,11 +480,13 @@ body.skribent-body::after {
    12. SKRIBENTTEKST
    ========================================================================== */
 
+/* ========================================================================== 
+   12. SKRIBENTTEKST
+   ========================================================================== */
+
 .skribent {
 
     width: 100%;
-
-    max-width: 100%;
 
     margin: 0 auto 25px;
 
@@ -446,7 +494,7 @@ body.skribent-body::after {
 
     box-sizing: border-box;
 
-    color: #d7f7ff;
+    color: rgba(109, 205, 50, 0.979);
 
     font-family:
         "Segoe UI",
@@ -477,7 +525,6 @@ body.skribent-body::after {
 
 }
 
-
 /* ==========================================================================
    13. TEKSTEN LYSER VED HOVER
    ========================================================================== */
@@ -506,6 +553,7 @@ body.skribent-body::after {
     margin-bottom: 0;
 
 }
+
 
 
 /* ==========================================================================

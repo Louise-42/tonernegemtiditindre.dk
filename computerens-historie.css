@@ -569,7 +569,175 @@ body {
 
 }
 
+/* =====================================================
+   CYBER NAVIGATIONSKNAPPER
+   ===================================================== */
 
+.knap-container-layout {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+    width: 100%;
+
+    margin: 60px auto 40px;
+
+}
+
+
+/* Begge knapper */
+
+.knap,
+.knap2 {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 200px;
+
+    padding: 15px 35px;
+
+    border-radius: 40px;
+
+    border: 3px solid #00f0ff;
+
+    background:
+
+        linear-gradient(145deg,
+            #040d1a,
+            #07172e);
+
+    color: #00f0ff !important;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    text-decoration: none !important;
+
+    text-shadow:
+        0 0 8px #00f0ff;
+
+
+    box-shadow:
+
+        0 15px 40px rgba(0, 0, 0, .8),
+
+        inset 0 0 15px rgba(0, 240, 255, .15),
+
+        0 0 25px rgba(0, 240, 255, .4);
+
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease,
+
+        border-color .3s ease;
+
+}
+
+
+/* Hover effekt */
+
+.knap:hover,
+.knap2:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #15ce2c;
+
+    color: white !important;
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0, 0, 0, .9),
+
+        inset 0 0 25px rgba(21, 206, 44, .2),
+
+        0 0 40px rgba(21, 206, 44, .7);
+
+}
+
+
+/* Mobil */
+
+@media (max-width:768px) {
+
+    .knap-container-layout {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .knap,
+    .knap2 {
+
+        width: 85%;
+
+    }
+
+}
+/* =====================================================
+   MERE TEKST FØLGER
+   ===================================================== */
+
+.kommer-snart {
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 70px auto 30px;
+
+    padding: 18px 25px;
+
+    text-align: center;
+text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #45cfc6;
+
+    background:
+        linear-gradient(145deg,
+            rgba(4, 13, 26, .95),
+            rgba(7, 23, 46, .98));
+
+    border: 3px solid #3024db;
+    border-radius: 18px;
+
+    text-shadow:
+        0 0 8px #00f0ff;
+
+    box-shadow:
+        0 0 25px rgba(48, 36, 219, .4);
+
+    animation: skuretsLys 5s ease-in-out infinite;
+
+}
 /* =====================================================
    14. LISTER
    ===================================================== */
