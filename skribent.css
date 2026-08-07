@@ -320,6 +320,7 @@ body.skribent-body::after {
         pulsereSkribentTitel 3s infinite alternate;
 
 }
+
 .skribent-undertitel {
 
     margin: 20px auto 35px;
@@ -519,7 +520,7 @@ body.skribent-body::after {
 
     transition:
 
-       
+
 
         text-shadow .3s ease;
 
