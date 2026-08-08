@@ -1,10 +1,3 @@
-/*
-==========================================================================
-© 2026 Toner fra hjertet – Kodens rejse
-Ophavsret til egen CSS-kode, design og struktur.
-Må ikke kopieres, genbruges eller distribueres uden tilladelse.
-==========================================================================
-*/
 /* =====================================================
    TROMMESEKTION - ROCK NEON SCENE LOOK
    ===================================================== */
@@ -14,11 +7,14 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     justify-content: center;
     align-items: center;
     gap: 50px;
+
     min-height: 450px;
     width: 90%;
     max-width: 1200px;
+
     margin: 40px auto;
     padding: 35px;
+
     background:
         radial-gradient(circle at top,
             rgba(255, 0, 0, 0.15),
@@ -26,49 +22,49 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
         linear-gradient(145deg,
             rgba(0, 0, 0, 0.95),
             rgba(20, 0, 10, 0.90));
+
     border: 3px solid #ff0000;
     border-radius: 25px;
+
     box-shadow:
         0 0 20px #ff0000,
         0 0 50px rgba(255, 0, 0, 0.5),
         inset 0 0 40px rgba(0, 170, 255, 0.25);
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease;
+
+    box-sizing: border-box;
 }
 
-.trommesektion:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 30px #ff0000,
-        0 0 70px rgba(255, 0, 0, 0.7),
-        inset 0 0 50px rgba(0, 170, 255, 0.4);
-}
 
 /* =====================================================
-   TROMMESÆT (RETTET NAVN HER)
+   TROMMESÆT
    ===================================================== */
 
 .trommesaet-img {
     width: 380px;
     height: 380px;
+
     object-fit: cover;
+
     border-radius: 25px;
     border: 4px solid #ff0000;
+
     box-shadow:
         0 0 25px #ff0000,
-        0 0 60px rgba(255, 0, 0, .8);
+        0 0 60px rgba(255, 0, 0, 0.8);
+
     transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .trommesaet-img:hover {
     transform: scale(1.05);
+
     box-shadow:
         0 0 35px #ff0000,
-        0 0 80px rgba(255, 0, 0, .9);
+        0 0 80px rgba(255, 0, 0, 0.9);
 }
+
 
 /* =====================================================
    BAS
@@ -77,64 +73,88 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 .bass-img {
     width: 360px;
     height: 360px;
+
     object-fit: contain;
     padding: 12px;
-    background: rgba(0, 0, 0, .4);
+
+    background: rgba(0, 0, 0, 0.4);
+
     border: 4px solid #ff0000;
     border-radius: 25px;
+
     box-shadow:
         0 0 25px #ff0000,
-        0 0 60px rgba(255, 0, 0, .8);
+        0 0 60px rgba(255, 0, 0, 0.8);
+
+    box-sizing: border-box;
+
     transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .bass-img:hover {
     transform: scale(1.05);
+
     box-shadow:
         0 0 35px #ff0000,
-        0 0 80px rgba(255, 0, 0, .9);
+        0 0 80px rgba(255, 0, 0, 0.9);
 }
 
+
 /* =====================================================
-   TROMMESTIKKER (RETTET ANIMATIONSHUL)
+   TROMMESTIKKER
    ===================================================== */
 
 .tromme-stikker-2 {
     width: 170px;
     height: auto;
+
     padding: 20px;
+
     background:
         linear-gradient(145deg,
-            rgba(0, 0, 0, .90),
-            rgba(0, 30, 60, .80));
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 30, 60, 0.80));
+
     border: 4px solid #ff0000;
     border-radius: 50px;
+
     display: block;
     max-width: 100%;
+
     box-shadow:
         0 0 35px #ff0000,
-        0 0 80px rgba(255, 0, 0, .9);
-    transition: box-shadow .35s ease;
+        0 0 80px rgba(255, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
     animation: boksBlink 6s infinite alternate ease-in-out;
 }
 
 .tromme-stikker-2:hover {
-    transform: rotate(0deg) scale(1.08);
+    transform: scale(1.08);
 }
 
+
 /* =====================================================
-   TEKST OMRÅDE
+   TEKSTOMRÅDE
    ===================================================== */
 
 .text-container {
     display: flex;
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
+
     max-width: 350px;
 }
+
 
 /* =====================================================
    TEKST
@@ -144,174 +164,63 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
 .line2 {
     font-size: 30px;
     font-weight: bold;
+
     text-align: center;
+
     color: #d9ff00;
+
     line-height: 1.4;
     letter-spacing: 1px;
+
     text-shadow:
         0 0 10px #00aaff,
         0 0 25px #0fce2c;
 }
+
 
 /* =====================================================
    CITAT
    ===================================================== */
 
 .forside-citat {
+    width: 90%;
     max-width: 700px;
+
     margin: 30px auto;
     padding: 20px;
+
     font-size: 32px;
+
     text-align: center;
     font-style: italic;
+
     color: #ff66cc;
+
     line-height: 1.5;
     letter-spacing: 1px;
-    background: rgba(0, 0, 0, .75);
+
+    background: rgba(0, 0, 0, 0.75);
+
     border: 3px solid #ff0000;
     border-radius: 20px;
+
     box-shadow:
         0 0 20px #ff0000,
-        0 0 50px rgba(255, 0, 0, .5),
-        inset 0 0 40px rgba(0, 170, 255, .25);
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-}
-
-.forside-citat:hover {
-    transform: scale(1.03);
-    box-shadow:
-        0 0 30px #ff0000,
-        0 0 70px rgba(255, 0, 0, .8);
-}
-
-.knap-container-layout {
-
-    width: 100vw;
-
-    margin-left: calc(50% - 50vw);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+        0 0 50px rgba(255, 0, 0, 0.5),
+        inset 0 0 40px rgba(0, 170, 255, 0.25);
 
     box-sizing: border-box;
-
-    padding: 40px 25px 60px;
 }
 
 
-.knap-container-layout .knap,
-.knap-container-layout .knap2 {
 
-    margin: 0;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 12px 24px;
-
-    text-decoration: none;
-
-    box-sizing: border-box;
-
-}
-
-
-@media (max-width: 768px) {
-
-    .knap-container-layout {
-
-        padding-left: 12px;
-        padding-right: 12px;
-        padding-top: 30px;
-        padding-bottom: 50px;
-
-    }
-
-    .knap-container-layout .knap,
-    .knap-container-layout .knap2 {
-
-        padding: 10px 16px;
-
-        font-size: 0.95rem;
-
-    }
-
-}
-
-/* =====================================================
-   TABLET
-   ===================================================== */
-
-@media (min-width:769px) and (max-width:1024px) {
-    .trommesektion {
-        gap: 30px;
-        padding: 25px;
-    }
-
-    .trommesaet-img,
-    .bass-img {
-        width: 280px;
-        height: 280px;
-    }
-
-    .tromme-stikker-2 {
-        width: 140px;
-    }
-
-    .line1,
-    .line2 {
-        font-size: 24px;
-    }
-
-    .forside-citat {
-        font-size: 28px;
-    }
-}
-
-/* =====================================================
-   STORE SKÆRME (Sammensmeltet dublering)
-   ===================================================== */
-
-@media (min-width:1600px) {
-    .trommesektion {
-        max-width: 1500px;
-        gap: 70px;
-    }
-
-    .trommesaet-img,
-    .bass-img {
-        width: 450px;
-        height: 450px;
-    }
-
-    .tromme-stikker-2 {
-        width: 200px;
-    }
-
-    .line1,
-    .line2 {
-        font-size: 34px;
-    }
-
-    .forside-citat {
-        max-width: 900px;
-        font-size: 36px;
-    }
-}
 
 /* =====================================================
    MOBIL
    ===================================================== */
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+
     .trommesektion {
         flex-direction: column;
         gap: 30px;
@@ -334,13 +243,18 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     }
 
     .forside-citat {
-        width: 90%;
         font-size: 24px;
         padding: 16px;
     }
 }
 
+
+/* =====================================================
+   LILLE MOBIL
+   ===================================================== */
+
 @media (max-width: 480px) {
+
     .trommesektion {
         padding: 15px;
         gap: 20px;
@@ -357,20 +271,28 @@ Må ikke kopieres, genbruges eller distribueres uden tilladelse.
     }
 }
 
+
 /* =====================================================
-   ANIMATIONER
+   ANIMATION
    ===================================================== */
+
 @keyframes boksBlink {
 
     0%,
     100% {
-        box-shadow: 0 0 35px #ff0000, 0 0 80px rgba(255, 0, 0, .9);
+        box-shadow:
+            0 0 35px #ff0000,
+            0 0 80px rgba(255, 0, 0, 0.9);
+
         border-color: #ff0000;
         opacity: 1;
     }
 
     50% {
-        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2), 0 0 20px rgba(255, 0, 0, 0.1);
+        box-shadow:
+            0 0 10px rgba(255, 0, 0, 0.2),
+            0 0 20px rgba(255, 0, 0, 0.1);
+
         border-color: rgba(255, 0, 0, 0.3);
         opacity: 0.6;
     }

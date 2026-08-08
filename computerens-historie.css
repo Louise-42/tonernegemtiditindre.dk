@@ -1,13 +1,13 @@
 /* =====================================================
-   COMPUTERENS HISTORIE
-   CYBER HISTORICAL STYLE
-   CENTRERET TEKST - PC - TABLET - MOBIL
-   ===================================================== */
+COMPUTERENS HISTORIE
+CYBER HISTORICAL STYLE
+CENTRERET TEKST - PC - TABLET - MOBIL
+===================================================== */
 
 
 /* =====================================================
-   1. ANIMATIONER
-   ===================================================== */
+1. ANIMATIONER
+===================================================== */
 
 @keyframes historyGlow {
 
@@ -83,8 +83,8 @@
 
 
 /* =====================================================
-   2. HELE SIDEN
-   ===================================================== */
+2. HELE SIDEN
+===================================================== */
 
 html,
 body {
@@ -127,8 +127,8 @@ body {
 
 
 /* =====================================================
-   HOVEDOMRÅDE - COMPUTERENS HISTORIE
-   ===================================================== */
+HOVEDOMRÅDE - COMPUTERENS HISTORIE
+===================================================== */
 
 .computer-artikel-boks {
 
@@ -152,8 +152,8 @@ body {
 
 
 /* =====================================================
-   3. HOVED ARTIKELBOKS
-   ===================================================== */
+3. HOVED ARTIKELBOKS
+===================================================== */
 
 .artikel-boks {
 
@@ -174,8 +174,8 @@ body {
     justify-content: flex-start !important;
 
     /*
-       MERE LUFT MELLEM ALLE ELEMENTER
-    */
+MERE LUFT MELLEM ALLE ELEMENTER
+*/
 
     gap: 25px;
 
@@ -185,8 +185,8 @@ body {
 
 
 /* =====================================================
-   4. ALLE DIREKTE ELEMENTER CENTRERES
-   ===================================================== */
+4. ALLE DIREKTE ELEMENTER CENTRERES
+===================================================== */
 
 .artikel-boks>* {
 
@@ -198,8 +198,8 @@ body {
 
 
 /* =====================================================
-   5. HOVEDTITEL
-   ===================================================== */
+5. HOVEDTITEL
+===================================================== */
 
 .historie-titel {
 
@@ -212,8 +212,8 @@ body {
     max-width: 700px !important;
 
     /*
-       MERE LUFT OMKRING HOVEDTITEL
-    */
+MERE LUFT OMKRING HOVEDTITEL
+*/
 
     margin: 50px auto 60px !important;
 
@@ -265,8 +265,8 @@ body {
 
 
 /* =====================================================
-   6. LASERLINJE UNDER HOVEDTITEL
-   ===================================================== */
+6. LASERLINJE UNDER HOVEDTITEL
+===================================================== */
 
 .historie-titel::after {
 
@@ -303,8 +303,8 @@ body {
 
 
 /* =====================================================
-   7. BRØDTEKST
-   ===================================================== */
+7. BRØDTEKST
+===================================================== */
 
 .artikel-boks p {
 
@@ -315,8 +315,8 @@ body {
     max-width: 700px !important;
 
     /*
-       MERE LUFT MELLEM TEKSTBOKSENE
-    */
+MERE LUFT MELLEM TEKSTBOKSENE
+*/
 
     margin: 0 auto 40px auto !important;
 
@@ -371,8 +371,8 @@ body {
 
 
 /* =====================================================
-   8. EKSTRA CENTRERING
-   ===================================================== */
+8. EKSTRA CENTRERING
+===================================================== */
 
 .artikel-boks p,
 .artikel-boks p span,
@@ -385,8 +385,8 @@ body {
 
 
 /* =====================================================
-   9. HOVER PÅ TEKSTBOKSE
-   ===================================================== */
+9. HOVER PÅ TEKSTBOKSE
+===================================================== */
 
 .artikel-boks p:hover {
 
@@ -408,8 +408,8 @@ body {
 
 
 /* =====================================================
-   10. FØRSTE BOGSTAV
-   ===================================================== */
+10. FØRSTE BOGSTAV
+===================================================== */
 
 .artikel-boks p::first-letter {
 
@@ -426,8 +426,8 @@ body {
 
 
 /* =====================================================
-   11. H2 OVERSKRIFTER
-   ===================================================== */
+11. H2 OVERSKRIFTER
+===================================================== */
 
 .historie-overskrift {
 
@@ -438,8 +438,8 @@ body {
     max-width: 800px !important;
 
     /*
-       MERE LUFT OVER OG UNDER H2
-    */
+MERE LUFT OVER OG UNDER H2
+*/
 
     margin: 45px auto 25px !important;
 
@@ -485,8 +485,8 @@ body {
 
 
 /* =====================================================
-   12. BILLEDE
-   ===================================================== */
+12. BILLEDE
+===================================================== */
 
 .historisk-billede {
 
@@ -503,8 +503,8 @@ body {
     max-width: 850px !important;
 
     /*
-       MERE LUFT OMKRING BILLEDER
-    */
+MERE LUFT OMKRING BILLEDER
+*/
 
     margin: 35px auto 50px !important;
 
@@ -539,8 +539,8 @@ body {
 
 
 /* =====================================================
-   13. BILLEDTEKST
-   ===================================================== */
+13. BILLEDTEKST
+===================================================== */
 
 .billede-tekst {
 
@@ -570,8 +570,8 @@ body {
 }
 
 /* =====================================================
-   CYBER NAVIGATIONSKNAPPER
-   ===================================================== */
+CYBER NAVIGATIONSKNAPPER
+===================================================== */
 
 .knap-container-layout {
 
@@ -700,9 +700,10 @@ body {
     }
 
 }
+
 /* =====================================================
-   MERE TEKST FØLGER
-   ===================================================== */
+MERE TEKST FØLGER
+===================================================== */
 
 .kommer-snart {
 
@@ -714,7 +715,7 @@ body {
     padding: 18px 25px;
 
     text-align: center;
-text-decoration: underline;
+    text-decoration: underline;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -738,9 +739,10 @@ text-decoration: underline;
     animation: skuretsLys 5s ease-in-out infinite;
 
 }
+
 /* =====================================================
-   14. LISTER
-   ===================================================== */
+14. LISTER
+===================================================== */
 
 .artikel-boks ul {
 
@@ -749,8 +751,8 @@ text-decoration: underline;
     max-width: 700px !important;
 
     /*
-       MERE LUFT OMKRING LISTER
-    */
+MERE LUFT OMKRING LISTER
+*/
 
     margin: 35px auto 50px !important;
 
@@ -797,8 +799,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   15. LINKS
-   ===================================================== */
+15. LINKS
+===================================================== */
 
 .artikel-boks a {
 
@@ -808,8 +810,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   16. KNAPPER
-   ===================================================== */
+16. KNAPPER
+===================================================== */
 
 .artikel-knapper {
 
@@ -824,8 +826,8 @@ text-decoration: underline;
     width: 100%;
 
     /*
-       MERE LUFT OMKRING KNAPPERNE
-    */
+MERE LUFT OMKRING KNAPPERNE
+*/
 
     margin: 50px auto;
 
@@ -833,8 +835,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   FOOTER
-   ===================================================== */
+FOOTER
+===================================================== */
 
 .site-footer {
 
@@ -925,8 +927,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   17. MOBIL
-   ===================================================== */
+17. MOBIL
+===================================================== */
 
 @media (max-width: 768px) {
 
@@ -951,8 +953,8 @@ text-decoration: underline;
         align-items: center !important;
 
         /*
-           MINDRE GAP PÅ MOBIL
-        */
+MINDRE GAP PÅ MOBIL
+*/
 
         gap: 15px;
 
@@ -985,8 +987,8 @@ text-decoration: underline;
         margin-right: auto !important;
 
         /*
-           MERE LUFT MELLEM TEKSTBOKSE
-        */
+MERE LUFT MELLEM TEKSTBOKSE
+*/
 
         margin-bottom: 30px !important;
 
@@ -1070,8 +1072,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   18. MEGET LILLE MOBIL
-   ===================================================== */
+18. MEGET LILLE MOBIL
+===================================================== */
 
 @media (max-width: 480px) {
 
@@ -1167,8 +1169,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   19. EKSTRA SIKKERHEDSREGLER
-   ===================================================== */
+19. EKSTRA SIKKERHEDSREGLER
+===================================================== */
 
 .artikel-boks {
 
@@ -1197,8 +1199,8 @@ text-decoration: underline;
 
 
 /* =====================================================
-   20. HÅRD RESET MOD ANDRE CSS-FILER
-   ===================================================== */
+20. HÅRD RESET MOD ANDRE CSS-FILER
+===================================================== */
 
 .artikel-boks p {
 
@@ -1216,13 +1218,13 @@ text-decoration: underline;
 
 
 /* =====================================================
-   21. EKSTRA REGEL TIL H2
-   ===================================================== */
+21. EKSTRA REGEL TIL H2
+===================================================== */
 
 /*
-   VIGTIGT:
-   Denne regel ligger nederst og styrer derfor
-   den endelige afstand omkring H2.
+VIGTIGT:
+Denne regel ligger nederst og styrer derfor
+den endelige afstand omkring H2.
 */
 
 .artikel-boks>.historie-overskrift {
@@ -1234,8 +1236,8 @@ text-decoration: underline;
 }
 
 /* =====================================================
-   BILLEDE OG FOTO-KILDE
-   ===================================================== */
+BILLEDE OG FOTO-KILDE
+===================================================== */
 
 .eniac-figur {
 
@@ -1301,8 +1303,8 @@ text-decoration: underline;
 }
 
 /* =====================================================
-   22. FOOTER - EKSTRA SIKKERHED
-   ===================================================== */
+22. FOOTER - EKSTRA SIKKERHED
+===================================================== */
 
 body>footer.site-footer {
 
@@ -1365,5 +1367,5 @@ body>footer.site-footer p {
 
 
 /* =====================================================
-   SLUT
-   ===================================================== */
+SLUT
+===================================================== */
