@@ -93,12 +93,148 @@ p {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #030a16;
-    color: white;
+/* ==========================================================================
+   FOOTER - FÆLLES FOR HELE HJEMMESIDEN
+   ========================================================================== */
+
+.site-footer {
+
+    position: relative;
+
     width: 100%;
+
+    margin-top: 60px;
+
+    padding: 35px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(0, 170, 255, 0.12),
+            transparent 45%),
+
+        linear-gradient(145deg,
+            #020814,
+            #061426,
+            #020611);
+
+    border-top: 3px solid #00aaff;
+
+    color: #45cfc6;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 15px rgba(69, 207, 198, 0.5);
+
+    box-shadow:
+        0 -10px 30px rgba(0, 170, 255, 0.18),
+
+        inset 0 5px 20px rgba(0, 170, 255, 0.05);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   NEON-LINJE
+   -------------------------------------------------------------------------- */
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -3px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            #3024db,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 10px #00aaff,
+        0 0 25px rgba(69, 207, 198, 0.6);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   FOOTER TEKST
+   -------------------------------------------------------------------------- */
+
+.site-footer p {
+
+    margin: 0;
+
+    line-height: 1.6;
+
+}
+
+
+/* --------------------------------------------------------------------------
+   HOVER
+   -------------------------------------------------------------------------- */
+
+.site-footer:hover {
+
+    box-shadow:
+        0 -10px 40px rgba(0, 170, 255, 0.3),
+
+        inset 0 5px 25px rgba(0, 170, 255, 0.08);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBIL
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .site-footer {
+
+        margin-top: 40px;
+
+        padding: 28px 15px;
+
+        font-size: 0.85rem;
+
+        letter-spacing: 1px;
+
+    }
+
+    .site-footer::before {
+
+        left: 10%;
+
+        width: 80%;
+
+    }
+
 }
 
 /* ==========================================================================
