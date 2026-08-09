@@ -525,6 +525,252 @@ body.skribent-body::after {
         text-shadow .3s ease;
 
 }
+```css
+/* ==========================================================================
+   25. FOOTER - CYBER NEON SKRIBENT
+   ========================================================================== */
+
+footer {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding: 35px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(2, 8, 20, .98),
+            rgba(5, 20, 42, .98));
+
+    border-top: 3px solid #00aaff;
+
+    box-shadow:
+
+        0 -10px 30px rgba(0, 170, 255, .15),
+
+        0 -2px 20px rgba(69, 207, 198, .15),
+
+        inset 0 10px 25px rgba(0, 170, 255, .05);
+
+    overflow: hidden;
+
+}
+
+
+/* Neon-linje øverst i footeren */
+
+footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 10%;
+
+    width: 80%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            #15ce2c,
+            #45cfc6,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px #45cfc6,
+
+        0 0 30px rgba(0, 170, 255, .6);
+
+}
+
+
+/* Digital glød nederst */
+
+footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -80px;
+
+    transform: translateX(-50%);
+
+    width: 500px;
+
+    height: 120px;
+
+    background:
+        radial-gradient(ellipse,
+            rgba(0, 170, 255, .18),
+            transparent 70%);
+
+    pointer-events: none;
+
+}
+
+
+/* Footer teksten */
+
+footer p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0;
+
+    color: #45cfc6;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    text-shadow:
+
+        0 0 6px rgba(0, 170, 255, .8),
+
+        0 0 15px rgba(69, 207, 198, .35);
+
+}
+
+
+/* Copyright-tegnet får ekstra neon */
+
+footer p::first-letter {
+
+    color: #00aaff;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px #00aaff;
+
+}
+
+
+/* Hover-effekt */
+
+footer:hover {
+
+    border-top-color: #45cfc6;
+
+    box-shadow:
+
+        0 -10px 35px rgba(0, 170, 255, .25),
+
+        0 -2px 30px rgba(69, 207, 198, .25),
+
+        inset 0 10px 30px rgba(0, 170, 255, .08);
+
+}
+
+
+footer:hover p {
+
+    color: #ffffff;
+
+    text-shadow:
+
+        0 0 8px #00aaff,
+
+        0 0 18px #45cfc6,
+
+        0 0 30px rgba(0, 170, 255, .5);
+
+}
+
+
+/* ==========================================================================
+   FOOTER - MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    footer {
+
+        margin-top: 50px;
+
+        padding: 28px 15px;
+
+    }
+
+    footer::before {
+
+        left: 5%;
+
+        width: 90%;
+
+    }
+
+    footer p {
+
+        font-size: .9rem;
+
+        letter-spacing: 1px;
+
+        line-height: 1.6;
+
+    }
+
+}
+
+
+/* ==========================================================================
+   FOOTER - MEGET LILLE MOBIL
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    footer {
+
+        margin-top: 40px;
+
+        padding: 25px 12px;
+
+    }
+
+    footer p {
+
+        font-size: .8rem;
+
+        letter-spacing: .6px;
+
+    }
+
+}
+
 
 /* ==========================================================================
    13. TEKSTEN LYSER VED HOVER

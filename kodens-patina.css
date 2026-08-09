@@ -77,6 +77,180 @@ main.kodens-side {
 
 }
 
+```css
+/* ==========================================================================
+   FOOTER - KODENS REJSE
+   DIGITAL / CYBER NEON STYLE
+   ========================================================================== */
+
+.site-footer {
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 22px 20px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(2, 8, 20, 0.98),
+            rgba(4, 20, 38, 0.97),
+            rgba(2, 10, 20, 0.98));
+
+    border-top: 2px solid #00aaff;
+
+    box-shadow:
+        0 -5px 20px rgba(0, 170, 255, 0.35),
+        0 -15px 40px rgba(15, 206, 44, 0.12),
+        inset 0 8px 20px rgba(0, 170, 255, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ==========================================================================
+   DIGITAL NEON-LINJE
+   ========================================================================== */
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #0fce2c,
+            #00aaff,
+            #45cfc6,
+            #00aaff,
+            #0fce2c,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00aaff,
+        0 0 18px rgba(15, 206, 44, 0.6);
+}
+
+
+/* ==========================================================================
+   FOOTER TEKST
+   ========================================================================== */
+
+.site-footer p {
+
+    margin: 0;
+
+    color: #45cfc6;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 12px #45cfc6,
+        0 0 22px rgba(15, 206, 44, 0.6);
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+/* ==========================================================================
+   HOVER
+   ========================================================================== */
+
+.site-footer:hover {
+
+    transform: translateY(-3px);
+
+    border-top-color: #45cfc6;
+
+    box-shadow:
+        0 -5px 25px rgba(0, 170, 255, 0.65),
+        0 -15px 45px rgba(15, 206, 44, 0.25),
+        inset 0 8px 25px rgba(0, 170, 255, 0.1);
+}
+
+
+.site-footer:hover p {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #00aaff,
+        0 0 25px #45cfc6,
+        0 0 40px #0fce2c;
+}
+
+
+/* ==========================================================================
+   MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .site-footer {
+
+        margin-top: 40px;
+
+        padding: 18px 12px;
+    }
+
+    .site-footer p {
+
+        font-size: 14px;
+
+        letter-spacing: 0.8px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .site-footer {
+
+        margin-top: 30px;
+
+        padding: 16px 10px;
+    }
+
+    .site-footer p {
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}
+
+
 
 /* ==========================================================================
    2. OVERSKRIFTER & TITLER

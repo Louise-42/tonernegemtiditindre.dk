@@ -271,6 +271,202 @@
     }
 }
 
+```css
+/* =====================================================
+   KNAP - HØJRE SIDE
+===================================================== */
+
+.knap-container-layout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+    padding: 10px 0;
+
+    box-sizing: border-box;
+}
+
+```css
+/* =====================================================
+   KNAP - NEON LAYOUT
+===================================================== */
+
+.knap-container-layout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+    padding: 10px 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SELVE KNAPPEN
+===================================================== */
+
+.knap {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    color: #d9ff00;
+    background:
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(20, 0, 10, 0.90));
+
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 15px #0fce2c;
+
+    box-shadow:
+        0 0 15px #ff0000,
+        0 0 35px rgba(255, 0, 0, 0.7),
+        inset 0 0 15px rgba(0, 170, 255, 0.15);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =====================================================
+   KNAP HOVER
+===================================================== */
+
+.knap:hover {
+    transform: scale(1.05);
+
+    background:
+        linear-gradient(145deg,
+            rgba(30, 0, 0, 0.95),
+            rgba(50, 0, 20, 0.95));
+
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 50px rgba(255, 0, 0, 0.9),
+        inset 0 0 20px rgba(0, 170, 255, 0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    width: 90%;
+    max-width: 600px;
+
+    margin: 10px auto 0;
+    padding: 15px 15px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(20, 0, 10, 0.90));
+
+    border-top: 3px solid #ff0000;
+    border-radius: 20px 20px 0 0;
+
+    box-shadow:
+        0 -5px 25px rgba(255, 0, 0, 0.5),
+        inset 0 10px 30px rgba(0, 170, 255, 0.08);
+
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    margin: 0;
+
+    color: #d9ff00;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 15px rgba(15, 206, 44, 0.8);
+}
+
+
+/* =====================================================
+   MOBIL
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .knap-container-layout {
+        justify-content: center;
+    }
+
+    .knap {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .site-footer {
+        width: 90%;
+        margin-top: 40px;
+        padding: 20px 15px;
+    }
+
+    .site-footer p {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   LILLE MOBIL
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .knap-container-layout {
+        width: 95%;
+    }
+
+    .knap {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .site-footer {
+        width: 95%;
+        padding: 18px 10px;
+    }
+
+    .site-footer p {
+        font-size: 12px;
+    }
+}
+
 
 /* =====================================================
    ANIMATION

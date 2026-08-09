@@ -537,6 +537,7 @@ body {
     text-shadow: 0 0 8px #00f7ff;
     animation: roligFade 5s ease-in-out infinite;
 }
+
 @keyframes roligFade {
 
     0% {
@@ -555,6 +556,7 @@ body {
     }
 
 }
+
 .knapper .knap,
 .knapper .knap2 {
 
@@ -606,6 +608,278 @@ body {
 
     transform: scale(.98);
 }
+
+/* =====================================================
+   FOOTER
+   ENIAC / CYBERPUNK NEON DESIGN
+   ===================================================== */
+
+.site-footer {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding: 35px 20px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            #01050c,
+            #031020,
+            #020812);
+
+    border-top: 3px solid #00f0ff;
+
+    box-shadow:
+        0 -5px 20px rgba(0, 240, 255, 0.25),
+        0 -10px 40px rgba(48, 36, 219, 0.15),
+
+        inset 0 10px 25px rgba(0, 170, 255, 0.05);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   NEON-LYS OVER FOOTER
+   ===================================================== */
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            #00f0ff,
+            #ff4141,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00f0ff,
+        0 0 18px rgba(0, 240, 255, 0.7);
+
+}
+
+
+/* =====================================================
+   SYSTEM ONLINE
+   ===================================================== */
+
+.footer-terminal {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-status {
+
+    display: inline-block;
+
+    padding: 7px 18px;
+
+    color: #15ce2c;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    background:
+        rgba(21, 206, 44, 0.05);
+
+    border:
+        1px solid #15ce2c;
+
+    border-radius: 6px;
+
+    text-shadow:
+        0 0 8px #15ce2c;
+
+    box-shadow:
+        0 0 10px rgba(21, 206, 44, 0.25);
+
+}
+
+
+/* =====================================================
+   DEKORATIV FOOTER-LINJE
+   ===================================================== */
+
+.footer-line {
+
+    width: 55%;
+
+    max-width: 500px;
+
+    height: 2px;
+
+    margin: 0 auto 20px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00f0ff,
+            #3024db,
+            #00f0ff,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00f0ff;
+
+}
+
+
+/* =====================================================
+   COPYRIGHT
+   ===================================================== */
+
+.site-footer p {
+
+    margin: 0 auto;
+
+    max-width: 700px;
+
+    color: #e2f5ff;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 6px rgba(0, 240, 255, 0.5);
+
+}
+
+
+/* =====================================================
+   SIGNATUR
+   ===================================================== */
+
+.footer-signature {
+
+    margin-top: 18px;
+
+    color: #00f0ff;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 8px #00f0ff;
+
+    opacity: 0.8;
+}
+
+
+/* =====================================================
+   HOVER / LILLE NEON-EFFEKT
+   ===================================================== */
+
+.site-footer:hover {
+
+    border-top-color: #15ce2c;
+
+    box-shadow:
+        0 -5px 25px rgba(0, 240, 255, 0.35),
+        0 -10px 45px rgba(21, 206, 44, 0.15),
+        inset 0 10px 30px rgba(0, 240, 255, 0.06);
+
+}
+
+
+.site-footer:hover .footer-status {
+
+    color: #00f0ff;
+
+    border-color: #00f0ff;
+
+    text-shadow:
+        0 0 8px #00f0ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+
+/* =====================================================
+   MOBIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .site-footer {
+
+        margin-top: 50px;
+
+        padding:
+            30px 15px 25px;
+    }
+
+    .footer-line {
+
+        width: 75%;
+    }
+
+    .footer-status {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 2px;
+
+        padding:
+            6px 14px;
+    }
+
+    .site-footer p {
+
+        font-size: 0.8rem;
+
+        line-height: 1.7;
+    }
+
+    .footer-signature {
+
+        font-size: 0.65rem;
+
+        letter-spacing: 2px;
+    }
+}
+
 /* =====================================================
    MOBIL
    ===================================================== */
