@@ -152,12 +152,7 @@ body {
     letter-spacing: 2px;
     line-height: 1.2;
 
-    color: rgba(100, 220, 150, 0.9);
-
-    text-shadow:
-        0 0 8px rgba(80, 220, 140, .7),
-        0 0 20px rgba(80, 220, 140, .4),
-        0 0 35px rgba(48, 36, 219, .3);
+    color: rgba(240, 100, 110, 0.9);
 
     text-align: center;
 
@@ -271,6 +266,69 @@ body {
         0 0 45px rgba(0, 170, 255, .35);
 }
 
+.instruments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 95%;
+    max-width: 1100px;
+
+    margin: 0 auto 25px;
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+.instruments span {
+    padding: 1px 1px;
+    gap: 1px;
+    color: #64dc96;
+    margin: 4px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(6, 20, 42, 0.95),
+            rgba(8, 29, 58, 0.98));
+
+    border: 2px solid rgba(100, 220, 150, 0.6);
+    border-radius: 18px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 10px rgba(100, 220, 150, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.instruments span:hover {
+    color: #06142a;
+
+    background: #64dc96;
+
+    border-color: #64dc96;
+
+    box-shadow:
+        0 0 12px rgba(100, 220, 150, 0.8),
+        0 0 25px rgba(100, 220, 150, 0.5);
+
+    transform: translateY(-3px);
+}
 
 /* ==========================================================================
    CITAT
