@@ -152,7 +152,12 @@ body {
     letter-spacing: 2px;
     line-height: 1.2;
 
-    color: #d7f7ff;
+    color: rgba(100, 220, 150, 0.9);
+
+    text-shadow:
+        0 0 8px rgba(80, 220, 140, .7),
+        0 0 20px rgba(80, 220, 140, .4),
+        0 0 35px rgba(48, 36, 219, .3);
 
     text-align: center;
 
@@ -164,10 +169,7 @@ body {
     border: 3px solid #3024db;
     border-radius: 25px;
 
-    text-shadow:
-        0 0 8px #00aaff,
-        0 0 20px rgba(0, 170, 255, .7),
-        0 0 35px rgba(48, 36, 219, .5);
+
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, .7),
