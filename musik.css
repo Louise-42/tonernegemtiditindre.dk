@@ -265,28 +265,80 @@ body {
         0 0 25px rgba(0, 170, 255, .7),
         0 0 45px rgba(0, 170, 255, .35);
 }
+.genre-overskrift {
+    position: relative;
+    text-align: center;
+}
 
-.instruments {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.genre-overskrift::before {
+    content: "🎵";
+    position: absolute;
+    left: 0;
+    top:0;
+}
 
+.genre-overskrift::after {
+    content: "🎵";
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* ============================================================
+   MUSIK GENRER
+   Samme ikon-look som på FOTOS-siden
+============================================================ */
+
+main {
+    position: relative;
+}
+
+
+/* ============================================================
+   GENRE-CONTAINER
+============================================================ */
+
+.genres {
     width: 95%;
     max-width: 1100px;
 
-    margin: 0 auto 25px;
-    padding: 15px;
+    margin: 20px auto 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(135px, 1fr));
+
+    gap: 10px;
+
+    justify-content: center;
+    align-items: stretch;
+
+    position: relative;
+    z-index: 10;
 
     box-sizing: border-box;
 }
 
-.instruments span {
-    padding: 1px 1px;
-    gap: 1px;
+
+/* ============================================================
+   SELVE GENRE-IKONERNE
+============================================================ */
+
+.genres span {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 20px;
+
+    padding: 8px 10px;
+
+    box-sizing: border-box;
+
     color: #64dc96;
-    margin: 4px;
 
     background:
         linear-gradient(145deg,
@@ -294,6 +346,7 @@ body {
             rgba(8, 29, 58, 0.98));
 
     border: 2px solid rgba(100, 220, 150, 0.6);
+
     border-radius: 18px;
 
     font-family:
@@ -302,7 +355,290 @@ body {
         sans-serif;
 
     font-size: 0.9rem;
+
+    font-weight: 300;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(100, 220, 150, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.genre-overskrift {
+    width: 95%;
+    max-width: 1100px;
+
+    margin: 20px auto 35px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(135px, 1fr));
+
+    gap: 10px;
+
+    justify-content: center;
+    align-items: stretch;
+
+    position: relative;
+    z-index: 10;
+
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   HOVER
+============================================================ */
+
+.genres span:hover {
+
+    color: #06142a;
+
+    background: #64dc96;
+
+    border-color: #64dc96;
+
+    box-shadow:
+        0 0 12px rgba(100, 220, 150, 0.8),
+        0 0 25px rgba(100, 220, 150, 0.5);
+
+    transform:
+        translateY(-4px) scale(1.03);
+}
+
+
+/* ============================================================
+   KLIK / ACTIVE
+============================================================ */
+
+.genres span:active {
+
+    transform:
+        translateY(-1px) scale(0.97);
+}
+
+
+/* ============================================================
+   AKTIV GENRE
+   Hvis JavaScript tilføjer .active
+============================================================ */
+
+.genres span.active {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(145deg,
+            #3024db,
+            #00aaff);
+
+    border-color: #00aaff;
+
+    box-shadow:
+        0 0 15px #00aaff,
+        0 0 30px rgba(0, 170, 255, 0.6);
+
+    transform: scale(1.03);
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+
+    .genres {
+
+        width: 94%;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+
+        margin-top: 15px;
+    }
+
+    .genres span {
+
+        min-height: 40px;
+
+        padding: 7px 6px;
+
+        font-size: 0.82rem;
+
+        border-radius: 15px;
+    }
+}
+
+
+/* ============================================================
+   MOBIL
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .genres {
+
+        width: 96%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-top: 12px;
+    }
+
+    .genres span {
+
+        min-height: 38px;
+
+        padding: 7px 5px;
+
+        font-size: 0.78rem;
+
+        border-radius: 13px;
+
+        white-space: normal;
+    }
+}
+
+
+/* ============================================================
+   REDUCERET BEVÆGELSE
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .genres span {
+
+        transition: none;
+    }
+}
+
+```
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 768px) {
+
+    .genres {
+
+        width: 94%;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 8px;
+
+        margin-top: 15px;
+    }
+
+    .genres span {
+
+        min-height: 40px;
+
+        padding: 8px 10px;
+
+        font-size: 0.88rem;
+
+        border-radius: 15px;
+    }
+}
+
+
+/* ============================================================
+   MOBIL
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .genres {
+
+        width: 96%;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-top: 12px;
+    }
+
+    .genres span {
+
+        min-height: 38px;
+
+        padding: 7px 8px;
+
+        font-size: 0.82rem;
+
+        border-radius: 14px;
+
+        white-space: normal;
+    }
+}
+
+
+
+
+
+
+
+
+.instruments span {
+    display: flex;
+    margin: 7px;
+    
+    justify-content: center;
+    align-items: center;
+
+    min-height: 40px;
+
+    padding: 8px 8px;
+
+    box-sizing: border-box;
+
+    color: #64dc96;
+
+    background:
+        linear-gradient(145deg,
+            rgba(6, 20, 42, 0.95),
+            rgba(8, 29, 58, 0.98));
+
+    border: 2px solid rgba(100, 220, 150, 0.6);
+
+    border-radius: 18px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 0.9rem;
+
     font-weight: 600;
+
+    text-align: center;
 
     white-space: nowrap;
 
@@ -313,7 +649,8 @@ body {
         transform 0.3s ease,
         color 0.3s ease,
         background 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .instruments span:hover {
@@ -329,6 +666,7 @@ body {
 
     transform: translateY(-3px);
 }
+
 
 /* ==========================================================================
    CITAT
