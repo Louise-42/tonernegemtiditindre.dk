@@ -1,0 +1,253 @@
+/*
+==========================================================================
+© 2026 Toner fra hjertet – Kodens rejse
+Ophavsret til egen CSS-kode, design og struktur.
+Må ikke kopieres, genbruges eller distribueres uden tilladelse.
+==========================================================================
+*/
+/* ==========================================================================
+   GLOBAL STYLE - Fælles for hele hjemmesiden
+   ========================================================================== */
+
+/* Grundindstillinger */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #030a16;
+    color: white;
+    width: 100%;
+}
+
+/* ==========================================================================
+   FÆLLES MAIN (RETTET: !important fjernet så den ikke ødelægger andre sider)
+   ========================================================================== */
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    /* Standard adfærd så grids indeni virker */
+}
+
+/* RETTELSE: !important fjernet fra grid-egenskaberne, så reglen KUN rammer IT-siden */
+main.it-side-baggrund {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   FÆLLES TEKST
+   ========================================================================== */
+p {
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   FÆLLES KNAPPER
+   ========================================================================== */
+.knap-container-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 35px auto;
+    width: 100%;
+}
+
+.knap,
+.knap2 {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white !important;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #5c4ff5, #3024db);
+    border: 2px solid #4c41e1;
+    box-shadow: 0 6px 15px rgba(76, 65, 225, 0.4);
+    transition: 0.3s ease;
+}
+
+.knap:hover,
+.knap2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #3024db;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+/* ==========================================================================
+   FOOTER - FÆLLES FOR HELE HJEMMESIDEN
+   ========================================================================== */
+
+.site-footer {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 60px;
+
+    padding: 35px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(0, 170, 255, 0.12),
+            transparent 45%),
+
+        linear-gradient(145deg,
+            #020814,
+            #061426,
+            #020611);
+
+    border-top: 3px solid #00aaff;
+
+    color: #45cfc6;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 15px rgba(69, 207, 198, 0.5);
+
+    box-shadow:
+        0 -10px 30px rgba(0, 170, 255, 0.18),
+
+        inset 0 5px 20px rgba(0, 170, 255, 0.05);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   NEON-LINJE
+   -------------------------------------------------------------------------- */
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -3px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00aaff,
+            #45cfc6,
+            #3024db,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 10px #00aaff,
+        0 0 25px rgba(69, 207, 198, 0.6);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   FOOTER TEKST
+   -------------------------------------------------------------------------- */
+
+.site-footer p {
+
+    margin: 0;
+
+    line-height: 1.6;
+
+}
+
+
+/* --------------------------------------------------------------------------
+   HOVER
+   -------------------------------------------------------------------------- */
+
+.site-footer:hover {
+
+    box-shadow:
+        0 -10px 40px rgba(0, 170, 255, 0.3),
+
+        inset 0 5px 25px rgba(0, 170, 255, 0.08);
+
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBIL
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .site-footer {
+
+        margin-top: 40px;
+
+        padding: 28px 15px;
+
+        font-size: 0.85rem;
+
+        letter-spacing: 1px;
+
+    }
+
+    .site-footer::before {
+
+        left: 10%;
+
+        width: 80%;
+
+    }
+
+}
+
+/* ==========================================================================
+   RESPONSIV
+   ========================================================================== */
+@media (max-width:768px) {
+    .knap-container-layout {
+        flex-direction: column;
+    }
+
+    .knap,
+    .knap2 {
+        width: 80%;
+        text-align: center;
+    }
+}

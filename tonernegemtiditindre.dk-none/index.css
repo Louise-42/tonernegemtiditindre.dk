@@ -1,0 +1,495 @@
+/* =====================================================
+   TROMMESEKTION - ROCK NEON SCENE LOOK
+   ===================================================== */
+
+.trommesektion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    min-height: 450px;
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+    padding: 35px;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(255, 0, 0, 0.15),
+            transparent 40%),
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(20, 0, 10, 0.90));
+
+    border: 3px solid #ff0000;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 50px rgba(255, 0, 0, 0.5),
+        inset 0 0 40px rgba(0, 170, 255, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TROMMESÆT
+   ===================================================== */
+
+.trommesaet-img {
+    width: 380px;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+    border: 4px solid #ff0000;
+
+    box-shadow:
+        0 0 25px #ff0000,
+        0 0 60px rgba(255, 0, 0, 0.8);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.trommesaet-img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 35px #ff0000,
+        0 0 80px rgba(255, 0, 0, 0.9);
+}
+
+
+/* =====================================================
+   BAS
+   ===================================================== */
+
+.bass-img {
+    width: 360px;
+    height: 360px;
+
+    object-fit: contain;
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    border: 4px solid #ff0000;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 25px #ff0000,
+        0 0 60px rgba(255, 0, 0, 0.8);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.bass-img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 35px #ff0000,
+        0 0 80px rgba(255, 0, 0, 0.9);
+}
+
+
+/* =====================================================
+   TROMMESTIKKER
+   ===================================================== */
+
+.tromme-stikker-2 {
+    width: 170px;
+    height: auto;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.90),
+            rgba(0, 30, 60, 0.80));
+
+    border: 4px solid #ff0000;
+    border-radius: 50px;
+
+    display: block;
+    max-width: 100%;
+
+    box-shadow:
+        0 0 35px #ff0000,
+        0 0 80px rgba(255, 0, 0, 0.9);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    animation: boksBlink 6s infinite alternate ease-in-out;
+}
+
+.tromme-stikker-2:hover {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   TEKSTOMRÅDE
+   ===================================================== */
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    max-width: 350px;
+}
+
+
+/* =====================================================
+   TEKST
+   ===================================================== */
+
+.line1,
+.line2 {
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #d9ff00;
+
+    line-height: 1.4;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px #00aaff,
+        0 0 25px #0fce2c;
+}
+
+
+/* =====================================================
+   CITAT
+   ===================================================== */
+
+.forside-citat {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 30px auto;
+    padding: 20px;
+
+    font-size: 32px;
+
+    text-align: center;
+    font-style: italic;
+
+    color: #ff66cc;
+
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 3px solid #ff0000;
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 50px rgba(255, 0, 0, 0.5),
+        inset 0 0 40px rgba(0, 170, 255, 0.25);
+
+    box-sizing: border-box;
+}
+
+
+
+
+/* =====================================================
+   MOBIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .trommesektion {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .trommesaet-img,
+    .bass-img {
+        width: 90%;
+        height: auto;
+    }
+
+    .tromme-stikker-2 {
+        width: 120px;
+    }
+
+    .line1,
+    .line2 {
+        font-size: 22px;
+    }
+
+    .forside-citat {
+        font-size: 24px;
+        padding: 16px;
+    }
+}
+
+
+/* =====================================================
+   LILLE MOBIL
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .trommesektion {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .line1,
+    .line2 {
+        font-size: 18px;
+    }
+
+    .forside-citat {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+```css
+/* =====================================================
+   KNAP - HØJRE SIDE
+===================================================== */
+
+.knap-container-layout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+    padding: 10px 0;
+
+    box-sizing: border-box;
+}
+
+```css
+/* =====================================================
+   KNAP - NEON LAYOUT
+===================================================== */
+
+.knap-container-layout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+    padding: 10px 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SELVE KNAPPEN
+===================================================== */
+
+.knap {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    color: #d9ff00;
+    background:
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(20, 0, 10, 0.90));
+
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 15px #0fce2c;
+
+    box-shadow:
+        0 0 15px #ff0000,
+        0 0 35px rgba(255, 0, 0, 0.7),
+        inset 0 0 15px rgba(0, 170, 255, 0.15);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =====================================================
+   KNAP HOVER
+===================================================== */
+
+.knap:hover {
+    transform: scale(1.05);
+
+    background:
+        linear-gradient(145deg,
+            rgba(30, 0, 0, 0.95),
+            rgba(50, 0, 20, 0.95));
+
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 50px rgba(255, 0, 0, 0.9),
+        inset 0 0 20px rgba(0, 170, 255, 0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    width: 90%;
+    max-width: 600px;
+
+    margin: 10px auto 0;
+    padding: 15px 15px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(145deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(20, 0, 10, 0.90));
+
+    border-top: 3px solid #ff0000;
+    border-radius: 20px 20px 0 0;
+
+    box-shadow:
+        0 -5px 25px rgba(255, 0, 0, 0.5),
+        inset 0 10px 30px rgba(0, 170, 255, 0.08);
+
+    box-sizing: border-box;
+}
+
+.site-footer p {
+    margin: 0;
+
+    color: #d9ff00;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 15px rgba(15, 206, 44, 0.8);
+}
+
+
+/* =====================================================
+   MOBIL
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .knap-container-layout {
+        justify-content: center;
+    }
+
+    .knap {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .site-footer {
+        width: 90%;
+        margin-top: 40px;
+        padding: 20px 15px;
+    }
+
+    .site-footer p {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   LILLE MOBIL
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .knap-container-layout {
+        width: 95%;
+    }
+
+    .knap {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .site-footer {
+        width: 95%;
+        padding: 18px 10px;
+    }
+
+    .site-footer p {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   ANIMATION
+   ===================================================== */
+
+@keyframes boksBlink {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 35px #ff0000,
+            0 0 80px rgba(255, 0, 0, 0.9);
+
+        border-color: #ff0000;
+        opacity: 1;
+    }
+
+    50% {
+        box-shadow:
+            0 0 10px rgba(255, 0, 0, 0.2),
+            0 0 20px rgba(255, 0, 0, 0.1);
+
+        border-color: rgba(255, 0, 0, 0.3);
+        opacity: 0.6;
+    }
+}

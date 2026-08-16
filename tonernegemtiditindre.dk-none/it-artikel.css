@@ -1,0 +1,541 @@
+/*
+==========================================================================
+© 2026 Toner fra hjertet – Kodens rejse
+Ophavsret til egen CSS-kode, design og struktur.
+Må ikke kopieres, genbruges eller distribueres uden tilladelse.
+==========================================================================
+*/
+/* =====================================================
+   IT ARTIKEL SIDE - CYBERPUNK / ENIAC LOOK
+   ===================================================== */
+
+@keyframes itNeonGlowBorder {
+    0% {
+        border-color: #ff4141;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .8), inset 0 0 15px rgba(255, 65, 65, .2), 0 0 20px rgba(255, 65, 65, .4);
+    }
+
+    50% {
+        border-color: #15ce2c;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .8), inset 0 0 15px rgba(21, 206, 44, .2), 0 0 30px rgba(21, 206, 44, .5);
+    }
+
+    100% {
+        border-color: #00f0ff;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .8), inset 0 0 15px rgba(0, 240, 255, .2), 0 0 25px rgba(0, 240, 255, .5);
+    }
+}
+
+@keyframes itTextGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes itTitlePulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 170, 255, .4), 0 0 35px rgba(48, 36, 219, .2);
+    }
+
+    100% {
+        box-shadow: 0 0 35px rgba(0, 240, 255, .8), 0 0 70px rgba(48, 36, 219, .5);
+    }
+}
+
+/* TVING CYBERPUNK-BAGGRUNDEN TILBAGE PÅ HTML OG BODY */
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    display: block !important;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(0, 170, 255, .22), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(48, 36, 219, .20), transparent 35%),
+        radial-gradient(circle at 50% 90%, rgba(21, 206, 44, .10), transparent 35%),
+        linear-gradient(145deg, #01040a, #02060f, #06142a, #02060f) !important;
+    background-attachment: fixed !important;
+}
+
+/* GENNEMTVING GRID-CENTRERING AF MAIN */
+main.it-side-baggrund {
+    display: grid !important;
+    place-items: center !important;
+    justify-content: center !important;
+    align-content: start !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 auto !important;
+    padding: 45px 20px 90px !important;
+    box-sizing: border-box !important;
+}
+
+.it-side {
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* TEKSTCONTAINER SOM LÅSER ALT INDHOLD PÅ MIDTEN */
+.it-tekst {
+    display: grid !important;
+    place-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* =====================================================
+   HOVEDOVERSKRIFT H1
+   ===================================================== */
+
+
+
+.it-tekst h1.it-overskrift::after {
+    content: '';
+    position: relative;
+    bottom: 15px;
+    left: 15%;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff4141, #00f0ff, #15ce2c, transparent) !important;
+    box-shadow: 0 0 15px #ff4141, 0 0 30px #00f0ff !important;
+    border-radius: 10px !important;
+    content: '';
+
+}
+
+/* =====================================================
+   FÆLLES CYBER LOOK TIL ALLE OVERSKRIFTER
+   ===================================================== */
+
+
+/* =====================================================
+   CYBER NEON OVERSKRIFTER - H1 H2 H3 H4 H5 H6
+   ===================================================== */
+
+
+.it-tekst h1.it-overskrift,
+.it-tekst h2.it-overskrift,
+.it-tekst h3.it-overskrift,
+.it-tekst h4.it-overskrift,
+.it-tekst h5.it-overskrift,
+.it-tekst h6.it-overskrift {
+
+    position: relative;
+
+    display: block !important;
+
+    width: min(90%, 850px) !important;
+
+    margin: 60px auto 45px !important;
+
+    padding: 22px 20px 38px !important;
+
+    box-sizing: border-box !important;
+
+
+    text-align: center !important;
+
+    font-weight: bold !important;
+
+    line-height: 1.2 !important;
+
+    letter-spacing: 2px !important;
+
+
+    color: #45cfc6 !important;
+
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #02060f) !important;
+
+
+    border: 4px solid #3024db !important;
+
+
+    border-radius: 18px !important;
+
+
+    text-shadow:
+        0 0 5px #00aaff,
+        0 0 15px #00aaff,
+        0 0 25px #3024db !important;
+
+
+    box-shadow:
+
+        0 0 22px rgba(48, 36, 219, .5),
+
+        inset 0 0 18px rgba(0, 170, 255, .08) !important;
+
+
+    animation:
+
+        itTitlePulse 4s infinite alternate !important;
+
+}
+
+
+
+/* =====================================================
+   HOVEDOVERSKRIFT STØRRELSE
+   ===================================================== */
+
+
+.it-tekst h1.it-overskrift {
+
+    font-size:
+        clamp(1.6rem, 4vw, 2.6rem) !important;
+
+}
+
+
+/* =====================================================
+   UNDEROVERSKRIFTER STØRRELSE
+   ===================================================== */
+
+
+.it-tekst h2.it-overskrift {
+
+    font-size:
+        clamp(1.4rem, 3vw, 2.2rem) !important;
+
+}
+
+
+.it-tekst h3.it-overskrift,
+.it-tekst h4.it-overskrift,
+.it-tekst h5.it-overskrift,
+.it-tekst h6.it-overskrift {
+
+    font-size:
+        clamp(1.2rem, 2.5vw, 1.8rem) !important;
+
+}
+
+
+
+/* =====================================================
+   NEON LINJE UNDER ALLE OVERSKRIFTER
+   ===================================================== */
+
+
+.it-tekst h1.it-overskrift::after,
+.it-tekst h2.it-overskrift::after,
+.it-tekst h3.it-overskrift::after,
+.it-tekst h4.it-overskrift::after,
+.it-tekst h5.it-overskrift::after,
+.it-tekst h6.it-overskrift::after {
+
+    font-size:
+        clamp(1.2rem, 2.5vw, 1.8rem) !important;
+    content: "";
+
+
+    position: absolute;
+
+
+    bottom: 15px;
+
+
+    left: 15%;
+
+
+    width: 70%;
+
+
+    height: 4px;
+
+
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            transparent) !important;
+
+
+
+    box-shadow:
+
+        0 0 15px #ff4141,
+
+        0 0 30px #00f0ff !important;
+
+
+
+    border-radius: 10px !important;
+
+}
+
+/* =====================================================
+   MATCHENDE CYBERPUNK OVERSKRIFTER
+   TEKST + BORDER + NEON
+   ===================================================== */
+
+
+/* H1 HOVEDOVERSKRIFT */
+.it-tekst h1.it-overskrift {
+
+    border: 4px solid #00f0ff !important;
+
+    background:
+        linear-gradient(145deg,
+            #02060f,
+            #06142a,
+            #02060f) !important;
+
+    color: transparent !important;
+    font-size:
+        clamp(1.6rem, 4vw, 2.6rem) !important;
+    background-image:
+        linear-gradient(90deg,
+            #00f0ff,
+            #15ce2c,
+            #ff4141,
+            #00f0ff) !important;
+
+    background-size: 300% auto !important;
+
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+
+    animation:
+        itTextGradientMove 5s infinite ease-in-out,
+        itTitlePulse 4s infinite alternate !important;
+
+
+    box-shadow:
+
+        0 0 15px #00f0ff,
+        0 0 35px rgba(0, 240, 255, .5),
+        inset 0 0 20px rgba(0, 240, 255, .15) !important;
+
+
+    text-shadow: none !important;
+
+}
+
+.it-tekst h1.it-overskrift {
+
+    position: relative;
+
+    display: block !important;
+
+    margin: 30px auto 45px !important;
+
+    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
+
+    font-weight: bold !important;
+
+    text-align: center !important;
+
+}
+
+/* H2 OVERSKRIFTER */
+.it-tekst h2.it-overskrift {
+    position: relative;
+    border: 4px solid #00f0ff !important;
+
+    border-radius: 15px !important;
+
+    background:
+        linear-gradient(145deg,
+            #02060f,
+            #06142a) !important;
+    font-size:
+        clamp(1.4rem, 3vw, 2.2rem) !important;
+
+    color: transparent !important;
+
+
+    background-image:
+        linear-gradient(90deg,
+            #15ce2c,
+            #00f0ff,
+            #ff4141,
+            #15ce2c) !important;
+
+
+    background-size: 300% auto !important;
+
+
+    -webkit-background-clip: text !important;
+
+    background-clip: text !important;
+
+
+    animation:
+        itTextGradientMove 6s infinite ease-in-out !important;
+
+
+    box-shadow:
+
+        0 0 15px rgba(21, 206, 44, .7),
+        0 0 35px rgba(0, 240, 255, .4),
+        inset 0 0 20px rgba(21, 206, 44, .15) !important;
+
+
+    text-shadow: none !important;
+
+}
+
+
+/* Lille digital linje over H2 */
+.it-tekst h2.it-overskrift::before {
+
+    color: #00f0ff !important;
+
+    text-shadow:
+        0 0 8px #00f0ff !important;
+
+}
+
+
+/* Understregning matcher H2 */
+.it-tekst h2.it-overskrift::after {
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #15ce2c,
+            #00f0ff,
+            #ff4141,
+            transparent) !important;
+
+
+    box-shadow:
+
+        0 0 15px #00f0ff,
+        0 0 30px #15ce2c !important;
+
+}
+
+/* =====================================================
+   BRØDTEKST OG LISTE-BOKSE
+   SAMME LOOK SOM OVERSKRIFTER
+   ===================================================== */
+
+.it-tekst p,
+.it-tekst ul {
+
+    display: block !important;
+
+    width: min(95%, 850px) !important;
+
+    max-width: 850px !important;
+
+    margin: 0 auto 45px !important;
+
+    padding: 35px !important;
+
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+
+    font-size: clamp(1rem, 1.5vw, 1.15rem) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.9 !important;
+
+    letter-spacing: .3px !important;
+
+    color: #e2f5ff !important;
+
+    background:
+        linear-gradient(145deg,
+            #06142a,
+            #02060f) !important;
+
+    border: 4px solid #00f0ff !important;
+
+    border-radius: 18px !important;
+
+    text-shadow:
+        0 0 4px #00aaff !important;
+
+    box-shadow:
+        0 0 15px #00f0ff,
+        0 0 30px #15ce2c !important;
+
+    animation:
+        itTitlePulse 4s infinite alternate !important;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease !important;
+
+}
+
+.it-tekst ul {
+    list-style-type: none !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.it-tekst ul li {
+    text-align: center !important;
+    margin-bottom: 12px !important;
+}
+
+/* INDRE TEKST-TAGS */
+.it-tekst p *,
+.it-tekst ul * {
+    text-align: center !important;
+}
+
+.it-tekst p:hover,
+.it-tekst ul:hover {
+    transform: translateY(-5px) !important;
+    color: #ffffff !important;
+    box-shadow: 0 20px 50px rgba(0, 240, 255, .3),
+        inset 0 0 20px rgba(0, 240, 255, .2),
+        0 0 30px rgba(0, 240, 255, .4) !important;
+    border-color: #00f0ff !important;
+}
+
+/* NAVIGATIONSKNAPPER I BUNDEN */
+.it-knapper {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    margin: 60px auto 0 !important;
+    width: 100% !important;
+}
+
+.it-nav-knap {
+    padding: 12px 25px !important;
+    background: #02060f !important;
+    border: 2px solid #00f0ff !important;
+    color: #00f0ff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.it-nav-knap:hover {
+    background: #00f0ff !important;
+    color: #02060f !important;
+    box-shadow: 0 0 15px #00f0ff !important;
+}

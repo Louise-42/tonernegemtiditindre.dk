@@ -1,0 +1,756 @@
+/*
+==========================================================================
+© 2026 Toner fra hjertet – Kodens rejse
+Ophavsret til egen CSS-kode, design og struktur.
+Må ikke kopieres, genbruges eller distribueres uden tilladelse.
+==========================================================================
+*/
+/* ==========================================================================
+   IT ARTIKEL SIDE - ULTIMATIVE CYBERPUNK LOOK
+   TONER FRA HJERTET
+   OPTIMERET + MOBIL + NAVIGATIONSKNAPPER
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. GLOBAL BAGGRUND & NULSTILLING
+   ========================================================================== */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    width: 100% !important;
+    min-height: 100% !important;
+
+    display: block !important;
+
+    background:
+        radial-gradient(circle at 15% 15%,
+            rgba(0, 170, 255, 0.25),
+            transparent 35%),
+        radial-gradient(circle at 85% 25%,
+            rgba(207, 69, 69, 0.15),
+            transparent 40%),
+        radial-gradient(circle at 50% 85%,
+            rgba(21, 206, 44, 0.12),
+            transparent 40%),
+        linear-gradient(145deg,
+            #01040a,
+            #030814,
+            #061226,
+            #02050d) !important;
+
+    background-attachment: fixed !important;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================================
+   2. HOVEDOMRÅDE
+   ========================================================================== */
+
+.it-side-baggrund {
+    display: grid !important;
+
+    place-items: center !important;
+    justify-content: center !important;
+    align-content: start !important;
+
+    width: 100% !important;
+    min-height: 100vh !important;
+
+    margin: 0 auto !important;
+
+    padding: 45px 20px 90px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.it-side {
+    max-width: 1000px;
+
+    width: 100%;
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   3. HOVEDOVERSKRIFT
+   ========================================================================== */
+
+.it-overskrift {
+    position: relative;
+
+    max-width: 950px;
+    width: 90%;
+
+    margin: 40px auto 55px auto !important;
+
+    padding: 30px 25px 50px 25px !important;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #040d1a,
+            #07172e) !important;
+
+    border: 4px solid rgb(48, 36, 219) !important;
+
+    border-radius: 20px !important;
+
+    color: #ffffff;
+
+    text-align: center !important;
+
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 20px rgba(0, 170, 255, 0.6),
+        0 0 30px rgb(48, 36, 219);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(48, 36, 219, 0.5),
+        inset 0 0 15px rgba(0, 170, 255, 0.2);
+
+    transition:
+        all 0.35s cubic-bezier(0.175,
+            0.885,
+            0.32,
+            1.275);
+}
+
+
+.it-overskrift:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    border-color: #00aaff !important;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.7),
+        0 0 45px rgba(0, 170, 255, 0.9),
+        inset 0 0 25px rgba(0, 170, 255, 0.4) !important;
+}
+
+
+/* Cyber-laserstreg */
+
+.it-overskrift::after {
+    content: '';
+
+    position: absolute;
+
+    bottom: 16px;
+    left: 15%;
+
+    width: 70%;
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            transparent);
+
+    box-shadow:
+        0 0 15px #ff4141,
+        0 0 30px #00f0ff;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================================================
+   4. TEKSTBOKSE
+   ========================================================================== */
+
+.it-tekst p,
+.it-tekst .it-afsnit {
+    display: block !important;
+
+    max-width: 860px;
+    width: 95%;
+
+    margin: 0 auto 40px auto !important;
+
+    padding: 30px !important;
+
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+
+    color: #e2f9ff;
+
+    font-size: 1.15rem;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    line-height: 2;
+
+    background:
+        linear-gradient(145deg,
+            rgba(4, 13, 26, 0.95),
+            rgba(7, 23, 46, 0.98)) !important;
+
+    border: 3px solid rgba(48, 36, 219, 0.6) !important;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        inset 0 0 15px rgba(0, 170, 255, 0.05),
+        0 0 20px rgba(48, 36, 219, 0.2);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+}
+
+
+/* ==========================================================================
+   5. HOVER PÅ TEKSTBOKSE
+   ========================================================================== */
+
+.it-tekst p:hover,
+.it-tekst .it-afsnit:hover {
+    transform: translateY(-5px);
+
+    border-color: #45cfc6 !important;
+
+    background:
+        rgba(8, 29, 58, 0.98) !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 20px 50px rgba(0, 170, 255, 0.35),
+        inset 0 0 20px rgba(0, 240, 255, 0.15),
+        0 0 30px rgba(69, 207, 198, 0.4);
+}
+
+
+/* ==========================================================================
+   6. FØRSTE BOGSTAV - NEON LYS
+   ========================================================================== */
+
+/*
+   Denne kode gør det første rigtige bogstav
+   i hvert tekstafsnit større og lysende.
+*/
+
+.it-tekst p::first-letter,
+.it-tekst .it-afsnit::first-letter {
+
+    color: #00f0ff !important;
+
+    font-weight: 900;
+
+    font-size: 1.5em;
+
+    text-shadow:
+        0 0 5px #00f0ff,
+        0 0 10px #00f0ff,
+        0 0 20px rgba(0, 240, 255, 0.9),
+        0 0 30px rgba(0, 170, 255, 0.7);
+}
+
+
+/* ==========================================================================
+   VIGTIGT:
+   INGEN ::before HER
+   ========================================================================== */
+
+/*
+   Vi bruger IKKE:
+
+   .it-tekst p::before
+
+   fordi vi ikke vil have ▪ foran teksten.
+*/
+
+
+/* ==========================================================================
+   7. UNDERSKRIFTER / H2 / H3 / H4
+   ========================================================================== */
+
+/*
+   Brug samme class på alle dine IT-underrubrikker:
+
+   <h2 class="it-del-overskrift">...</h2>
+   <h3 class="it-del-overskrift">...</h3>
+   <h4 class="it-del-overskrift">...</h4>
+
+   Så får de samme design.
+*/
+
+.it-del-overskrift {
+
+    position: relative;
+
+    max-width: 820px;
+
+    width: 90%;
+
+    margin: 55px auto 30px auto;
+
+    padding: 18px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: #45cfc6;
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    font-size: clamp(1.35rem, 3vw, 2rem);
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 14px rgba(0, 170, 255, 0.55),
+        0 0 25px rgba(48, 36, 219, 0.6);
+
+    background:
+        linear-gradient(145deg,
+            rgba(4, 13, 26, 0.95),
+            rgba(7, 23, 46, 0.98));
+
+    border: 2px solid rgba(48, 36, 219, 0.85);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 15px rgba(48, 36, 219, 0.35),
+        inset 0 0 12px rgba(0, 170, 255, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Laser under overskrift */
+
+.it-del-overskrift::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 25%;
+
+    bottom: -5px;
+
+    width: 50%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00f0ff,
+        0 0 15px rgba(255, 65, 65, 0.5);
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* Hover */
+
+.it-del-overskrift:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #00aaff;
+
+    box-shadow:
+        0 0 20px rgba(0, 170, 255, 0.55),
+        0 0 35px rgba(48, 36, 219, 0.35),
+        inset 0 0 15px rgba(0, 170, 255, 0.12);
+}
+
+
+.it-del-overskrift:hover::after {
+    width: 65%;
+}
+
+
+/* ==========================================================================
+   8. TILBAGE / NÆSTE KNAPPER
+   ========================================================================== */
+
+.it-knapper {
+
+    max-width: 860px;
+
+    width: 95%;
+
+    margin: 20px auto 50px auto;
+
+    padding: 0 5px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.it-nav-knap {
+
+    position: relative;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 150px;
+
+    padding: 13px 24px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(3, 12, 30, 0.98),
+            rgba(7, 23, 46, 0.98));
+
+    border: 2px solid #00aaff;
+
+    border-radius: 12px;
+
+    text-shadow:
+        0 0 5px #00aaff;
+
+    box-shadow:
+        0 0 8px rgba(0, 170, 255, 0.65),
+        0 0 20px rgba(48, 36, 219, 0.35),
+        inset 0 0 10px rgba(0, 170, 255, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.it-nav-knap:hover {
+
+    transform: translateY(-3px) scale(1.04);
+
+    color: #ffffff;
+
+    border-color: #00f0ff;
+
+    background:
+        linear-gradient(145deg,
+            rgba(0, 50, 90, 0.98),
+            rgba(20, 20, 75, 0.98));
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #00f0ff;
+
+    box-shadow:
+        0 0 10px #00aaff,
+        0 0 25px #00aaff,
+        0 0 45px rgba(0, 240, 255, 0.55),
+        inset 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+
+.it-nav-knap:active {
+
+    transform: scale(0.97);
+
+    box-shadow:
+        0 0 8px #00aaff,
+        inset 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+
+/* Neon-linje under knapper */
+
+.it-nav-knap::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 20%;
+
+    bottom: -5px;
+
+    width: 60%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #00f0ff,
+            #00aaff,
+            transparent);
+
+    box-shadow:
+        0 0 8px #00f0ff;
+
+    opacity: 0.7;
+
+    transition:
+        width 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.it-nav-knap:hover::after {
+
+    width: 80%;
+
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   9. TABLET / MOBIL
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .it-side {
+        padding: 5px;
+    }
+
+
+    .it-overskrift {
+
+        width: 94%;
+
+        font-size: 1.6rem;
+
+        padding: 20px 15px 40px 15px !important;
+
+        margin: 25px auto;
+
+        letter-spacing: 1px;
+    }
+
+
+    .it-overskrift::after {
+
+        width: 70%;
+
+        left: 15%;
+
+        bottom: 12px;
+    }
+
+
+    .it-tekst p,
+    .it-tekst .it-afsnit {
+
+        width: 96%;
+
+        padding: 25px !important;
+
+        font-size: 1.05rem;
+
+        line-height: 1.8;
+
+        text-align: center !important;
+    }
+
+
+    .it-del-overskrift {
+
+        width: 94%;
+
+        margin: 40px auto 25px;
+
+        padding: 15px 18px;
+
+        font-size: 1.35rem;
+
+        letter-spacing: 1px;
+    }
+
+
+    .it-del-overskrift::after {
+
+        width: 55%;
+
+        bottom: -4px;
+    }
+
+
+    .it-knapper {
+
+        width: 95%;
+
+        margin-top: 35px;
+
+        margin-bottom: 35px;
+
+        gap: 15px;
+
+        padding: 0 5px;
+    }
+
+
+    .it-nav-knap {
+
+        min-width: 0;
+
+        width: 48%;
+
+        padding: 11px 10px;
+
+        font-size: 0.92rem;
+
+        letter-spacing: 0.5px;
+    }
+}
+
+
+/* ==========================================================================
+   10. MEGET SMÅ MOBILSKÆRME
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .it-side-baggrund {
+
+        padding: 25px 8px 60px !important;
+    }
+
+
+    .it-overskrift {
+
+        width: 94%;
+
+        font-size: 1.35rem;
+
+        padding: 18px 10px 38px !important;
+
+        border-width: 3px !important;
+    }
+
+
+    .it-tekst p,
+    .it-tekst .it-afsnit {
+
+        width: 97%;
+
+        padding: 20px 17px !important;
+
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+    }
+
+
+    .it-del-overskrift {
+
+        width: 96%;
+
+        margin: 35px auto 22px;
+
+        padding: 13px 12px;
+
+        font-size: 1.15rem;
+
+        border-radius: 12px;
+
+        border-width: 2px;
+    }
+
+
+    .it-del-overskrift::after {
+
+        width: 60%;
+    }
+
+
+    .it-knapper {
+
+        width: 96%;
+
+        gap: 8px;
+
+        margin-top: 25px;
+    }
+
+
+    .it-nav-knap {
+
+        width: 50%;
+
+        padding: 10px 6px;
+
+        font-size: 0.82rem;
+
+        border-radius: 10px;
+    }
+}

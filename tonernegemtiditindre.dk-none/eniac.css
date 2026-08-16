@@ -1,0 +1,605 @@
+/*
+==========================================================================
+© 2026 Toner fra hjertet – Kodens rejse
+Ophavsret til egen CSS-kode, design og struktur.
+Må ikke kopieres, genbruges eller distribueres uden tilladelse.
+==========================================================================
+*/
+
+/* =====================================================
+   ENIAC ARTIKEL SIDE
+   TONER FRA HJERTET
+   ===================================================== */
+
+
+/* =====================================================
+   ANIMATIONER
+   ===================================================== */
+
+@keyframes neonGlowBorder {
+
+    0% {
+        border-color: #ff4141;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.8),
+            inset 0 0 15px rgba(255, 65, 65, 0.2),
+            0 0 20px rgba(255, 65, 65, 0.4);
+    }
+
+    50% {
+        border-color: #15ce2c;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.8),
+            inset 0 0 15px rgba(21, 206, 44, 0.2),
+            0 0 25px rgba(21, 206, 44, 0.5);
+    }
+
+    100% {
+        border-color: #ff4141;
+
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.8),
+            inset 0 0 15px rgba(255, 65, 65, 0.2),
+            0 0 20px rgba(255, 65, 65, 0.4);
+    }
+}
+
+
+@keyframes cyberBoxPulse {
+
+    0% {
+        box-shadow:
+            0 0 25px rgba(48, 36, 219, 0.4),
+            inset 0 0 15px rgba(0, 170, 255, 0.1);
+    }
+
+    100% {
+        box-shadow:
+            0 0 45px rgba(0, 240, 255, 0.7),
+            inset 0 0 25px rgba(48, 36, 219, 0.3);
+    }
+}
+
+
+/* =====================================================
+   GLOBAL BAGGRUND
+   ===================================================== */
+
+html,
+body {
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    width: 100%;
+    min-height: 100%;
+
+    background:
+
+        radial-gradient(circle at 15% 15%,
+            rgba(0, 170, 255, 0.25),
+            transparent 35%),
+
+        radial-gradient(circle at 85% 25%,
+            rgba(207, 69, 69, 0.18),
+            transparent 40%),
+
+        radial-gradient(circle at 50% 85%,
+            rgba(21, 206, 44, 0.12),
+            transparent 40%),
+
+        linear-gradient(145deg,
+            #01040a,
+            #030814,
+            #061226,
+            #02050d) !important;
+
+    background-attachment: fixed !important;
+
+    color: #e2f5ff;
+}
+
+/* =====================================================
+   HELE ARTIKELBOKSEN
+   ===================================================== */
+
+.artikel-boks {
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-family:
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+
+/* =====================================================
+   SELVE ARTIKLEN
+   ===================================================== */
+
+.artikel-boks article {
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   H1 + H2 + H3
+   SAMME DESIGN
+   ===================================================== */
+
+.artikel-boks h1,
+.artikel-boks h2,
+.artikel-boks h3 {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding: 25px 30px 40px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    line-height: 1.25;
+
+    color: #45cfc6 !important;
+
+    background:
+        linear-gradient(145deg,
+            #040d1a,
+            #07172e) !important;
+
+    border: 3px solid #00f0ff;
+
+    border-radius: 40px !important;
+
+    text-shadow:
+        0 0 8px #00aaff,
+        0 0 20px rgba(0, 170, 255, 0.6),
+        0 0 30px #3024db;
+
+    box-shadow:
+        0 0 25px rgba(48, 36, 219, 0.4),
+        inset 0 0 15px rgba(0, 170, 255, 0.1);
+
+    animation:
+        cyberBoxPulse 4s infinite alternate ease-in-out;
+}
+
+
+/* =====================================================
+   AFSTAND MELLEM OVERSKRIFTER
+   ===================================================== */
+
+.artikel-boks h1,
+.artikel-boks h2,
+.artikel-boks h3 {
+
+    margin-top: 80px !important;
+
+    margin-bottom: 45px !important;
+}
+
+
+/* =====================================================
+   LASERSTREG UNDER H1 + H2 + H3
+   ===================================================== */
+
+.artikel-boks h1::after,
+.artikel-boks h2::after,
+.artikel-boks h3::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 15%;
+
+    width: 70%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #ff4141,
+            #00f0ff,
+            #15ce2c,
+            transparent);
+
+    box-shadow:
+        0 0 15px #ff4141,
+        0 0 30px #00f0ff;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   ALLE TEKSTAFSNIT
+   ===================================================== */
+
+.artikel-boks p {
+
+    display: block !important;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 40px auto !important;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #020612,
+            #051024) !important;
+
+    border: 3px solid #ff4141;
+
+    border-radius: 12px;
+
+    color: #e2f5ff !important;
+
+    font-size: 1.15rem;
+
+    line-height: 1.95;
+
+    text-align: center !important;
+
+    animation:
+        neonGlowBorder 7s infinite ease-in-out;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =====================================================
+   HOVER PÅ TEKSTBOKSE
+   ===================================================== */
+
+.artikel-boks p:hover {
+
+    transform: translateY(-5px);
+
+    color: #ffffff !important;
+
+    border-color: #00f0ff !important;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        inset 0 0 20px rgba(0, 240, 255, 0.2),
+        0 0 35px rgba(0, 240, 255, 0.5) !important;
+}
+
+
+/* =====================================================
+   FØRSTE BOGSTAV
+   ===================================================== */
+
+.artikel-boks p::first-letter {
+
+    color: #00f0ff;
+
+    font-weight: 900;
+
+    font-size: 1.4rem;
+
+    text-shadow:
+        0 0 8px #00f0ff;
+}
+
+
+/* =====================================================
+   FOTO-TEKST
+   ===================================================== */
+
+.artikel-boks .foto-kilde {
+
+    display: block;
+
+    width: fit-content;
+
+    max-width: 90%;
+
+    margin: 15px auto 45px;
+
+    padding: 10px 20px;
+
+    color: #a9dff0;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: linear-gradient(145deg,
+            #06142a,
+            #02060f);
+
+    border: 2px solid #00f0ff;
+
+    border-radius: 12px;
+
+    text-shadow:
+        0 0 6px #00aaff;
+
+    box-shadow:
+        0 0 12px rgba(0, 240, 255, .4);
+
+}
+
+/* =====================================================
+   ENIAC LISTE
+   ===================================================== */
+
+.eniac-liste {
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 50px auto 65px auto !important;
+
+    padding: 35px 40px 35px 50px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(145deg,
+            #020612,
+            #040f21) !important;
+
+    border: 3px solid #15ce2c;
+
+    border-radius: 12px;
+
+    color: #e2f5ff;
+
+    list-style-position: inside;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        inset 0 0 15px rgba(21, 206, 44, 0.1),
+        0 0 30px rgba(21, 206, 44, 0.4) !important;
+}
+
+
+.eniac-liste li::marker {
+
+    content: "⚡ ";
+
+    font-size: 1.2rem;
+}
+
+
+.eniac-liste li {
+
+    font-size: 1.15rem;
+
+    line-height: 2;
+
+    margin-bottom: 15px;
+
+    color: #e2f5ff;
+
+    text-align: left;
+
+    border-bottom:
+        1px dashed rgba(21, 206, 44, 0.15);
+
+    padding-bottom: 12px;
+}
+
+
+.eniac-liste li:last-child {
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+}
+
+
+/* =====================================================
+   BILLEDE
+   ===================================================== */
+
+.eniac-billede {
+
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+
+    height: auto;
+
+    margin: 60px auto !important;
+
+    border: 3px solid #00f0ff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(0, 240, 255, 0.4) !important;
+}
+
+
+/* =====================================================
+   KNAPPER
+   ===================================================== */
+
+.knapper {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding: 40px 25px 60px;
+}
+
+
+.knapper .knap,
+.knapper .knap2 {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   MOBIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .artikel-boks {
+
+        width: 100%;
+
+        padding: 10px;
+    }
+
+
+    .artikel-boks h1,
+    .artikel-boks h2,
+    .artikel-boks h3 {
+
+        width: 100%;
+
+        padding: 20px 15px 35px;
+
+        font-size: 1.5rem;
+
+        letter-spacing: 2px;
+
+        margin-top: 60px !important;
+
+        margin-bottom: 35px !important;
+    }
+
+
+    .artikel-boks h1::after,
+    .artikel-boks h2::after,
+    .artikel-boks h3::after {
+
+        bottom: 14px;
+
+        left: 10%;
+
+        width: 80%;
+
+        height: 3px;
+    }
+
+
+    .artikel-boks p {
+
+        font-size: 1.05rem;
+
+        padding: 25px;
+
+        line-height: 1.8;
+    }
+
+
+    .artikel-boks .foto-kilde {
+
+        font-size: 0.8rem;
+
+        margin-bottom: 25px;
+    }
+
+
+    .eniac-liste {
+
+        padding: 25px 20px;
+    }
+
+
+    .eniac-liste li {
+
+        font-size: 1.05rem;
+    }
+
+
+    .knapper {
+
+        padding: 30px 12px 50px;
+    }
+
+
+    .knapper .knap,
+    .knapper .knap2 {
+
+        padding: 10px 16px;
+
+        font-size: 0.95rem;
+    }
+}

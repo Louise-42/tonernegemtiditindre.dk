@@ -1,0 +1,191 @@
+/* ==========================================================================
+   HEADER - TONER FRA HJERTET
+   Stabil responsiv navigation til PC, tablet og mobil
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+header {
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #030a16;
+
+    border-bottom: 2px solid rgb(207, 69, 69);
+    box-shadow: 0 4px 20px rgba(207, 69, 69, 0.3);
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.nav-links {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    /* PC */
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+/* ==========================================================================
+   NAVIGATIONSKNAPPER
+   ========================================================================== */
+
+header .nav-links a {
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 6px;
+
+    color: white !important;
+    text-decoration: none;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+
+    background: linear-gradient(180deg,
+            #d43c3c,
+            #a61f1f) !important;
+
+    border: 1px solid #111;
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* ==========================================================================
+   HOVER
+   ========================================================================== */
+
+header .nav-links a:hover {
+    background: linear-gradient(180deg,
+            #ff5050,
+            #a61f1f) !important;
+
+    box-shadow:
+        0 0 10px rgb(207, 69, 69),
+        0 0 25px rgba(207, 69, 69, 0.6);
+
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   AKTIV SIDE
+   ========================================================================== */
+
+header .nav-links a.active {
+    box-shadow:
+        0 0 20px #ff5555,
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   TABLET
+   1100px og derunder
+   3 knapper pr. række
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .nav-links {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0 auto;
+    }
+
+    header .nav-links a {
+        font-size: 12px;
+    }
+}
+
+/* ==========================================================================
+   MOBIL
+   600px og derunder
+   2 knapper pr. række
+   ========================================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    header .nav-links a {
+        min-height: 44px;
+        padding: 11px 4px;
+
+        font-size: 11px;
+        line-height: 1.15;
+    }
+}
+
+/* ==========================================================================
+   MEGET SMAL TELEFON
+   ========================================================================== */
+
+@media (max-width: 380px) {
+
+    header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    header .nav-links a {
+        font-size: 10px;
+        padding: 10px 3px;
+        border-radius: 12px;
+    }
+}
