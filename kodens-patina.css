@@ -291,7 +291,7 @@ main.kodens-side {
 
     width: 95%;
 
-    margin: 45px auto 25px auto;
+    margin: 25px auto 25px auto;
 
     padding-bottom: 12px;
 
@@ -299,7 +299,23 @@ main.kodens-side {
         drop-shadow(0 0 8px rgba(0, 170, 255, 0.6));
 }
 
+.kodens-artikel .overskrift-patina {
 
+    position: relative;
+
+    z-index: 1;
+
+    padding: 25px 35px;
+
+    border: 3px solid #00aaff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 15px rgba(0, 170, 255, .7),
+        0 0 35px rgba(15, 206, 44, .35),
+        inset 0 0 20px rgba(0, 170, 255, .12);
+}
 /* ==========================================================================
    NEON-LINJE UNDER OVERSKRIFTER
    ========================================================================== */
@@ -333,15 +349,6 @@ main.kodens-side {
 
     border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    3. BRØDTEKST
@@ -385,7 +392,16 @@ main.kodens-side {
 
     width: 100%;
 }
+.betaling li::marker {
 
+    color: #00aaff;
+
+    font-size: 1.1em;
+
+    text-shadow:
+        0 0 6px #00aaff,
+        0 0 12px #00aaff;
+}
 
 .betaling ul {
 
@@ -418,22 +434,37 @@ main.kodens-side {
 
 .betaling li {
 
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
     font-size: 18px;
 
-    margin: 12px 0;
+    font-weight: 700;
 
-    font-weight: bold;
+    letter-spacing: 0.5px;
 
-    color: white;
+    line-height: 1.6;
 
-    text-shadow:
-        0 0 10px #00aaff;
+    margin: 14px 0;
+
+    color: #f5fbff;
+
+    text-align: left;
 
     list-style-type: disc;
 
     list-style-position: outside;
 
-    text-align: left;
+    text-shadow:
+        0 0 4px rgba(0, 170, 255, .8),
+        0 0 10px rgba(0, 170, 255, .45);
+
+    transition:
+        color .3s ease,
+        text-shadow .3s ease,
+        transform .3s ease;
 }
 
 
