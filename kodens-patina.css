@@ -358,16 +358,15 @@ main.kodens-side {
 .kodens-artikel h1.overskrift-patina {
     display: block !important;
 
-    color: #ffffff !important;
-
-    background: linear-gradient(90deg,
-            #0fce2c,
-            #00aaff,
-            #d810ad) !important;
+    background: linear-gradient(
+        90deg,
+        #0fce2c,
+        #00aaff,
+        #d810ad
+    ) !important;
 
     -webkit-background-clip: text !important;
     background-clip: text !important;
-
     -webkit-text-fill-color: transparent !important;
 
     font-size: 30px !important;
@@ -385,6 +384,7 @@ main.kodens-side {
         0 0 20px #00aaff,
         0 0 40px #0fce2c !important;
 }
+
 
 /* ==========================================================================
    3. BRØDTEKST
