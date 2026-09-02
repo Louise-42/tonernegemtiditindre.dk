@@ -316,6 +316,7 @@ main.kodens-side {
         0 0 35px rgba(15, 206, 44, .35),
         inset 0 0 20px rgba(0, 170, 255, .12);
 }
+
 /* ==========================================================================
    NEON-LINJE UNDER OVERSKRIFTER
    ========================================================================== */
@@ -349,6 +350,7 @@ main.kodens-side {
 
     border-radius: 10px;
 }
+
 /* =========================================================
    TEST - KODENS REJSE H1
    ========================================================= */
@@ -358,20 +360,18 @@ main.kodens-side {
 
     color: #ffffff !important;
 
-    background: linear-gradient(
-        90deg,
-        #0fce2c,
-        #00aaff,
-        #d810ad
-    ) !important;
+    background: linear-gradient(90deg,
+            #0fce2c,
+            #00aaff,
+            #d810ad) !important;
 
     -webkit-background-clip: text !important;
     background-clip: text !important;
 
     -webkit-text-fill-color: transparent !important;
 
-    font-size: 48px !important;
-    font-weight: 900 !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
 
     text-align: center !important;
 
@@ -385,6 +385,7 @@ main.kodens-side {
         0 0 20px #00aaff,
         0 0 40px #0fce2c !important;
 }
+
 /* ==========================================================================
    3. BRØDTEKST
    ========================================================================== */
@@ -427,6 +428,7 @@ main.kodens-side {
 
     width: 100%;
 }
+
 .betaling li::marker {
 
     color: #00aaff;
